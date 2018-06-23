@@ -7,3 +7,7 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
   console.log('OK');
 });
+
+it('test', ()=>{
+  expect(true).toBe(true);
+})
