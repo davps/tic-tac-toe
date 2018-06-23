@@ -1,4 +1,3 @@
 #Tic tac toe
 
-Developed with React s
-
+Developed with React 
