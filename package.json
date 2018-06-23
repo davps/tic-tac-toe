@@ -1,9 +1,12 @@
 {
-  "name": "create-react-app-redux-boilerplate",
+  "name": "tic-tac-toe",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "husky": "^0.14.3",
     "immutable": "^3.8.2",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.13.5",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -14,15 +17,10 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-import": "^2.11.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.7.0",
-    "@storybook/react": "^3.4.8",
     "@storybook/addon-actions": "^3.4.8",
     "@storybook/addon-links": "^3.4.8",
     "@storybook/addons": "^3.4.8",
+    "@storybook/react": "^3.4.8",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0"
   },

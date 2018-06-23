@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import './App.css';
 import WinnerInfo from './layouts/WinnerInfo.jsx';
 import Board from './layouts/Board.jsx';

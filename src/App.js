@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import TicTacToe from './TicTacToe';
-import { MOVE } from './config';
 
 class App extends Component {
   render() {

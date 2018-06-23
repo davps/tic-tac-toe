@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import PlayerInfo from './PlayerInfo.jsx';
 import WinnerInfo from './WinnerInfo.jsx';
 
