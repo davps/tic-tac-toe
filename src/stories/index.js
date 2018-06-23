@@ -14,6 +14,8 @@ import WinnerInfo from '../layouts/WinnerInfo';
 import PlayerInfo from '../layouts/PlayerInfo';
 import TicTacToe from '../TicTacToe';
 
+storiesOf('Full game', module).add('Play it here', () => <TicTacToe />);
+
 storiesOf('Square', module)
   .add('as a button, pending to use', () =>  
     <Square owner={MOVE.PENDING.val} onMove={action('clicked')} disabled={false} />
@@ -113,10 +115,5 @@ storiesOf('Winner information', module)
   )
   .add('We do not have a winner yet and the board is full', () =>
     <WinnerInfo hasWinner={false} isBoardFull={true} player={MOVE.PLAYER_1.val} />
-  )
-
-storiesOf('Full game', module)
-  .add('Play it here', () =>
-    <TicTacToe />
   )
 

@@ -1,10 +1,12 @@
-#Tic tac toe [![Build Status](https://travis-ci.org/davps/tic-tac-toe.svg?branch=master)](https://travis-ci.org/davps/tic-tac-toe)
+# Tic tac toe [![Build Status](https://travis-ci.org/davps/tic-tac-toe.svg?branch=master)](https://travis-ci.org/davps/tic-tac-toe)
 
+## Demo
+
+[View the live demo and the individual components on the storybook](https://davps.github.io/tic-tac-toe)
 
 Showcase of my development workflow 
 
-
-## Showcases:
+## Relevant history:
 
 - Original code, this is what I've developed in about 1 hour, not completed but close
 https://github.com/davps/tic-tac-toe/tree/445c98f32a92aa389390323664d45c61c1e680b2
