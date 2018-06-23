@@ -1,55 +1,160 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import PropTypes from 'prop-types';
 import './App.css';
 
-export const PLAYER = {
+/**
+ * I used the key property on this data structure because it is
+ * easiert to debug with it (instead of using null or empty)
+ */
+export const MOVE = {
   PENDING: { val: 'PENDING', label: ' ' },
   PLAYER_1: { val: 'PLAYER_1', label: 'X', name: 'Jacob' },
   PLAYER_2: { val: 'PLAYER_2', label: 'O', name: 'David' }
 };
 
-export const PlayerInfo = ({ player }) => {
-  return (
-    <span>
-      {' ' + PLAYER[player].name} ( {PLAYER[player].label} )
-    </span>
-  );
-};
-
-const Square = function({ owner, onMove, disabled }) {
-  if (
-    owner !== PLAYER.PENDING.val &&
-    owner !== PLAYER.PLAYER_1.val &&
-    owner !== PLAYER.PLAYER_2.val
-  ) {
-    throw new Error('The value of PLAYER is not valid');
-  }
-
-  const component = {};
-  component[PLAYER.PENDING.val] = (
-    <button disabled={disabled} onClick={onMove} />
-  );
-  component[PLAYER.PLAYER_1.val] = <span>{PLAYER.PLAYER_1.label}</span>;
-  component[PLAYER.PLAYER_2.val] = <span>{PLAYER.PLAYER_2.label}</span>;
-
-  return component[owner];
-};
-
+/**
+ * Initial state of the app, used to initialize and reset the game
+ */
 const initialState = {
   togglePlayer: false,
   winner: null,
   isFull: false,
   squares: [
-    PLAYER.PENDING.val,
-    PLAYER.PENDING.val,
-    PLAYER.PENDING.val,
-    PLAYER.PENDING.val,
-    PLAYER.PENDING.val,
-    PLAYER.PENDING.val,
-    PLAYER.PENDING.val,
-    PLAYER.PENDING.val,
-    PLAYER.PENDING.val
+    MOVE.PENDING.val,
+    MOVE.PENDING.val,
+    MOVE.PENDING.val,
+    MOVE.PENDING.val,
+    MOVE.PENDING.val,
+    MOVE.PENDING.val,
+    MOVE.PENDING.val,
+    MOVE.PENDING.val,
+    MOVE.PENDING.val
   ]
+};
+
+/**
+ * Component to display information about a player
+ * @param {string} player The player value
+ */
+export const PlayerInfo = ({ player }) => {
+  return (
+    <span>
+      {' ' + MOVE[player].name} ( {MOVE[player].label} )
+    </span>
+  );
+};
+
+PlayerInfo.propTypes = {
+  player: PropTypes.oneOf([MOVE.PLAYER_1.val, MOVE.PLAYER_2.val]).isRequired
+};
+
+/**
+ * A square of tic tac toe board
+ * @param {string} owner The player (val) that owns the square
+ */
+const Square = function({ owner, onMove, disabled }) {
+  const elements = {};
+  elements[MOVE.PENDING.val] = <button disabled={disabled} onClick={onMove} />;
+  elements[MOVE.PLAYER_1.val] = <span>{MOVE.PLAYER_1.label}</span>;
+  elements[MOVE.PLAYER_2.val] = <span>{MOVE.PLAYER_2.label}</span>;
+
+  return elements[owner];
+};
+
+Square.propTypes = {
+  owner: PropTypes.oneOf([
+    MOVE.PENDING.val,
+    MOVE.PLAYER_1.val,
+    MOVE.PLAYER_2.val
+  ]).isRequired,
+  onMove: PropTypes.func.isRequired,
+  disabled: PropTypes.bool
+};
+
+Square.defaultProps = {
+  disabled: false
+};
+
+const Board = ({ squares, moveHandler, hasWinner }) => {
+  const isLineBreak = index => {
+    return index === 2 || index === 5;
+  };
+
+  return (
+    <div>
+      {squares.map((square, index) => (
+        <span key={index}>
+          <Square
+            onMove={() => moveHandler(index)}
+            owner={squares[index]}
+            disabled={hasWinner}
+          />
+          {isLineBreak(index) && <br />}
+        </span>
+      ))}
+    </div>
+  );
+};
+
+Board.propTypes = {
+  squares: PropTypes.array.isRequired,
+  moveHandler: PropTypes.func.isRequired,
+  hasWinner: PropTypes.bool
+};
+
+const WinnerInfo = ({ hasWinner, isBoardFull, player }) => (
+  <span>
+    {hasWinner && (
+      <div>
+        The winner is{' '}
+        <strong>
+          <PlayerInfo player={player} />{' '}
+        </strong>{' '}
+      </div>
+    )}
+
+    {!hasWinner && isBoardFull && <div>Nobody wins!</div>}
+  </span>
+);
+
+WinnerInfo.propTypes = {
+  hasWinner: PropTypes.bool.isRequired,
+  player: PropTypes.string,
+  isBoardFull: PropTypes.bool.isRequired
+};
+
+const WhoIsNextInfo = ({ player, hasWinner, isBoardFull }) => (
+  <div>
+    {!hasWinner &&
+      !isBoardFull && (
+        <span>
+          Now is the turn of
+          <strong>
+            <PlayerInfo player={player} />
+          </strong>
+        </span>
+      )}
+  </div>
+);
+
+WhoIsNextInfo.propTypes = {
+  player: PlayerInfo.propTypes.player,
+  hasWinner: WinnerInfo.propTypes.hasWinner,
+  isBoardFull: WinnerInfo.propTypes.isBoardFull
+};
+
+const PlayAgainButton = ({ hasWinner, isBoardFull, resetGame }) => (
+  <span>
+    {(hasWinner || isBoardFull) && (
+      <button onClick={resetGame}>Play again</button>
+    )}
+  </span>
+);
+
+PlayAgainButton.propTypes = {
+  hasWinner: WinnerInfo.propTypes.hasWinner,
+  isBoardFull: WinnerInfo.propTypes.isBoardFull,
+  resetGame: PropTypes.func.isRequired
 };
 
 class TicTacToe extends Component {
@@ -58,7 +163,12 @@ class TicTacToe extends Component {
     this.state = initialState;
   }
 
-  changePlayer = () => {
+  /**
+   * Note that this method is async because it set the state
+   * and I will need to perform other actions after it finish
+   * @see {@link moveHandler} to understand how it's being used
+   */
+  changePlayerAsync = () => {
     return new Promise((resolve, reject) => {
       this.setState({ togglePlayer: !this.state.togglePlayer }, () => {
         resolve(this.getActualPlayer());
@@ -67,10 +177,21 @@ class TicTacToe extends Component {
   };
 
   getActualPlayer = () => {
-    return this.state.togglePlayer ? PLAYER.PLAYER_2.val : PLAYER.PLAYER_1.val;
+    return this.state.togglePlayer ? MOVE.PLAYER_2.val : MOVE.PLAYER_1.val;
   };
 
-  changeSquareState = (squareIndex, player) => {
+  /**
+   * @see {@link changePlayerAsync} for explanation about its asynchronity
+   */
+  useSquareAsync = (squareIndex, player) => {
+    if (typeof squareIndex !== 'number' && squareIndex < 0 && squareIndex > 8) {
+      throw new Error('Invalid param squareIndex: ' + squareIndex);
+    }
+
+    if (player !== MOVE.PLAYER_1.val && player !== MOVE.PLAYER_2.val) {
+      throw new Error('Invalid player value: ' + player);
+    }
+
     const squares = [...this.state.squares];
 
     squares[squareIndex] = player;
@@ -85,12 +206,17 @@ class TicTacToe extends Component {
     });
   };
 
+  /**
+   * TODO: This should be async too, now it didn't affect the
+   * actual implementation but should break if I perform async
+   * actions after it
+   */
   verifyResult = () => {
     for (let i = 0; i < 9; i += 3) {
       const col1 = this.state.squares[i + 0];
       const col2 = this.state.squares[i + 1];
       const col3 = this.state.squares[i + 2];
-      if (col1 === col2 && col2 === col3 && col1 != PLAYER.PENDING.val) {
+      if (col1 === col2 && col2 === col3 && col1 !== MOVE.PENDING.val) {
         this.setState({ winner: this.getActualPlayer() });
         return;
       }
@@ -100,7 +226,7 @@ class TicTacToe extends Component {
       const row1 = this.state.squares[i + 0];
       const row2 = this.state.squares[i + 3];
       const row3 = this.state.squares[i + 6];
-      if (row1 === row2 && row2 === row3 && row1 != PLAYER.PENDING.val) {
+      if (row1 === row2 && row2 === row3 && row1 !== MOVE.PENDING.val) {
         this.setState({ winner: this.getActualPlayer() });
         return;
       }
@@ -115,7 +241,7 @@ class TicTacToe extends Component {
     if (
       topLeft === center &&
       center === bottomRight &&
-      topLeft != PLAYER.PENDING.val
+      topLeft !== MOVE.PENDING.val
     ) {
       this.setState({ winner: this.getActualPlayer() });
       return;
@@ -124,7 +250,7 @@ class TicTacToe extends Component {
     if (
       topRight === center &&
       center === bottomLeft &&
-      topRight != PLAYER.PENDING.val
+      topRight !== MOVE.PENDING.val
     ) {
       this.setState({ winner: this.getActualPlayer() });
       return;
@@ -135,70 +261,57 @@ class TicTacToe extends Component {
 
   isFull = () => {
     const pendingFound = this.state.squares.find(
-      square => square === PLAYER.PENDING.val
+      square => square === MOVE.PENDING.val
     );
     const result = typeof pendingFound === 'undefined';
     return result;
   };
 
   moveHandler = squareIndex => {
-    this.changePlayer().then(player => {
-      this.changeSquareState(squareIndex, player).then(this.verifyResult);
-    });
+    Promise.resolve()
+      .then(() => {
+        return this.useSquareAsync(squareIndex, this.getActualPlayer());
+      })
+      .then(() => {
+        return this.changePlayerAsync();
+      })
+      .then(player => {
+        return this.verifyResult();
+      });
   };
 
-  resetGame = () => {
+  resetGameHandler = () => {
     this.setState(initialState);
   };
 
-  isLineBreak = index => {
-    return (index === 2 || index === 5);
-  };
-
   render() {
-    const actualPlayer = this.getActualPlayer();
-    const actualPlayerName = PLAYER[actualPlayer].name;
-
     console.log(this.state);
 
     return (
       <div>
-        {this.state.squares.map((square, index) => (
-          <span>
-            <Square
-              key={index}
-              onMove={() => this.moveHandler(index)}
-              owner={this.state.squares[index]}
-              disabled={this.state.winner !== null}
-            />
-            {this.isLineBreak(index) && <br />}
-          </span>
-        ))}
+        <Board
+          squares={this.state.squares}
+          moveHandler={this.moveHandler}
+          hasWinner={this.state.winner !== null}
+        />
 
-        {!this.state.winner &&
-          !this.state.isFull && (
-            <div>
-              Now is the turn of
-              <strong>
-                <PlayerInfo player={actualPlayer} />
-              </strong>
-            </div>
-          )}
+        <WhoIsNextInfo
+          player={this.getActualPlayer()}
+          hasWinner={this.state.winner !== null}
+          isBoardFull={this.state.isFull}
+        />
 
-        {this.state.winner && (
-          <div>
-            The winner is{' '}
-            <strong>
-              <PlayerInfo player={this.state.winner} />{' '}
-            </strong>{' '}
-          </div>
-        )}
+        <WinnerInfo
+          player={this.state.winner}
+          hasWinner={this.state.winner !== null}
+          isBoardFull={this.state.isFull}
+        />
 
-        {!this.state.winner && this.state.isFull && <div>Nobody wins!</div>}
-
-        {(this.state.winner || this.state.isFull) && (
-          <button onClick={this.resetGame}>Play again</button>
-        )}
+        <PlayAgainButton
+          hasWinner={this.state.winner !== null}
+          isBoardFull={this.state.isFull}
+          resetGame={this.resetGameHandler}
+        />
       </div>
     );
   }
