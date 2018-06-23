@@ -2,110 +2,203 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const SQUARE_STATE = {
-  NOT_USED: 0,
-  PLAYER_1: 1,
-  PLAYER_2: 2
+export const PLAYER = {
+  PENDING: { val: 'PENDING', label: ' ' },
+  PLAYER_1: { val: 'PLAYER_1', label: 'X', name: 'Jacob' },
+  PLAYER_2: { val: 'PLAYER_2', label: 'O', name: 'David' }
 };
 
-const Square = function({ value, flip }) {
-  let text;
-  if (value === SQUARE_STATE.NOT_USED) {
-    text = ' ';
-  } else if (value === SQUARE_STATE.PLAYER_1) {
-    text = 'X';
-  } else if (value === SQUARE_STATE.PLAYER_2) {
-    text = 'O';
-  } else {
-    throw new Error('The value of SQUARE_STATE is not valid');
+export const PlayerInfo = ({ player }) => {
+  return (
+    <span>
+      {' ' + PLAYER[player].name} ( {PLAYER[player].label} )
+    </span>
+  );
+};
+
+const Square = function({ owner, onMove, disabled }) {
+  if (
+    owner !== PLAYER.PENDING.val &&
+    owner !== PLAYER.PLAYER_1.val &&
+    owner !== PLAYER.PLAYER_2.val
+  ) {
+    throw new Error('The value of PLAYER is not valid');
   }
 
-  return <button onClick={flip}>{text}</button>;
+  const component = {};
+  component[PLAYER.PENDING.val] = (
+    <button disabled={disabled} onClick={onMove} />
+  );
+  component[PLAYER.PLAYER_1.val] = <span>{PLAYER.PLAYER_1.label}</span>;
+  component[PLAYER.PLAYER_2.val] = <span>{PLAYER.PLAYER_2.label}</span>;
+
+  return component[owner];
+};
+
+const initialState = {
+  togglePlayer: false,
+  winner: null,
+  isFull: false,
+  squares: [
+    PLAYER.PENDING.val,
+    PLAYER.PENDING.val,
+    PLAYER.PENDING.val,
+    PLAYER.PENDING.val,
+    PLAYER.PENDING.val,
+    PLAYER.PENDING.val,
+    PLAYER.PENDING.val,
+    PLAYER.PENDING.val,
+    PLAYER.PENDING.val
+  ]
 };
 
 class TicTacToe extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      toggle: false,
-      row1: [
-        SQUARE_STATE.NOT_USED,
-        SQUARE_STATE.NOT_USED,
-        SQUARE_STATE.NOT_USED
-      ],
-      row2: [
-        SQUARE_STATE.NOT_USED,
-        SQUARE_STATE.NOT_USED,
-        SQUARE_STATE.NOT_USED
-      ],
-      row3: [
-        SQUARE_STATE.NOT_USED,
-        SQUARE_STATE.NOT_USED,
-        SQUARE_STATE.NOT_USED
-      ]
-    };
+    this.state = initialState;
   }
 
-  changeWhoIsPlaying = () => {
-    this.setState({ toggle: !this.state.toggle });
+  changePlayer = () => {
+    return new Promise((resolve, reject) => {
+      this.setState({ togglePlayer: !this.state.togglePlayer }, () => {
+        resolve(this.getActualPlayer());
+      });
+    });
   };
 
-  changeSquareState = (rowIndex, rowName) => {
-    const row = [...this.state[rowName]];
-
-    const state = {
-      row: this.state[rowName]
-    };
-
-    let value;
-    if (this.state.toogle === false) {
-      value = SQUARE_STATE.PLAYER_1;
-    } else {
-      value = SQUARE_STATE.PLAYER_2;
-    }
-
-    state.row[rowIndex] = value;
-
-    this.setState(state);
+  getActualPlayer = () => {
+    return this.state.togglePlayer ? PLAYER.PLAYER_2.val : PLAYER.PLAYER_1.val;
   };
 
-  clickHandler = (rowIndex, rowNumber) => {
-    this.changeWhoIsPlaying();
+  changeSquareState = (squareIndex, player) => {
+    const squares = [...this.state.squares];
 
-    if (rowNumber === 1) {
-      this.changeSquareState(rowIndex, 'row1');
-    } else if (rowNumber === 2) {
-      this.changeSquareState(rowIndex, 'row2');
-    } else if (rowNumber === 3) {
-      this.changeSquareState(rowIndex, 'row3');
+    squares[squareIndex] = player;
+
+    return new Promise((resolve, reject) => {
+      this.setState(
+        {
+          squares: squares
+        },
+        resolve()
+      );
+    });
+  };
+
+  verifyResult = () => {
+    for (let i = 0; i < 9; i += 3) {
+      const col1 = this.state.squares[i + 0];
+      const col2 = this.state.squares[i + 1];
+      const col3 = this.state.squares[i + 2];
+      if (col1 === col2 && col2 === col3 && col1 != PLAYER.PENDING.val) {
+        this.setState({ winner: this.getActualPlayer() });
+        return;
+      }
     }
+
+    for (let i = 0; i < 3; i += 1) {
+      const row1 = this.state.squares[i + 0];
+      const row2 = this.state.squares[i + 3];
+      const row3 = this.state.squares[i + 6];
+      if (row1 === row2 && row2 === row3 && row1 != PLAYER.PENDING.val) {
+        this.setState({ winner: this.getActualPlayer() });
+        return;
+      }
+    }
+
+    const topLeft = this.state.squares[0];
+    const topRight = this.state.squares[2];
+    const center = this.state.squares[4];
+    const bottomLeft = this.state.squares[6];
+    const bottomRight = this.state.squares[8];
+
+    if (
+      topLeft === center &&
+      center === bottomRight &&
+      topLeft != PLAYER.PENDING.val
+    ) {
+      this.setState({ winner: this.getActualPlayer() });
+      return;
+    }
+
+    if (
+      topRight === center &&
+      center === bottomLeft &&
+      topRight != PLAYER.PENDING.val
+    ) {
+      this.setState({ winner: this.getActualPlayer() });
+      return;
+    }
+
+    this.setState({ isFull: this.isFull() });
+  };
+
+  isFull = () => {
+    const pendingFound = this.state.squares.find(
+      square => square === PLAYER.PENDING.val
+    );
+    const result = typeof pendingFound === 'undefined';
+    return result;
+  };
+
+  moveHandler = squareIndex => {
+    this.changePlayer().then(player => {
+      this.changeSquareState(squareIndex, player).then(this.verifyResult);
+    });
+  };
+
+  resetGame = () => {
+    this.setState(initialState);
+  };
+
+  isLineBreak = index => {
+    return (index === 2 || index === 5);
   };
 
   render() {
+    const actualPlayer = this.getActualPlayer();
+    const actualPlayerName = PLAYER[actualPlayer].name;
+
+    console.log(this.state);
+
     return (
       <div>
-        {this.state.row1.map((rowItem, index) => {
-          console.log(rowItem);
-          return (
-            <Square flip={() => this.clickHandler(index, 1)} value={rowItem} />
-          );
-        })}
-        <br />
-        {this.state.row2.map((rowItem, index) => (
-          <Square flip={() => this.clickHandler(index, 2)} value={rowItem} />
-        ))}
-        <br />
-        {this.state.row3.map((rowItem, index) => (
-          <Square flip={() => this.clickHandler(index, 3)} value={rowItem} />
+        {this.state.squares.map((square, index) => (
+          <span>
+            <Square
+              key={index}
+              onMove={() => this.moveHandler(index)}
+              owner={this.state.squares[index]}
+              disabled={this.state.winner !== null}
+            />
+            {this.isLineBreak(index) && <br />}
+          </span>
         ))}
 
-        <div>
-          Who is playing now?
-          <br />
-          Now is the turn of
-          <strong>{this.state.toggle === false ? ' Jacob' : ' David'}</strong>
-        </div>
+        {!this.state.winner &&
+          !this.state.isFull && (
+            <div>
+              Now is the turn of
+              <strong>
+                <PlayerInfo player={actualPlayer} />
+              </strong>
+            </div>
+          )}
+
+        {this.state.winner && (
+          <div>
+            The winner is{' '}
+            <strong>
+              <PlayerInfo player={this.state.winner} />{' '}
+            </strong>{' '}
+          </div>
+        )}
+
+        {!this.state.winner && this.state.isFull && <div>Nobody wins!</div>}
+
+        {(this.state.winner || this.state.isFull) && (
+          <button onClick={this.resetGame}>Play again</button>
+        )}
       </div>
     );
   }
