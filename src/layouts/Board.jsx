@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Square from './Square.jsx';
+import Square from './Square';
+import { MOVE } from '../config';
 
-const Board = ({ squares, moveHandler, isGameOver }) => {
-  const isLineBreak = index => {
-    return index === 2 || index === 5;
-  };
+const Board = ({ moves, moveHandler, isGameOver }) => {
+  const isLineBreak = index => index === 2 || index === 5;
 
+  /* eslint-disable react/no-array-index-key */
   return (
     <div>
-      {squares.map((square, index) => (
+      {moves.map((square, index) => (
         <span key={index}>
           <Square
             onMove={() => moveHandler(index)}
-            owner={squares[index]}
+            owner={square}
             isGameOver={isGameOver}
           />
           {isLineBreak(index) && <br />}
@@ -21,12 +21,15 @@ const Board = ({ squares, moveHandler, isGameOver }) => {
       ))}
     </div>
   );
+  /* eslint-enable */
 };
 
 Board.propTypes = {
-  squares: PropTypes.array.isRequired,
+  moves: PropTypes.arrayOf(
+    PropTypes.oneOf([MOVE.PENDING.val, MOVE.PLAYER_1.val, MOVE.PLAYER_2.val])
+  ).isRequired,
   moveHandler: PropTypes.func.isRequired,
-  isGameOver: PropTypes.bool.isRequired,
+  isGameOver: PropTypes.bool.isRequired
 };
 
 export default Board;

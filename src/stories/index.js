@@ -2,16 +2,8 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
-import {
-  withKnobs,
-  text,
-  boolean,
-  number,
-  select
-} from '@storybook/addon-knobs';
+import { withKnobs, boolean, select } from '@storybook/addon-knobs';
 
-import { Button, Welcome } from '@storybook/react/demo';
 import Square from '../layouts/Square';
 import { MOVE } from '../config';
 import Board from '../layouts/Board';
@@ -19,9 +11,9 @@ import PlayAgainButton from '../layouts/PlayAgainButton';
 import WhoIsNextInfo from '../layouts/WhoIsNextInfo';
 import WinnerInfo from '../layouts/WinnerInfo';
 import PlayerInfo from '../layouts/PlayerInfo';
-import TicTacToe from '../TicTacToe';
+import Game from '../layouts/Game';
 
-storiesOf('Full game', module).add('Play it here', () => <TicTacToe />);
+storiesOf('Full game', module).add('Play it here', () => <Game />);
 
 const owners = (defaultPlayer = MOVE.PLAYER_1.val) =>
   select(
@@ -68,7 +60,7 @@ storiesOf('Square', module)
     )
   );
 
-const squaresPending = [
+const movesAllPending = [
   MOVE.PENDING.val,
   MOVE.PENDING.val,
   MOVE.PENDING.val,
@@ -80,7 +72,7 @@ const squaresPending = [
   MOVE.PENDING.val
 ];
 
-const squaresWithWinner = [
+const movesWithWinner = [
   MOVE.PLAYER_1.val,
   MOVE.PLAYER_1.val,
   MOVE.PLAYER_1.val,
@@ -96,14 +88,14 @@ storiesOf('Board', module)
   .addDecorator(withKnobs)
   .add('board without winner', () => (
     <Board
-      squares={squaresPending}
+      moves={movesAllPending}
       onMove={action('clicked')}
       isGameOver={boolean('Game over', false)}
     />
   ))
   .add('board with a winner', () => (
     <Board
-      squares={squaresWithWinner}
+      moves={movesWithWinner}
       onMove={action('clicked')}
       isGameOver={boolean('Game over', true)}
     />

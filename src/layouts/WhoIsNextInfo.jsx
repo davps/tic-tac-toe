@@ -1,21 +1,23 @@
 import React from 'react';
-import PlayerInfo from './PlayerInfo.jsx';
+import PropTypes from 'prop-types';
+import PlayerInfo from './PlayerInfo';
 
-const WhoIsNextInfo = ({ player, isGameOver}) => (
+const WhoIsNextInfo = ({ player, isGameOver }) => (
   <div>
     {!isGameOver && (
-        <span>
-          Now is the turn of
-          <strong>
-            <PlayerInfo player={player} />
-          </strong>
-        </span>
-      )}
+      <span>
+        Now is the turn of
+        <strong>
+          <PlayerInfo player={player} />
+        </strong>
+      </span>
+    )}
   </div>
 );
 
 WhoIsNextInfo.propTypes = {
-  player: PlayerInfo.propTypes.player,
+  player: PlayerInfo.propTypes.player, // eslint-disable-line react/require-default-props
+  isGameOver: PropTypes.bool.isRequired
 };
 
 export default WhoIsNextInfo;
