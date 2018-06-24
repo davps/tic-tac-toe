@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PlayerInfo_snapshot 1`] = `
+exports[`PlayerInfo_snapshot1 1`] = `
 <span>
    Jacob (X) 
+</span>
+`;
+
+exports[`PlayerInfo_snapshot2 1`] = `
+<span>
+   David (O) 
 </span>
 `;

@@ -46,10 +46,10 @@ const Logic = {
   },
 
   updateMoves: (moves, moveIdx, player) => {
-    if (typeof moveIdx !== 'number' && moveIdx < 0 && moveIdx > 8) {
+    if (typeof moveIdx !== 'number' || moveIdx < 0 || moveIdx > 8) {
       throw new Error(`Invalid param moveIdx: ${moveIdx}`);
     }
-    if (player !== MOVE.PLAYER_1.val && player !== MOVE.PLAYER_2.val) {
+    if (![MOVE.PLAYER_1.val, MOVE.PLAYER_2.val].includes(player)) {
       throw new Error(`Invalid player value: ${player}`);
     }
     const updatedMoves = [...moves];

@@ -1,0 +1,322 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Board Game is not over yet 1`] = `
+<div>
+  <span>
+    <button
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    />
+  </span>
+  <span>
+    <button
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    />
+  </span>
+  <span>
+    <button
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    />
+    <br />
+  </span>
+  <span>
+    <button
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    />
+  </span>
+  <span>
+    <button
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    />
+  </span>
+  <span>
+    <button
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    />
+    <br />
+  </span>
+  <span>
+    <button
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    />
+  </span>
+  <span>
+    <button
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    />
+  </span>
+  <span>
+    <button
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    />
+  </span>
+</div>
+`;
+
+exports[`Storyshots Board Game over! 1`] = `
+<div>
+  <span>
+    <span>
+      X
+    </span>
+  </span>
+  <span>
+    <span>
+      X
+    </span>
+  </span>
+  <span>
+    <span>
+      X
+    </span>
+    <br />
+  </span>
+  <span>
+    <button
+      disabled={true}
+      onClick={[Function]}
+      type="button"
+    />
+  </span>
+  <span>
+    <button
+      disabled={true}
+      onClick={[Function]}
+      type="button"
+    />
+  </span>
+  <span>
+    <button
+      disabled={true}
+      onClick={[Function]}
+      type="button"
+    />
+    <br />
+  </span>
+  <span>
+    <button
+      disabled={true}
+      onClick={[Function]}
+      type="button"
+    />
+  </span>
+  <span>
+    <button
+      disabled={true}
+      onClick={[Function]}
+      type="button"
+    />
+  </span>
+  <span>
+    <button
+      disabled={true}
+      onClick={[Function]}
+      type="button"
+    />
+  </span>
+</div>
+`;
+
+exports[`Storyshots Full game Play it here 1`] = `
+<div>
+  <h1>
+    Tic tac toe
+  </h1>
+  <br />
+  <span>
+     Jacob (X) 
+  </span>
+  <br />
+  <span>
+     David (O) 
+  </span>
+  <div>
+    <span>
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <span>
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <span>
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+      <br />
+    </span>
+    <span>
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <span>
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <span>
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+      <br />
+    </span>
+    <span>
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <span>
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <span>
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+  </div>
+  <div>
+    <span>
+      Now is the turn of
+      <strong>
+        <span>
+           Jacob (X) 
+        </span>
+      </strong>
+    </span>
+  </div>
+  <span />
+  <span />
+</div>
+`;
+
+exports[`Storyshots PlayAgainButton Game is not over yet (so this component should be hidden)  1`] = `<span />`;
+
+exports[`Storyshots PlayAgainButton Game over! 1`] = `
+<span>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    Play again
+  </button>
+</span>
+`;
+
+exports[`Storyshots PlayerInfo PlayerInfo of  val=PLAYER_1 label=X name=Jacob 1`] = `
+<span>
+   Jacob (X) 
+</span>
+`;
+
+exports[`Storyshots PlayerInfo PlayerInfo of  val=PLAYER_2 label=O name=David 1`] = `
+<span>
+   David (O) 
+</span>
+`;
+
+exports[`Storyshots Square Pending to use (displayed as a button) 1`] = `
+<button
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+/>
+`;
+
+exports[`Storyshots Square Pending to use but game is over 1`] = `
+<button
+  disabled={true}
+  onClick={[Function]}
+  type="button"
+/>
+`;
+
+exports[`Storyshots Square used by PLAYER_1  (X ) 1`] = `
+<span>
+  X
+</span>
+`;
+
+exports[`Storyshots Square used by PLAYER_2  (O ) 1`] = `
+<span>
+  O
+</span>
+`;
+
+exports[`Storyshots WhoIsNextInfo Game is not over and the next player is PLAYER_1  1`] = `
+<div>
+  <span>
+    Now is the turn of
+    <strong>
+      <span>
+         Jacob (X) 
+      </span>
+    </strong>
+  </span>
+</div>
+`;
+
+exports[`Storyshots WhoIsNextInfo Game over! (so this component should be hidden) 1`] = `<div />`;
+
+exports[`Storyshots WinnerInfo Game is NOT over yet (so this component should be hidden) 1`] = `<span />`;
+
+exports[`Storyshots WinnerInfo Game over! But without a winner, the board is full 1`] = `
+<span>
+  <div>
+    Nobody wins!
+  </div>
+</span>
+`;
+
+exports[`Storyshots WinnerInfo Game over! PLAYER_1 wins.  1`] = `
+<span>
+  <div>
+    The winner
+     
+    <strong>
+      <span>
+         Jacob (X) 
+      </span>
+    </strong>
+  </div>
+</span>
+`;

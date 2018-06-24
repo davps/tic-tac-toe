@@ -59,7 +59,7 @@ class Game extends Component {
 
         <Board
           moves={moves}
-          moveHandler={this.moveHandler}
+          onMove={this.moveHandler}
           isGameOver={isGameOver}
         />
 

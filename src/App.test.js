@@ -72,6 +72,20 @@ it('the game has a winner', () => {
   ];
 
   expect(Logic.getWinner(moves3)).toBe(MOVE.PLAYER_2.val);
+
+  const moves4 = [
+    MOVE.PLAYER_1.val,
+    MOVE.PENDING.val,
+    MOVE.PENDING.val,
+    MOVE.PENDING.val,
+    MOVE.PLAYER_1.val,
+    MOVE.PENDING.val,
+    MOVE.PENDING.val,
+    MOVE.PENDING.val,
+    MOVE.PLAYER_1.val
+  ];
+
+  expect(Logic.getWinner(moves4)).toBe(MOVE.PLAYER_1.val);
 });
 
 it('the game has no winner', () => {
@@ -114,4 +128,22 @@ it('set a move on the board', () => {
     MOVE.PENDING.val
   ];
   expect(Logic.updateMoves(moves, 0, MOVE.PLAYER_1.val)).toEqual(updatedMoves);
+});
+
+it('updateMoves with invalid arguments', () => {
+  const moves = [];
+  const moveIdx = 10;
+  const player = MOVE.PLAYER_1.val;
+
+  expect(() => {
+    Logic.updateMoves(moves, moveIdx, player);
+  }).toThrow();
+
+  expect(() => {
+    Logic.updateMoves(moves, -moveIdx, player);
+  }).toThrow();
+
+  expect(() => {
+    Logic.updateMoves(moves, 0, null);
+  }).toThrow();
 });

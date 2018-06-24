@@ -83,14 +83,14 @@ const movesWithWinner = [
 
 storiesOf('Board', module)
   .addDecorator(withKnobs)
-  .add('board without winner', () => (
+  .add('Game is not over yet', () => (
     <Board
       moves={movesAllPending}
       onMove={action('clicked')}
       isGameOver={boolean('Game over', false)}
     />
   ))
-  .add('board with a winner', () => (
+  .add('Game over!', () => (
     <Board
       moves={movesWithWinner}
       onMove={action('clicked')}
@@ -114,13 +114,13 @@ storiesOf('PlayerInfo', module)
 
 storiesOf('PlayAgainButton', module)
   .addDecorator(withKnobs)
-  .add('game is over', () => (
+  .add('Game over!', () => (
     <PlayAgainButton
       isGameOver={boolean('Game over', true)}
       resetGame={action('clicked')}
     />
   ))
-  .add('game is not over yet (component should be hidden) ', () => (
+  .add('Game is not over yet (so this component should be hidden) ', () => (
     <PlayAgainButton
       isGameOver={boolean('Game over', false)}
       resetGame={action('clicked')}
@@ -129,16 +129,13 @@ storiesOf('PlayAgainButton', module)
 
 storiesOf('WhoIsNextInfo', module)
   .addDecorator(withKnobs)
-  .add(
-    `${MOVE.PLAYER_1.val}  is the next player and game did not finish yet`,
-    () => (
-      <WhoIsNextInfo
-        player={MOVE.PLAYER_1.val}
-        isGameOver={boolean('Game over', false)}
-      />
-    )
-  )
-  .add('Game finished (so this component should be hidden)', () => (
+  .add(`Game is not over and the next player is ${MOVE.PLAYER_1.val} `, () => (
+    <WhoIsNextInfo
+      player={MOVE.PLAYER_1.val}
+      isGameOver={boolean('Game over', false)}
+    />
+  ))
+  .add('Game over! (so this component should be hidden)', () => (
     <WhoIsNextInfo
       player={MOVE.PLAYER_1.val}
       isGameOver={boolean('Game over', true)}
@@ -146,19 +143,16 @@ storiesOf('WhoIsNextInfo', module)
   ));
 
 storiesOf('WinnerInfo', module)
-  .add(`${MOVE.PLAYER_1.val} wins. `, () => (
+  .add(`Game over! ${MOVE.PLAYER_1.val} wins. `, () => (
     <WinnerInfo isBoardFull={false} player={MOVE.PLAYER_1.val} />
   ))
-  .add(
-    'We do not have a winner yet (so this component should be hidden)',
-    () => (
-      <WinnerInfo
-        hasWinner={false}
-        isBoardFull={false}
-        player={MOVE.PLAYER_1.val}
-      />
-    )
-  )
-  .add('We do not have a winner yet and the board is full', () => (
+  .add('Game is NOT over yet (so this component should be hidden)', () => (
+    <WinnerInfo
+      hasWinner={false}
+      isBoardFull={false}
+      player={MOVE.PLAYER_1.val}
+    />
+  ))
+  .add('Game over! But without a winner, the board is full', () => (
     <WinnerInfo hasWinner={false} player={MOVE.PLAYER_1.val} />
   ));

@@ -21,12 +21,14 @@ const WinnerInfo = ({ hasWinner, isBoardFull, player }) => (
 /* eslint-enable */
 
 WinnerInfo.propTypes = {
-  hasWinner: PropTypes.bool.isRequired,
+  hasWinner: PropTypes.bool,
   player: PropTypes.oneOf([MOVE.PLAYER_1.val, MOVE.PLAYER_2.val]),
-  isBoardFull: PropTypes.bool.isRequired
+  isBoardFull: PropTypes.bool
 };
 
 WinnerInfo.defaultProps = {
+  hasWinner: true,
+  isBoardFull: true,
   player: null
 };
 
