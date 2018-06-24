@@ -31,20 +31,18 @@ class Game extends Component {
     const { moves, xIsNext } = this.state;
     const player = this.getNextPlayer();
     const updatedMoves = Logic.updateMoves(moves, moveIdx, player);
-    const updatedXIsNext = Logic.togglePlayer(xIsNext);
     const isFull = Logic.isFull(updatedMoves);
-    const winner = Logic.hasWinner(updatedMoves, player);
+    const winner = Logic.getWinner(updatedMoves);
 
     this.setState({
       moves: updatedMoves,
-      xIsNext: updatedXIsNext,
+      xIsNext: !xIsNext,
       winner,
       isFull
     });
   }
 
   render() {
-    // console.log(this.state);
     const { winner, isFull, moves } = this.state;
     const hasWinner = winner !== null;
     const isGameOver = hasWinner || isFull;

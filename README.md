@@ -2,14 +2,14 @@
 
 ## Live demo of Tic-tac-toe
 
-[View the live demo and the individual components on the storybook](https://davps.github.io/tic-tac-toe)
+[View the live demo of tic-tac-toe and the individual components on the storybook](https://davps.github.io/tic-tac-toe)
 
 ## Tech stack
 
--React (create-react-app)
--Storybook of [my UI components](https://davps.github.io/tic-tac-toe), deployed to Github Pages as part of the CI service
--Prettier + ESLint setup with Airbnb's style guide + its VSCode plugins
--Travis CI
+- React (create-react-app)
+- Storybook of [my UI components](https://davps.github.io/tic-tac-toe), deployed to Github Pages as part of the CI service
+- Prettier + ESLint setup with Airbnb's style guide + its VSCode plugins
+- Travis CI
 
 ## Relevant history:
 
