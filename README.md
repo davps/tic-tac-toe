@@ -8,9 +8,9 @@ I am developing this Tic tac toe game to showcase my skillsets.
 
 ## Tech stack
 
-- React (create-react-app, which includes a webpack build and other tools)
+- Create-react-app, which includes: React, JSX, ES6, Webpack, Babel and other amazing projects.
 - Prettier Code Formatter + ESLint setup with Airbnb's style guide + VSCode integration
-- Jest, for tests
+- Jest + Enzyme for tests, including `@storybook/addon-storyshots` to snapshot test my Storybook
 - Storybook of [my UI components](https://davps.github.io/tic-tac-toe)
 - Travis CI to build the production bundles, run the tests, creating and publishing [the test coverage report](https://coveralls.io/github/davps/tic-tac-toe) and the [UI documentation as a Storybook](https://davps.github.io/tic-tac-toe) on Github Pages.
 
