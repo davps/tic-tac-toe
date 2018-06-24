@@ -1,5 +1,5 @@
-import { MOVE } from './config';
-import Logic from './layouts/Logic';
+import { MOVE } from '../config';
+import Logic from './Logic';
 
 it('the board is full', () => {
   const moves = [

@@ -1,18 +1,18 @@
-# Showcase of my development workflow [![Build Status](https://travis-ci.org/davps/tic-tac-toe.svg?branch=master)](https://travis-ci.org/davps/tic-tac-toe) [![Coverage Status](https://coveralls.io/repos/github/davps/tic-tac-toe/badge.svg)](https://coveralls.io/github/davps/tic-tac-toe)
+# Showcase of my development workflow [![Build Status](https://travis-ci.org/davps/tic-tac-toe.svg?branch=master)](https://travis-ci.org/davps/tic-tac-toe) [![Coverage Status](https://coveralls.io/repos/github/davps/tic-tac-toe/badge.svg?branch=master)](https://coveralls.io/github/davps/tic-tac-toe?branch=master)
 
 I am developing this Tic tac toe game to showcase my skillsets.
 
-## Live demo of Tic-tac-toe
+## Live demo
 
-[View the live demo of tic-tac-toe and the individual components on the storybook](https://davps.github.io/tic-tac-toe)
+[View the live demo](https://davps.github.io/tic-tac-toe) of tic-tac-toe and the individual components on my Storybook
 
 ## Tech stack
 
 - React (create-react-app, which includes a webpack build and other tools)
 - Prettier Code Formatter + ESLint setup with Airbnb's style guide + VSCode integration
-- Travis CI
-- Storybook of [my UI components](https://davps.github.io/tic-tac-toe), deployed to Github Pages as part of the CI service
-- Jest, for unit tests
+- Jest, for tests
+- Storybook of [my UI components](https://davps.github.io/tic-tac-toe)
+- Travis CI to build the production bundles, run the tests, creating and publishing [the test coverage report](https://coveralls.io/github/davps/tic-tac-toe) and the [UI documentation as a Storybook](https://davps.github.io/tic-tac-toe) on Github Pages.
 
 ## Best practices
 
