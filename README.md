@@ -1,4 +1,6 @@
-# Showcase of my development workflow - Tic tac toe as example [![Build Status](https://travis-ci.org/davps/tic-tac-toe.svg?branch=master)](https://travis-ci.org/davps/tic-tac-toe)
+# Showcase of my development workflow [![Build Status](https://travis-ci.org/davps/tic-tac-toe.svg?branch=master)](https://travis-ci.org/davps/tic-tac-toe) [![Coverage Status](https://coveralls.io/repos/github/davps/tic-tac-toe/badge.svg)](https://coveralls.io/github/davps/tic-tac-toe)
+
+I am developing this Tic tac toe game to showcase my skillsets.
 
 ## Live demo of Tic-tac-toe
 
@@ -6,10 +8,22 @@
 
 ## Tech stack
 
-- React (create-react-app)
-- Storybook of [my UI components](https://davps.github.io/tic-tac-toe), deployed to Github Pages as part of the CI service
-- Prettier + ESLint setup with Airbnb's style guide + its VSCode plugins
+- React (create-react-app, which includes a webpack build and other tools)
+- Prettier Code Formatter + ESLint setup with Airbnb's style guide + VSCode integration
 - Travis CI
+- Storybook of [my UI components](https://davps.github.io/tic-tac-toe), deployed to Github Pages as part of the CI service
+- Jest, for unit tests
+
+## Best practices
+
+- Application of the DRY principle everywhere, including:
+  - having a single “source of truth” on the shared react states,
+  - using a single enumeration object to render the same information on two different components
+- Usage of a linter and code formatting.
+- Regression tests.
+- Atomic design and Component Driven Development for the UI. Each UI component does only one thing and one thing well and are tested in isolation then later in conjunction and build their documentations as I write the code using Storybook.
+- Test Driven Development for the business logic.
+- Good separation of concerns between the views (React components) and their state management (Redux) - WIP.
 
 ## Relevant history:
 
@@ -21,5 +35,3 @@
 
 - Applying optimizations for React:
   Fixed the unnecesary render() calls by calling `setState` only once on [this function](https://github.com/davps/tic-tac-toe/commit/7372b0c2bad344e92bce18d64bde4276a3ee8128#diff-84599220e354fbfa3b9310dec52ed9bcL270).
-
-s
