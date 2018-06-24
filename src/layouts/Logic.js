@@ -45,7 +45,7 @@ const Logic = {
     return typeof exists === 'undefined';
   },
 
-  updatedMoves: (moves, moveIdx, player) => {
+  updateMoves: (moves, moveIdx, player) => {
     if (typeof moveIdx !== 'number' && moveIdx < 0 && moveIdx > 8) {
       throw new Error(`Invalid param moveIdx: ${moveIdx}`);
     }

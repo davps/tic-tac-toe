@@ -1,10 +1,6 @@
 import { MOVE } from './config';
 import Logic from './layouts/Logic';
 
-it('test', () => {
-  expect(true).toBe(true);
-});
-
 it('the board is full', () => {
   const moves = [
     MOVE.PLAYER_1.val,
@@ -117,5 +113,5 @@ it('set a move on the board', () => {
     MOVE.PENDING.val,
     MOVE.PENDING.val
   ];
-  expect(Logic.updatedMoves(moves, 0, MOVE.PLAYER_1.val)).toEqual(updatedMoves);
+  expect(Logic.updateMoves(moves, 0, MOVE.PLAYER_1.val)).toEqual(updatedMoves);
 });
