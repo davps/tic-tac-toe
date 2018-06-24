@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Square from './Square.jsx';
 
-const Board = ({ squares, moveHandler, hasWinner }) => {
+const Board = ({ squares, moveHandler, isGameOver }) => {
   const isLineBreak = index => {
     return index === 2 || index === 5;
   };
@@ -14,7 +14,7 @@ const Board = ({ squares, moveHandler, hasWinner }) => {
           <Square
             onMove={() => moveHandler(index)}
             owner={squares[index]}
-            disabled={hasWinner}
+            isGameOver={isGameOver}
           />
           {isLineBreak(index) && <br />}
         </span>
@@ -26,7 +26,7 @@ const Board = ({ squares, moveHandler, hasWinner }) => {
 Board.propTypes = {
   squares: PropTypes.array.isRequired,
   moveHandler: PropTypes.func.isRequired,
-  hasWinner: PropTypes.bool
+  isGameOver: PropTypes.bool.isRequired,
 };
 
 export default Board;

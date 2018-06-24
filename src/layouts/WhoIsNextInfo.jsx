@@ -1,11 +1,9 @@
 import React from 'react';
 import PlayerInfo from './PlayerInfo.jsx';
-import WinnerInfo from './WinnerInfo.jsx';
 
-const WhoIsNextInfo = ({ player, hasWinner, isBoardFull }) => (
+const WhoIsNextInfo = ({ player, isGameOver}) => (
   <div>
-    {!hasWinner &&
-      !isBoardFull && (
+    {!isGameOver && (
         <span>
           Now is the turn of
           <strong>
@@ -18,8 +16,6 @@ const WhoIsNextInfo = ({ player, hasWinner, isBoardFull }) => (
 
 WhoIsNextInfo.propTypes = {
   player: PlayerInfo.propTypes.player,
-  hasWinner: WinnerInfo.propTypes.hasWinner,
-  isBoardFull: WinnerInfo.propTypes.isBoardFull
 };
 
 export default WhoIsNextInfo;

@@ -128,7 +128,10 @@ class TicTacToe extends Component {
   };
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
+    const hasWinner = this.state.winner !== null;
+    const isBoardFull = this.state.isFull;
+    const isGameOver = hasWinner || isBoardFull;
 
     return (
       <div>
@@ -144,13 +147,12 @@ class TicTacToe extends Component {
         <Board
           squares={this.state.squares}
           moveHandler={this.moveHandler}
-          hasWinner={this.state.winner !== null}
+          isGameOver={isGameOver}
         />
 
         <WhoIsNextInfo
           player={this.getNextPlayer()}
-          hasWinner={this.state.winner !== null}
-          isBoardFull={this.state.isFull}
+          isGameOver={isGameOver}
         />
 
         <WinnerInfo
@@ -160,8 +162,7 @@ class TicTacToe extends Component {
         />
 
         <PlayAgainButton
-          hasWinner={this.state.winner !== null}
-          isBoardFull={this.state.isFull}
+          isGameOver={isGameOver}
           resetGame={this.resetGameHandler}
         />
       </div>

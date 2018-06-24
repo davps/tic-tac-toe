@@ -1,18 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import WinnerInfo from './WinnerInfo.jsx';
 
-const PlayAgainButton = ({ hasWinner, isBoardFull, resetGame }) => (
+const PlayAgainButton = ({ isGameOver, resetGame }) => (
   <span>
-    {(hasWinner || isBoardFull) && (
+    {isGameOver && (
       <button onClick={resetGame}>Play again</button>
     )}
   </span>
 );
 
 PlayAgainButton.propTypes = {
-  hasWinner: WinnerInfo.propTypes.hasWinner,
-  isBoardFull: WinnerInfo.propTypes.isBoardFull,
+  isGameOver: PropTypes.bool.isRequired,
   resetGame: PropTypes.func.isRequired
 };
 
