@@ -1,7 +1,11 @@
 {
-    "extends": ["airbnb", "prettier"],
-    "env": {
-        "jest": true,
-        "node": true
-    }
+  "extends": "react-app",
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error"
+  },
+  "env": {
+    "jest": true,
+    "node": true
+  }
 }
