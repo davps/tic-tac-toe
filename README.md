@@ -1,6 +1,10 @@
-# Showcase of my development workflow [![Build Status](https://travis-ci.org/davps/tic-tac-toe.png?branch=master)](https://travis-ci.org/davps/tic-tac-toe) [![Coverage Status](https://coveralls.io/repos/github/davps/tic-tac-toe/badge.png?branch=master)](https://coveralls.io/github/davps/tic-tac-toe?branch=master)
+# Showcase of my development workflow
 
 I am developing this Tic tac toe game to showcase my skillsets.
+
+| ------------- | ------------- |
+| CI service | [![Build Status](https://travis-ci.org/davps/tic-tac-toe.png?branch=master)](https://travis-ci.org/davps/tic-tac-toe) |
+| Tests | [![Coverage Status](https://coveralls.io/repos/github/davps/tic-tac-toe/badge.png?branch=master)](https://coveralls.io/github/davps/tic-tac-toe?branch=master) |
 
 ## Live demo
 
@@ -17,14 +21,11 @@ I am developing this Tic tac toe game to showcase my skillsets.
 ## Best practices
 
 - Super-high test coverage, including unit tests, integration tests and soon end to end tests too.
-- Application of the DRY principle everywhere, including:
-  - having a single “source of truth” on the shared react states,
-  - using a single enumeration object to render the same information on two different components
+- Application of the DRY principle.
 - Usage of a linter and code formatting.
-- Regression tests.
 - Atomic design and Component Driven Development for the UI. Each UI component does only one thing and one thing well and are tested in isolation then later in conjunction and build their documentations as I write the code using Storybook.
 - Test Driven Development for the business logic.
-- Good separation of concerns between the views (React components) and their state management (Redux) - WIP.
+- Good separation of concerns between the views (React components) and their state management (Redux).
 
 ## Relevant history
 
@@ -36,3 +37,6 @@ I am developing this Tic tac toe game to showcase my skillsets.
 
 - Applying optimizations for React:
   Fixed the unnecesary render() calls by calling `setState` only once on [this function](https://github.com/davps/tic-tac-toe/commit/7372b0c2bad344e92bce18d64bde4276a3ee8128#diff-84599220e354fbfa3b9310dec52ed9bcL270).
+
+- State management with redux is ready:
+  https://github.com/davps/tic-tac-toe/commit/41fc3ea8634e690868e10f0063d6b5d0455e64d8
