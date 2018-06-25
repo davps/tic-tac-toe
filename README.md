@@ -1,4 +1,4 @@
-# Showcase of my development workflow [![Build Status](https://travis-ci.org/davps/tic-tac-toe.svg?branch=master)](https://travis-ci.org/davps/tic-tac-toe) [![Coverage Status](https://coveralls.io/repos/github/davps/tic-tac-toe/badge.svg?branch=master)](https://coveralls.io/github/davps/tic-tac-toe?branch=master)
+# Showcase of my development workflow [![Build Status](https://travis-ci.org/davps/tic-tac-toe.svg?branch=master)](https://travis-ci.org/davps/tic-tac-toe) [![Coverage Status](https://coveralls.io/repos/github/davps/tic-tac-toe/badge.png?branch=master)](https://coveralls.io/github/davps/tic-tac-toe?branch=master)
 
 I am developing this Tic tac toe game to showcase my skillsets.
 
