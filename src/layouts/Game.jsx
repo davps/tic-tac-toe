@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import initialState from './initialState';
+import React from 'react';
+import PropTypes from 'prop-types';
 import WinnerInfo from './WinnerInfo';
 import Board from './Board';
 import Logic from './Logic';
@@ -8,62 +8,50 @@ import { MOVE } from '../config';
 import WhoIsNextInfo from './WhoIsNextInfo';
 import PlayAgainButton from './PlayAgainButton';
 import PlayerInfo from './PlayerInfo';
+import initialState from './initialState';
 
-class Game extends Component {
-  constructor(props) {
-    super(props);
-    this.state = initialState;
-    this.resetGameHandler = this.resetGameHandler.bind(this);
-    this.moveHandler = this.moveHandler.bind(this);
-  }
+const Game = ({ xIsNext, winner, isFull, moves, placeMove, resetGame }) => {
+  const hasWinner = winner !== null;
+  const isGameOver = hasWinner || isFull;
+  const nextPlayer = Logic.getNextPlayer(xIsNext);
 
-  resetGameHandler() {
-    this.setState(initialState);
-  }
+  /* eslint-disable react/jsx-one-expression-per-line */
+  return (
+    <div>
+      <h1>Tic tac toe</h1>
 
-  moveHandler(moveIdx) {
-    const { state } = this;
-    this.setState(Logic.makeMove(moveIdx, state));
-  }
+      <br />
+      <PlayerInfo player={MOVE.PLAYER_1.val} />
+      <br />
+      <PlayerInfo player={MOVE.PLAYER_2.val} />
 
-  render() {
-    const { winner, isFull, moves, xIsNext } = this.state;
-    const hasWinner = winner !== null;
-    const isGameOver = hasWinner || isFull;
-    const nextPlayer = Logic.getNextPlayer(xIsNext);
+      <Board moves={moves} onMove={placeMove} isGameOver={isGameOver} />
 
-    /* eslint-disable react/jsx-one-expression-per-line */
-    return (
-      <div>
-        <h1>Tic tac toe</h1>
+      <WhoIsNextInfo player={nextPlayer} isGameOver={isGameOver} />
 
-        <br />
-        <PlayerInfo player={MOVE.PLAYER_1.val} />
-        <br />
-        <PlayerInfo player={MOVE.PLAYER_2.val} />
+      <WinnerInfo player={winner} hasWinner={hasWinner} isBoardFull={isFull} />
 
-        <Board
-          moves={moves}
-          onMove={this.moveHandler}
-          isGameOver={isGameOver}
-        />
+      <PlayAgainButton isGameOver={isGameOver} resetGame={resetGame} />
+    </div>
+  );
+  /* eslint-enable */
+};
 
-        <WhoIsNextInfo player={nextPlayer} isGameOver={isGameOver} />
+Game.propTypes = {
+  xIsNext: PropTypes.bool,
+  winner: PropTypes.string,
+  isFull: PropTypes.bool,
+  moves: PropTypes.arrayOf(
+    PropTypes.oneOf([MOVE.PENDING.val, MOVE.PLAYER_1.val, MOVE.PLAYER_2.val])
+  ).isRequired,
+  placeMove: PropTypes.func.isRequired,
+  resetGame: PropTypes.func.isRequired
+};
 
-        <WinnerInfo
-          player={winner}
-          hasWinner={hasWinner}
-          isBoardFull={isFull}
-        />
-
-        <PlayAgainButton
-          isGameOver={isGameOver}
-          resetGame={this.resetGameHandler}
-        />
-      </div>
-    );
-    /* eslint-enable */
-  }
-}
+Game.defaultProps = {
+  xIsNext: initialState.xIsNext,
+  isFull: initialState.isFull,
+  winner: initialState.winner
+};
 
 export default Game;

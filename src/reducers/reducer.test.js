@@ -1,4 +1,9 @@
-import { PLACE_MOVE, RESET_GAME } from '../actions/actions';
+import {
+  PLACE_MOVE,
+  RESET_GAME,
+  placeMove,
+  resetGame
+} from '../actions/actions';
 import reducer from './reducer';
 import { MOVE } from '../config';
 
@@ -20,11 +25,11 @@ describe(PLACE_MOVE, () => {
   const bottomRight = 8;
   beforeEach(() => {
     initialState = reducer(undefined, {});
-    stateA = reducer(initialState, { type: PLACE_MOVE, position: topLeft });
-    stateB = reducer(stateA, { type: PLACE_MOVE, position: bottomLeft });
-    stateC = reducer(stateB, { type: PLACE_MOVE, position: topMid });
-    stateD = reducer(stateC, { type: PLACE_MOVE, position: bottomRight });
-    stateE = reducer(stateD, { type: PLACE_MOVE, position: topRight });
+    stateA = reducer(initialState, placeMove(topLeft));
+    stateB = reducer(stateA, placeMove(bottomLeft));
+    stateC = reducer(stateB, placeMove(topMid));
+    stateD = reducer(stateC, placeMove(bottomRight));
+    stateE = reducer(stateD, placeMove(topRight));
   });
   it('initial state', () => {
     expect(initialState).not.toBeNull();
@@ -38,7 +43,7 @@ describe(PLACE_MOVE, () => {
   });
 
   it(RESET_GAME, () => {
-    const state = reducer(stateE, { type: RESET_GAME });
+    const state = reducer(stateE, resetGame());
     expect(state).toEqual(initialState);
   });
 });

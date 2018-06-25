@@ -13,10 +13,9 @@ import PlayAgainButton from '../layouts/PlayAgainButton';
 import WhoIsNextInfo from '../layouts/WhoIsNextInfo';
 import WinnerInfo from '../layouts/WinnerInfo';
 import PlayerInfo from '../layouts/PlayerInfo';
+import GameContainer from '../containers/GameContainer';
+import App from '../App';
 import Game from '../layouts/Game';
-
-// eslint-disable-next-line react/jsx-filename-extension
-storiesOf('Full game', module).add('Play it here', () => <Game />);
 
 const owners = (defaultPlayer = MOVE.PLAYER_1.val) =>
   select(
@@ -25,6 +24,9 @@ const owners = (defaultPlayer = MOVE.PLAYER_1.val) =>
     defaultPlayer,
     'GROUP-ID1'
   );
+
+// eslint-disable-next-line react/jsx-filename-extension
+storiesOf('Full, live game', module).add('Play it here', () => <App />);
 
 storiesOf('Square', module)
   .addDecorator(withKnobs)
@@ -95,6 +97,19 @@ storiesOf('Board', module)
       moves={movesWithWinner}
       onMove={action('clicked')}
       isGameOver={boolean('Game over', true)}
+    />
+  ));
+
+storiesOf('Game', module)
+  .addDecorator(withKnobs)
+  .add('With initialized values', () => (
+    <Game
+      xIsNext={boolean(`${MOVE.PLAYER_1.val} is next`, false)}
+      winner={null}
+      isFull={boolean('Is the board full', false)}
+      moves={movesAllPending}
+      placeMove={action('clicked')}
+      resetGame={action('clicked')}
     />
   ));
 

@@ -134,7 +134,102 @@ exports[`Storyshots Board Game over! 1`] = `
 </div>
 `;
 
-exports[`Storyshots Full game Play it here 1`] = `
+exports[`Storyshots Full, live game Play it here 1`] = `
+<div>
+  <h1>
+    Tic tac toe
+  </h1>
+  <br />
+  <span>
+     Jacob (X) 
+  </span>
+  <br />
+  <span>
+     David (O) 
+  </span>
+  <div>
+    <span>
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <span>
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <span>
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+      <br />
+    </span>
+    <span>
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <span>
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <span>
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+      <br />
+    </span>
+    <span>
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <span>
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <span>
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+  </div>
+  <div>
+    <span>
+      Now is the turn of
+      <strong>
+        <span>
+           Jacob (X) 
+        </span>
+      </strong>
+    </span>
+  </div>
+  <span />
+  <span />
+</div>
+`;
+
+exports[`Storyshots Game With initialized values 1`] = `
 <div>
   <h1>
     Tic tac toe

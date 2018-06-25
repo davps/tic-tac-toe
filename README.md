@@ -1,4 +1,4 @@
-# Showcase of my development workflow [![Build Status](https://travis-ci.org/davps/tic-tac-toe.svg?branch=master)](https://travis-ci.org/davps/tic-tac-toe) [![Coverage Status](https://coveralls.io/repos/github/davps/tic-tac-toe/badge.png?branch=master)](https://coveralls.io/github/davps/tic-tac-toe?branch=master)
+# Showcase of my development workflow [![Build Status](https://travis-ci.org/davps/tic-tac-toe.png?branch=master)](https://travis-ci.org/davps/tic-tac-toe) [![Coverage Status](https://coveralls.io/repos/github/davps/tic-tac-toe/badge.png?branch=master)](https://coveralls.io/github/davps/tic-tac-toe?branch=master)
 
 I am developing this Tic tac toe game to showcase my skillsets.
 
@@ -16,6 +16,7 @@ I am developing this Tic tac toe game to showcase my skillsets.
 
 ## Best practices
 
+- Super-high test coverage, including unit tests, integration tests and soon end to end tests too.
 - Application of the DRY principle everywhere, including:
   - having a single “source of truth” on the shared react states,
   - using a single enumeration object to render the same information on two different components
@@ -25,7 +26,7 @@ I am developing this Tic tac toe game to showcase my skillsets.
 - Test Driven Development for the business logic.
 - Good separation of concerns between the views (React components) and their state management (Redux) - WIP.
 
-## Relevant history:
+## Relevant history
 
 - Original code, this is what I've developed in about 1 hour, not completed but close
   https://github.com/davps/tic-tac-toe/tree/445c98f32a92aa389390323664d45c61c1e680b2

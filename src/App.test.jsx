@@ -1,13 +1,28 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow, mount } from 'enzyme';
 import App from './App';
+import Square from './layouts/Square';
+import PlayAgainButton from './layouts/PlayAgainButton';
 
 /**
- * Smoke test for the App component. This is enough because it acts just as a container.
+ * Smoke test
  * */
 it('renders without crashing', () => {
-  // eslint-disable-next-line no-undef
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  shallow(<App />);
+});
+
+// TODO: write e2e tests based on this
+it('Smoke test', () => {
+  const game = mount(<App />);
+  const squares = game.find(Square);
+  squares.first().simulate('click');
+  squares.at(4).simulate('click');
+  squares.at(1).simulate('click');
+  squares.at(5).simulate('click');
+  squares.at(2).simulate('click');
+
+  game
+    .find(PlayAgainButton)
+    .find('button')
+    .simulate('click');
 });

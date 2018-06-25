@@ -12,6 +12,6 @@ export const placeMove = position => ({
   position
 });
 
-export const resetGame = {
+export const resetGame = () => ({
   type: RESET_GAME
-};
+});

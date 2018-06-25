@@ -105,7 +105,7 @@ it('the game has no winner', () => {
   expect(Logic.getWinner(moves)).toBe(null);
 });
 
-it('set a move on the board', () => {
+it('place a move on the board', () => {
   const moves = [
     MOVE.PENDING.val,
     MOVE.PENDING.val,
