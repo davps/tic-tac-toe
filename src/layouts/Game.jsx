@@ -13,14 +13,8 @@ class Game extends Component {
   constructor(props) {
     super(props);
     this.state = initialState;
-    this.getNextPlayer = this.getNextPlayer.bind(this);
-    this.moveHandler = this.moveHandler.bind(this);
     this.resetGameHandler = this.resetGameHandler.bind(this);
-  }
-
-  getNextPlayer() {
-    const { xIsNext } = this.state;
-    return xIsNext ? MOVE.PLAYER_2.val : MOVE.PLAYER_1.val;
+    this.moveHandler = this.moveHandler.bind(this);
   }
 
   resetGameHandler() {
@@ -28,24 +22,15 @@ class Game extends Component {
   }
 
   moveHandler(moveIdx) {
-    const { moves, xIsNext } = this.state;
-    const player = this.getNextPlayer();
-    const updatedMoves = Logic.updateMoves(moves, moveIdx, player);
-    const isFull = Logic.isFull(updatedMoves);
-    const winner = Logic.getWinner(updatedMoves);
-
-    this.setState({
-      moves: updatedMoves,
-      xIsNext: !xIsNext,
-      winner,
-      isFull
-    });
+    const { state } = this;
+    this.setState(Logic.makeMove(moveIdx, state));
   }
 
   render() {
-    const { winner, isFull, moves } = this.state;
+    const { winner, isFull, moves, xIsNext } = this.state;
     const hasWinner = winner !== null;
     const isGameOver = hasWinner || isFull;
+    const nextPlayer = Logic.getNextPlayer(xIsNext);
 
     /* eslint-disable react/jsx-one-expression-per-line */
     return (
@@ -63,7 +48,7 @@ class Game extends Component {
           isGameOver={isGameOver}
         />
 
-        <WhoIsNextInfo player={this.getNextPlayer()} isGameOver={isGameOver} />
+        <WhoIsNextInfo player={nextPlayer} isGameOver={isGameOver} />
 
         <WinnerInfo
           player={winner}

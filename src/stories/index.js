@@ -6,8 +6,8 @@ import { action } from '@storybook/addon-actions';
 import { withKnobs, boolean, select } from '@storybook/addon-knobs';
 /* eslint-enable */
 
-import Square from '../layouts/Square';
 import { MOVE } from '../config';
+import Square from '../layouts/Square';
 import Board from '../layouts/Board';
 import PlayAgainButton from '../layouts/PlayAgainButton';
 import WhoIsNextInfo from '../layouts/WhoIsNextInfo';

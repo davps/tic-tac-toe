@@ -13,15 +13,15 @@ it('renders without crashing', () => {
 it('Test the Game', () => {
   const game = mount(<Game />);
 
-  const movesAfterFirstClick = [...initialState.moves];
-  movesAfterFirstClick[0] = MOVE.PLAYER_1.val;
+  const newMoves = [...initialState.moves];
+  newMoves[0] = MOVE.PLAYER_1.val;
 
   expect(game.state()).toEqual(initialState);
 
   const squares = game.find(Square);
 
   squares.first().simulate('click'); //x
-  expect(game.state().moves).toEqual(movesAfterFirstClick);
+  expect(game.state().moves).toEqual(newMoves);
 
   squares.at(4).simulate('click'); //o
   squares.at(1).simulate('click'); //x

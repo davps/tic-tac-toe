@@ -1,5 +1,6 @@
 import { MOVE } from '../config';
 
+//
 const Logic = {
   getWinner: moves => {
     for (let i = 0; i < 9; i += 3) {
@@ -55,6 +56,24 @@ const Logic = {
     const updatedMoves = [...moves];
     updatedMoves[moveIdx] = player;
     return updatedMoves;
+  },
+
+  getNextPlayer: xIsNext => (xIsNext ? MOVE.PLAYER_2.val : MOVE.PLAYER_1.val),
+
+  makeMove: (moveIdx, state) => {
+    const { moves, xIsNext } = state;
+    const player = Logic.getNextPlayer();
+    const updatedMoves = Logic.updateMoves(moves, moveIdx, player);
+    const isFull = Logic.isFull(updatedMoves);
+    const winner = Logic.getWinner(updatedMoves);
+
+    return {
+      ...state,
+      moves: updatedMoves,
+      xIsNext: !xIsNext,
+      winner,
+      isFull
+    };
   }
 };
 

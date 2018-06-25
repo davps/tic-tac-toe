@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import Game from './layouts/Game';
 
 /**
  * Smoke test for the App component. This is enough because it acts just as a container.
@@ -12,5 +11,3 @@ it('renders without crashing', () => {
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
-
-it('Game', () => {});
