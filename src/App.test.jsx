@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import App from './App';
-import Square from './layouts/Square';
-import PlayAgainButton from './layouts/PlayAgainButton';
+import Square from './components/Square';
+import PlayAgainButton from './components/PlayAgainButton';
 
 /**
  * Smoke test

@@ -8,7 +8,7 @@ import { MOVE } from '../config';
 import WhoIsNextInfo from './WhoIsNextInfo';
 import PlayAgainButton from './PlayAgainButton';
 import PlayerInfo from './PlayerInfo';
-import initialState from './initialState';
+import initialState from '../store/initialState';
 
 const Game = ({ xIsNext, winner, isFull, moves, placeMove, resetGame }) => {
   const hasWinner = winner !== null;

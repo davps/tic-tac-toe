@@ -5,17 +5,15 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, boolean, select } from '@storybook/addon-knobs';
 /* eslint-enable */
-
 import { MOVE } from '../config';
-import Square from '../layouts/Square';
-import Board from '../layouts/Board';
-import PlayAgainButton from '../layouts/PlayAgainButton';
-import WhoIsNextInfo from '../layouts/WhoIsNextInfo';
-import WinnerInfo from '../layouts/WinnerInfo';
-import PlayerInfo from '../layouts/PlayerInfo';
-import GameContainer from '../containers/GameContainer';
 import App from '../App';
-import Game from '../layouts/Game';
+import Game from '../components/Game';
+import Square from '../components/Square';
+import Board from '../components/Board';
+import PlayAgainButton from '../components/PlayAgainButton';
+import WhoIsNextInfo from '../components/WhoIsNextInfo';
+import WinnerInfo from '../components/WinnerInfo';
+import PlayerInfo from '../components/PlayerInfo';
 
 const owners = (defaultPlayer = MOVE.PLAYER_1.val) =>
   select(
