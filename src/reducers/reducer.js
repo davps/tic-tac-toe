@@ -1,6 +1,6 @@
 import { PLACE_MOVE, RESET_GAME } from '../actions/actions';
 import initialState from '../layouts/initialState';
-import Logic from '../layouts/Logic';
+import Logic from './Logic';
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {

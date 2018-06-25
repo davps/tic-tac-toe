@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import WinnerInfo from './WinnerInfo';
 import Board from './Board';
-import Logic from './Logic';
+import Logic from '../reducers/Logic';
 
 import { MOVE } from '../config';
 import WhoIsNextInfo from './WhoIsNextInfo';
