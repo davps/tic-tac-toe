@@ -4,6 +4,7 @@ exports[`Storyshots Board Game is not over yet 1`] = `
 <div>
   <span>
     <button
+      className="square pending square-0"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -11,6 +12,7 @@ exports[`Storyshots Board Game is not over yet 1`] = `
   </span>
   <span>
     <button
+      className="square pending square-1"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -18,28 +20,7 @@ exports[`Storyshots Board Game is not over yet 1`] = `
   </span>
   <span>
     <button
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    />
-    <br />
-  </span>
-  <span>
-    <button
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    />
-  </span>
-  <span>
-    <button
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    />
-  </span>
-  <span>
-    <button
+      className="square pending square-2"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -48,6 +29,7 @@ exports[`Storyshots Board Game is not over yet 1`] = `
   </span>
   <span>
     <button
+      className="square pending square-3"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -55,6 +37,7 @@ exports[`Storyshots Board Game is not over yet 1`] = `
   </span>
   <span>
     <button
+      className="square pending square-4"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -62,6 +45,32 @@ exports[`Storyshots Board Game is not over yet 1`] = `
   </span>
   <span>
     <button
+      className="square pending square-5"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    />
+    <br />
+  </span>
+  <span>
+    <button
+      className="square pending square-6"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    />
+  </span>
+  <span>
+    <button
+      className="square pending square-7"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    />
+  </span>
+  <span>
+    <button
+      className="square pending square-8"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -73,23 +82,30 @@ exports[`Storyshots Board Game is not over yet 1`] = `
 exports[`Storyshots Board Game over! 1`] = `
 <div>
   <span>
-    <span>
+    <span
+      className="square placed square-0"
+    >
       X
     </span>
   </span>
   <span>
-    <span>
+    <span
+      className="square placed square-1"
+    >
       X
     </span>
   </span>
   <span>
-    <span>
+    <span
+      className="square placed square-2"
+    >
       X
     </span>
     <br />
   </span>
   <span>
     <button
+      className="square pending square-3"
       disabled={true}
       onClick={[Function]}
       type="button"
@@ -97,6 +113,7 @@ exports[`Storyshots Board Game over! 1`] = `
   </span>
   <span>
     <button
+      className="square pending square-4"
       disabled={true}
       onClick={[Function]}
       type="button"
@@ -104,6 +121,7 @@ exports[`Storyshots Board Game over! 1`] = `
   </span>
   <span>
     <button
+      className="square pending square-5"
       disabled={true}
       onClick={[Function]}
       type="button"
@@ -112,6 +130,7 @@ exports[`Storyshots Board Game over! 1`] = `
   </span>
   <span>
     <button
+      className="square pending square-6"
       disabled={true}
       onClick={[Function]}
       type="button"
@@ -119,6 +138,7 @@ exports[`Storyshots Board Game over! 1`] = `
   </span>
   <span>
     <button
+      className="square pending square-7"
       disabled={true}
       onClick={[Function]}
       type="button"
@@ -126,6 +146,7 @@ exports[`Storyshots Board Game over! 1`] = `
   </span>
   <span>
     <button
+      className="square pending square-8"
       disabled={true}
       onClick={[Function]}
       type="button"
@@ -150,6 +171,7 @@ exports[`Storyshots Full, live game Play it here 1`] = `
   <div>
     <span>
       <button
+        className="square pending square-0"
         disabled={false}
         onClick={[Function]}
         type="button"
@@ -157,6 +179,7 @@ exports[`Storyshots Full, live game Play it here 1`] = `
     </span>
     <span>
       <button
+        className="square pending square-1"
         disabled={false}
         onClick={[Function]}
         type="button"
@@ -164,28 +187,7 @@ exports[`Storyshots Full, live game Play it here 1`] = `
     </span>
     <span>
       <button
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      />
-      <br />
-    </span>
-    <span>
-      <button
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      />
-    </span>
-    <span>
-      <button
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      />
-    </span>
-    <span>
-      <button
+        className="square pending square-2"
         disabled={false}
         onClick={[Function]}
         type="button"
@@ -194,6 +196,7 @@ exports[`Storyshots Full, live game Play it here 1`] = `
     </span>
     <span>
       <button
+        className="square pending square-3"
         disabled={false}
         onClick={[Function]}
         type="button"
@@ -201,6 +204,7 @@ exports[`Storyshots Full, live game Play it here 1`] = `
     </span>
     <span>
       <button
+        className="square pending square-4"
         disabled={false}
         onClick={[Function]}
         type="button"
@@ -208,6 +212,32 @@ exports[`Storyshots Full, live game Play it here 1`] = `
     </span>
     <span>
       <button
+        className="square pending square-5"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+      <br />
+    </span>
+    <span>
+      <button
+        className="square pending square-6"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <span>
+      <button
+        className="square pending square-7"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <span>
+      <button
+        className="square pending square-8"
         disabled={false}
         onClick={[Function]}
         type="button"
@@ -245,6 +275,7 @@ exports[`Storyshots Game With initialized values 1`] = `
   <div>
     <span>
       <button
+        className="square pending square-0"
         disabled={false}
         onClick={[Function]}
         type="button"
@@ -252,6 +283,7 @@ exports[`Storyshots Game With initialized values 1`] = `
     </span>
     <span>
       <button
+        className="square pending square-1"
         disabled={false}
         onClick={[Function]}
         type="button"
@@ -259,28 +291,7 @@ exports[`Storyshots Game With initialized values 1`] = `
     </span>
     <span>
       <button
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      />
-      <br />
-    </span>
-    <span>
-      <button
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      />
-    </span>
-    <span>
-      <button
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      />
-    </span>
-    <span>
-      <button
+        className="square pending square-2"
         disabled={false}
         onClick={[Function]}
         type="button"
@@ -289,6 +300,7 @@ exports[`Storyshots Game With initialized values 1`] = `
     </span>
     <span>
       <button
+        className="square pending square-3"
         disabled={false}
         onClick={[Function]}
         type="button"
@@ -296,6 +308,7 @@ exports[`Storyshots Game With initialized values 1`] = `
     </span>
     <span>
       <button
+        className="square pending square-4"
         disabled={false}
         onClick={[Function]}
         type="button"
@@ -303,6 +316,32 @@ exports[`Storyshots Game With initialized values 1`] = `
     </span>
     <span>
       <button
+        className="square pending square-5"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+      <br />
+    </span>
+    <span>
+      <button
+        className="square pending square-6"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <span>
+      <button
+        className="square pending square-7"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <span>
+      <button
+        className="square pending square-8"
         disabled={false}
         onClick={[Function]}
         type="button"
@@ -329,6 +368,7 @@ exports[`Storyshots PlayAgainButton Game is not over yet (so this component shou
 exports[`Storyshots PlayAgainButton Game over! 1`] = `
 <span>
   <button
+    className="play-again"
     onClick={[Function]}
     type="button"
   >
@@ -351,6 +391,7 @@ exports[`Storyshots PlayerInfo PlayerInfo of  val=PLAYER_2 label=O name=David 1`
 
 exports[`Storyshots Square Pending to use (displayed as a button) 1`] = `
 <button
+  className="square pending "
   disabled={false}
   onClick={[Function]}
   type="button"
@@ -359,6 +400,7 @@ exports[`Storyshots Square Pending to use (displayed as a button) 1`] = `
 
 exports[`Storyshots Square Pending to use but game is over 1`] = `
 <button
+  className="square pending "
   disabled={true}
   onClick={[Function]}
   type="button"
@@ -366,13 +408,17 @@ exports[`Storyshots Square Pending to use but game is over 1`] = `
 `;
 
 exports[`Storyshots Square used by PLAYER_1  (X ) 1`] = `
-<span>
+<span
+  className="square placed "
+>
   X
 </span>
 `;
 
 exports[`Storyshots Square used by PLAYER_2  (O ) 1`] = `
-<span>
+<span
+  className="square placed "
+>
   O
 </span>
 `;
@@ -396,7 +442,9 @@ exports[`Storyshots WinnerInfo Game is NOT over yet (so this component should be
 
 exports[`Storyshots WinnerInfo Game over! But without a winner, the board is full 1`] = `
 <span>
-  <div>
+  <div
+    className="has-no-winner"
+  >
     Nobody wins!
   </div>
 </span>
@@ -404,7 +452,9 @@ exports[`Storyshots WinnerInfo Game over! But without a winner, the board is ful
 
 exports[`Storyshots WinnerInfo Game over! PLAYER_1 wins.  1`] = `
 <span>
-  <div>
+  <div
+    className="has-winner"
+  >
     The winner
      
     <strong>

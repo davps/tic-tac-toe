@@ -15,6 +15,7 @@ const Board = ({ moves, onMove, isGameOver }) => {
             onMove={() => onMove(index)}
             owner={square}
             isGameOver={isGameOver}
+            className={`square-${index}`}
           />
           {isLineBreak(index) && <br />}
         </span>

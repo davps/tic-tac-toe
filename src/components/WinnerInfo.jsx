@@ -7,7 +7,7 @@ import { MOVE } from '../config';
 const WinnerInfo = ({ hasWinner, isBoardFull, player }) => (
   <span>
     {hasWinner && (
-      <div>
+      <div className="has-winner">
         The winner{' '}
         <strong>
           <PlayerInfo player={player} />
@@ -15,7 +15,8 @@ const WinnerInfo = ({ hasWinner, isBoardFull, player }) => (
       </div>
     )}
 
-    {!hasWinner && isBoardFull && <div>Nobody wins!</div>}
+    {!hasWinner &&
+      isBoardFull && <div className="has-no-winner">Nobody wins!</div>}
   </span>
 );
 /* eslint-enable */

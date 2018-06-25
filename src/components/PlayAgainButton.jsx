@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const PlayAgainButton = ({ isGameOver, resetGame }) => (
   <span>
     {isGameOver && (
-      <button type="button" onClick={resetGame}>
+      <button className="play-again" type="button" onClick={resetGame}>
         Play again
       </button>
     )}
