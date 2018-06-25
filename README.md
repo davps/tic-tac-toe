@@ -15,13 +15,13 @@ I am developing this Tic tac toe game to showcase my skillsets.
 
 - Create-react-app, which includes: React, JSX, ES6, Webpack, Babel and other amazing projects.
 - Prettier Code Formatter + ESLint setup with Airbnb's style guide + VSCode integration
-- Jest + Enzyme for tests, including `@storybook/addon-storyshots` to snapshot test my Storybook
+- Jest + Enzyme for tests, including `@storybook/addon-storyshots` to snapshot test my Storybook and puppeteer for e2e tests.
 - Storybook of [my UI components](https://davps.github.io/tic-tac-toe)
 - Travis CI to build the production bundles, run the tests, creating and publishing [the test coverage report](https://coveralls.io/github/davps/tic-tac-toe) and the [UI documentation as a Storybook](https://davps.github.io/tic-tac-toe) on Github Pages.
 
 ## Best practices
 
-- Super-high test coverage, including unit tests, integration tests and soon end to end tests too.
+- Super-high test coverage, including unit tests, integration tests and end to end tests.
 - Application of the DRY principle.
 - Usage of a linter and code formatting.
 - Atomic design and Component Driven Development for the UI. Each UI component does only one thing and one thing well and are tested in isolation then later in conjunction and build their documentations as I write the code using Storybook.
