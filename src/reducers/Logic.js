@@ -62,7 +62,7 @@ const Logic = {
 
   makeMove: (moveIdx, state) => {
     const { moves, xIsNext } = state;
-    const player = Logic.getNextPlayer();
+    const player = Logic.getNextPlayer(xIsNext);
     const updatedMoves = Logic.updateMoves(moves, moveIdx, player);
     const isFull = Logic.isFull(updatedMoves);
     const winner = Logic.getWinner(updatedMoves);
