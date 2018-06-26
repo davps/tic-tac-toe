@@ -8,7 +8,7 @@ import { setup, teardownDevServer } from 'jest-dev-server';
 const timeout = 60000;
 const url = 'http://localhost:3006/';
 
-describe('Google', () => {
+describe('e2e tests', () => {
   let page;
   let browser;
   beforeAll(async () => {

@@ -11,18 +11,25 @@ it('renders without crashing', () => {
   shallow(<App />);
 });
 
-// TODO: write e2e tests based on this
 it('Smoke test', () => {
   const game = mount(<App />);
-  const squares = game.find(Square);
-  squares.first().simulate('click');
-  squares.at(4).simulate('click');
-  squares.at(1).simulate('click');
-  squares.at(5).simulate('click');
-  squares.at(2).simulate('click');
+
+  const placeMove = position =>
+    game
+      .find(Square)
+      .at(position)
+      .find('button')
+      .simulate('click');
+
+  placeMove(0);
+  placeMove(4);
+  placeMove(1);
+  placeMove(5);
+  placeMove(2);
 
   game
     .find(PlayAgainButton)
+    .at(0)
     .find('button')
     .simulate('click');
 });

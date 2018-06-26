@@ -4,7 +4,7 @@ import WinnerInfo from './WinnerInfo';
 import Board from './Board';
 import Logic from '../reducers/Logic';
 
-import { MOVE } from '../config';
+import { MOVE } from '../constants';
 import WhoIsNextInfo from './WhoIsNextInfo';
 import PlayAgainButton from './PlayAgainButton';
 import PlayerInfo from './PlayerInfo';

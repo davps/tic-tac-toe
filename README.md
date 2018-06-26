@@ -27,6 +27,7 @@ I am developing this Tic tac toe game to showcase my skillsets.
 - Atomic design and Component Driven Development for the UI. Each UI component does only one thing and one thing well and are tested in isolation then later in conjunction and build their documentations as I write the code using Storybook.
 - Test Driven Development for the business logic.
 - Good separation of concerns between the views (React components) and their state management (Redux).
+- Pixel-perfect CSS on the react components (see how I use styled components on `Board.jsx` and `Square.jsx`.
 
 ## Relevant history
 

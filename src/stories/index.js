@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, boolean, select } from '@storybook/addon-knobs';
 /* eslint-enable */
-import { MOVE } from '../config';
+import { MOVE } from '../constants';
 import App from '../App';
 import Game from '../components/Game';
 import Square from '../components/Square';
@@ -81,6 +81,18 @@ const movesWithWinner = [
   MOVE.PENDING.val
 ];
 
+const movesWithWinner2 = [
+  MOVE.PLAYER_1.val,
+  MOVE.PLAYER_1.val,
+  MOVE.PLAYER_1.val,
+  MOVE.PLAYER_2.val,
+  MOVE.PLAYER_2.val,
+  MOVE.PENDING.val,
+  MOVE.PENDING.val,
+  MOVE.PENDING.val,
+  MOVE.PENDING.val
+];
+
 storiesOf('Board', module)
   .addDecorator(withKnobs)
   .add('Game is not over yet', () => (
@@ -106,6 +118,16 @@ storiesOf('Game', module)
       winner={null}
       isFull={boolean('Is the board full', false)}
       moves={movesAllPending}
+      placeMove={action('clicked')}
+      resetGame={action('clicked')}
+    />
+  ))
+  .add('With full board and winner', () => (
+    <Game
+      xIsNext={boolean(`${MOVE.PLAYER_1.val} is next`, false)}
+      winner={MOVE.PLAYER_1.val}
+      isFull={boolean('Is the board full', true)}
+      moves={movesWithWinner2}
       placeMove={action('clicked')}
       resetGame={action('clicked')}
     />

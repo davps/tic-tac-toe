@@ -1,157 +1,241 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Board Game is not over yet 1`] = `
-<div>
-  <span>
+<div
+  className="sc-htpNat euKIwJ"
+>
+  <div
+    className="sc-bdVaJa cNKYHd"
+  >
     <button
-      className="square pending square-0"
+      className="square pending square-0 sc-bwzfXH bYFqfy"
       disabled={false}
       onClick={[Function]}
       type="button"
     />
-  </span>
-  <span>
+  </div>
+  <div
+    className="sc-bdVaJa gbAgJD"
+  >
     <button
-      className="square pending square-1"
+      className="square pending square-1 sc-bwzfXH bYFqfy"
       disabled={false}
       onClick={[Function]}
       type="button"
     />
-  </span>
-  <span>
+  </div>
+  <div
+    className="sc-bdVaJa cjRrrc"
+  >
     <button
-      className="square pending square-2"
+      className="square pending square-2 sc-bwzfXH bYFqfy"
       disabled={false}
       onClick={[Function]}
       type="button"
     />
-    <br />
-  </span>
-  <span>
+  </div>
+  <div
+    className="sc-bdVaJa iVAllT"
+  >
     <button
-      className="square pending square-3"
+      className="square pending square-3 sc-bwzfXH bYFqfy"
       disabled={false}
       onClick={[Function]}
       type="button"
     />
-  </span>
-  <span>
+  </div>
+  <div
+    className="sc-bdVaJa ggDFcv"
+  >
     <button
-      className="square pending square-4"
+      className="square pending square-4 sc-bwzfXH bYFqfy"
       disabled={false}
       onClick={[Function]}
       type="button"
     />
-  </span>
-  <span>
+  </div>
+  <div
+    className="sc-bdVaJa btJNLp"
+  >
     <button
-      className="square pending square-5"
+      className="square pending square-5 sc-bwzfXH bYFqfy"
       disabled={false}
       onClick={[Function]}
       type="button"
     />
-    <br />
-  </span>
-  <span>
+  </div>
+  <div
+    className="sc-bdVaJa fayFBb"
+  >
     <button
-      className="square pending square-6"
+      className="square pending square-6 sc-bwzfXH bYFqfy"
       disabled={false}
       onClick={[Function]}
       type="button"
     />
-  </span>
-  <span>
+  </div>
+  <div
+    className="sc-bdVaJa BQxiX"
+  >
     <button
-      className="square pending square-7"
+      className="square pending square-7 sc-bwzfXH bYFqfy"
       disabled={false}
       onClick={[Function]}
       type="button"
     />
-  </span>
-  <span>
+  </div>
+  <div
+    className="sc-bdVaJa dWNWPL"
+  >
     <button
-      className="square pending square-8"
+      className="square pending square-8 sc-bwzfXH bYFqfy"
       disabled={false}
       onClick={[Function]}
       type="button"
     />
-  </span>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Board Game over! 1`] = `
-<div>
-  <span>
-    <span
-      className="square placed square-0"
+<div
+  className="sc-htpNat euKIwJ"
+>
+  <div
+    className="sc-bdVaJa cNKYHd"
+  >
+    <svg
+      height="64"
+      width="64"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      X
-    </span>
-  </span>
-  <span>
-    <span
-      className="square placed square-1"
+      <g
+        id="svg_1"
+        transform="translate(-64,0)"
+      >
+        <path
+          d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
+          fill="#000000"
+          fillRule="nonzero"
+          id="path3676"
+          stroke="#000000"
+          strokeDashoffset="0"
+          strokeMiterlimit="4"
+          strokeWidth="2"
+        />
+        <path
+          d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
+          fill="#000000"
+          fillRule="nonzero"
+          id="path3678"
+          stroke="#000000"
+          strokeDashoffset="0"
+          strokeMiterlimit="4"
+          strokeWidth="2"
+        />
+      </g>
+    </svg>
+  </div>
+  <div
+    className="sc-bdVaJa gbAgJD"
+  >
+    <svg
+      height="64"
+      width="64"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      X
-    </span>
-  </span>
-  <span>
-    <span
-      className="square placed square-2"
+      <g
+        id="svg_1"
+        transform="translate(-64,0)"
+      >
+        <path
+          d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
+          fill="#000000"
+          fillRule="nonzero"
+          id="path3676"
+          stroke="#000000"
+          strokeDashoffset="0"
+          strokeMiterlimit="4"
+          strokeWidth="2"
+        />
+        <path
+          d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
+          fill="#000000"
+          fillRule="nonzero"
+          id="path3678"
+          stroke="#000000"
+          strokeDashoffset="0"
+          strokeMiterlimit="4"
+          strokeWidth="2"
+        />
+      </g>
+    </svg>
+  </div>
+  <div
+    className="sc-bdVaJa cjRrrc"
+  >
+    <svg
+      height="64"
+      width="64"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      X
-    </span>
-    <br />
-  </span>
-  <span>
-    <button
-      className="square pending square-3"
-      disabled={true}
-      onClick={[Function]}
-      type="button"
-    />
-  </span>
-  <span>
-    <button
-      className="square pending square-4"
-      disabled={true}
-      onClick={[Function]}
-      type="button"
-    />
-  </span>
-  <span>
-    <button
-      className="square pending square-5"
-      disabled={true}
-      onClick={[Function]}
-      type="button"
-    />
-    <br />
-  </span>
-  <span>
-    <button
-      className="square pending square-6"
-      disabled={true}
-      onClick={[Function]}
-      type="button"
-    />
-  </span>
-  <span>
-    <button
-      className="square pending square-7"
-      disabled={true}
-      onClick={[Function]}
-      type="button"
-    />
-  </span>
-  <span>
-    <button
-      className="square pending square-8"
-      disabled={true}
-      onClick={[Function]}
-      type="button"
-    />
-  </span>
+      <g
+        id="svg_1"
+        transform="translate(-64,0)"
+      >
+        <path
+          d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
+          fill="#000000"
+          fillRule="nonzero"
+          id="path3676"
+          stroke="#000000"
+          strokeDashoffset="0"
+          strokeMiterlimit="4"
+          strokeWidth="2"
+        />
+        <path
+          d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
+          fill="#000000"
+          fillRule="nonzero"
+          id="path3678"
+          stroke="#000000"
+          strokeDashoffset="0"
+          strokeMiterlimit="4"
+          strokeWidth="2"
+        />
+      </g>
+    </svg>
+  </div>
+  <div
+    className="sc-bdVaJa iVAllT"
+  >
+    <span />
+  </div>
+  <div
+    className="sc-bdVaJa ggDFcv"
+  >
+    <span />
+  </div>
+  <div
+    className="sc-bdVaJa btJNLp"
+  >
+    <span />
+  </div>
+  <div
+    className="sc-bdVaJa fayFBb"
+  >
+    <span />
+  </div>
+  <div
+    className="sc-bdVaJa BQxiX"
+  >
+    <span />
+  </div>
+  <div
+    className="sc-bdVaJa dWNWPL"
+  >
+    <span />
+  </div>
 </div>
 `;
 
@@ -168,81 +252,99 @@ exports[`Storyshots Full, live game Play it here 1`] = `
   <span>
      David (O) 
   </span>
-  <div>
-    <span>
+  <div
+    className="sc-htpNat euKIwJ"
+  >
+    <div
+      className="sc-bdVaJa cNKYHd"
+    >
       <button
-        className="square pending square-0"
+        className="square pending square-0 sc-bwzfXH bYFqfy"
         disabled={false}
         onClick={[Function]}
         type="button"
       />
-    </span>
-    <span>
+    </div>
+    <div
+      className="sc-bdVaJa gbAgJD"
+    >
       <button
-        className="square pending square-1"
+        className="square pending square-1 sc-bwzfXH bYFqfy"
         disabled={false}
         onClick={[Function]}
         type="button"
       />
-    </span>
-    <span>
+    </div>
+    <div
+      className="sc-bdVaJa cjRrrc"
+    >
       <button
-        className="square pending square-2"
+        className="square pending square-2 sc-bwzfXH bYFqfy"
         disabled={false}
         onClick={[Function]}
         type="button"
       />
-      <br />
-    </span>
-    <span>
+    </div>
+    <div
+      className="sc-bdVaJa iVAllT"
+    >
       <button
-        className="square pending square-3"
+        className="square pending square-3 sc-bwzfXH bYFqfy"
         disabled={false}
         onClick={[Function]}
         type="button"
       />
-    </span>
-    <span>
+    </div>
+    <div
+      className="sc-bdVaJa ggDFcv"
+    >
       <button
-        className="square pending square-4"
+        className="square pending square-4 sc-bwzfXH bYFqfy"
         disabled={false}
         onClick={[Function]}
         type="button"
       />
-    </span>
-    <span>
+    </div>
+    <div
+      className="sc-bdVaJa btJNLp"
+    >
       <button
-        className="square pending square-5"
+        className="square pending square-5 sc-bwzfXH bYFqfy"
         disabled={false}
         onClick={[Function]}
         type="button"
       />
-      <br />
-    </span>
-    <span>
+    </div>
+    <div
+      className="sc-bdVaJa fayFBb"
+    >
       <button
-        className="square pending square-6"
+        className="square pending square-6 sc-bwzfXH bYFqfy"
         disabled={false}
         onClick={[Function]}
         type="button"
       />
-    </span>
-    <span>
+    </div>
+    <div
+      className="sc-bdVaJa BQxiX"
+    >
       <button
-        className="square pending square-7"
+        className="square pending square-7 sc-bwzfXH bYFqfy"
         disabled={false}
         onClick={[Function]}
         type="button"
       />
-    </span>
-    <span>
+    </div>
+    <div
+      className="sc-bdVaJa dWNWPL"
+    >
       <button
-        className="square pending square-8"
+        className="square pending square-8 sc-bwzfXH bYFqfy"
         disabled={false}
         onClick={[Function]}
         type="button"
       />
-    </span>
+    </div>
   </div>
   <div>
     <span>
@@ -259,6 +361,218 @@ exports[`Storyshots Full, live game Play it here 1`] = `
 </div>
 `;
 
+exports[`Storyshots Game With full board and winner 1`] = `
+<div>
+  <h1>
+    Tic tac toe
+  </h1>
+  <br />
+  <span>
+     Jacob (X) 
+  </span>
+  <br />
+  <span>
+     David (O) 
+  </span>
+  <div
+    className="sc-htpNat euKIwJ"
+  >
+    <div
+      className="sc-bdVaJa cNKYHd"
+    >
+      <svg
+        height="64"
+        width="64"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          id="svg_1"
+          transform="translate(-64,0)"
+        >
+          <path
+            d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
+            fill="#000000"
+            fillRule="nonzero"
+            id="path3676"
+            stroke="#000000"
+            strokeDashoffset="0"
+            strokeMiterlimit="4"
+            strokeWidth="2"
+          />
+          <path
+            d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
+            fill="#000000"
+            fillRule="nonzero"
+            id="path3678"
+            stroke="#000000"
+            strokeDashoffset="0"
+            strokeMiterlimit="4"
+            strokeWidth="2"
+          />
+        </g>
+      </svg>
+    </div>
+    <div
+      className="sc-bdVaJa gbAgJD"
+    >
+      <svg
+        height="64"
+        width="64"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          id="svg_1"
+          transform="translate(-64,0)"
+        >
+          <path
+            d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
+            fill="#000000"
+            fillRule="nonzero"
+            id="path3676"
+            stroke="#000000"
+            strokeDashoffset="0"
+            strokeMiterlimit="4"
+            strokeWidth="2"
+          />
+          <path
+            d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
+            fill="#000000"
+            fillRule="nonzero"
+            id="path3678"
+            stroke="#000000"
+            strokeDashoffset="0"
+            strokeMiterlimit="4"
+            strokeWidth="2"
+          />
+        </g>
+      </svg>
+    </div>
+    <div
+      className="sc-bdVaJa cjRrrc"
+    >
+      <svg
+        height="64"
+        width="64"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          id="svg_1"
+          transform="translate(-64,0)"
+        >
+          <path
+            d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
+            fill="#000000"
+            fillRule="nonzero"
+            id="path3676"
+            stroke="#000000"
+            strokeDashoffset="0"
+            strokeMiterlimit="4"
+            strokeWidth="2"
+          />
+          <path
+            d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
+            fill="#000000"
+            fillRule="nonzero"
+            id="path3678"
+            stroke="#000000"
+            strokeDashoffset="0"
+            strokeMiterlimit="4"
+            strokeWidth="2"
+          />
+        </g>
+      </svg>
+    </div>
+    <div
+      className="sc-bdVaJa iVAllT"
+    >
+      <svg
+        height="64"
+        width="64"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g>
+          <path
+            d="m35.104694,11.161316c-3.745693,-0.694368 -16.796932,3.032976 -14.63146,2.685302c3.489632,-2.757582 -8.717073,9.22066 -6.354376,14.71551c-1.657402,15.053522 14.30228,23.750284 27.104179,25.269571c3.250519,0.293041 12.036514,-3.859299 4.552967,-0.218243c8.041058,-10.160023 5.919575,-26.781155 -2.633755,-36.271605c-5.378586,-3.32588 -15.767635,-10.787502 -4.564316,-9.648385c12.621204,5.820886 19.66098,20.668349 16.303444,34.1296c-0.427242,14.974796 -21.150288,18.985233 -31.472523,10.861671c-13.402975,-4.417789 -18.267056,-21.579205 -10.777348,-33.029352c4.744314,-8.447283 21.285046,-12.820305 25.849361,-10.947108c-1.125397,0.817653 -2.250782,1.635401 -3.376175,2.453038z"
+            fill="#000000"
+            fillRule="nonzero"
+            id="path3666"
+            stroke="#000000"
+            strokeDashoffset="0"
+            strokeMiterlimit="4"
+            strokeWidth="2"
+          />
+        </g>
+      </svg>
+    </div>
+    <div
+      className="sc-bdVaJa ggDFcv"
+    >
+      <svg
+        height="64"
+        width="64"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g>
+          <path
+            d="m35.104694,11.161316c-3.745693,-0.694368 -16.796932,3.032976 -14.63146,2.685302c3.489632,-2.757582 -8.717073,9.22066 -6.354376,14.71551c-1.657402,15.053522 14.30228,23.750284 27.104179,25.269571c3.250519,0.293041 12.036514,-3.859299 4.552967,-0.218243c8.041058,-10.160023 5.919575,-26.781155 -2.633755,-36.271605c-5.378586,-3.32588 -15.767635,-10.787502 -4.564316,-9.648385c12.621204,5.820886 19.66098,20.668349 16.303444,34.1296c-0.427242,14.974796 -21.150288,18.985233 -31.472523,10.861671c-13.402975,-4.417789 -18.267056,-21.579205 -10.777348,-33.029352c4.744314,-8.447283 21.285046,-12.820305 25.849361,-10.947108c-1.125397,0.817653 -2.250782,1.635401 -3.376175,2.453038z"
+            fill="#000000"
+            fillRule="nonzero"
+            id="path3666"
+            stroke="#000000"
+            strokeDashoffset="0"
+            strokeMiterlimit="4"
+            strokeWidth="2"
+          />
+        </g>
+      </svg>
+    </div>
+    <div
+      className="sc-bdVaJa btJNLp"
+    >
+      <span />
+    </div>
+    <div
+      className="sc-bdVaJa fayFBb"
+    >
+      <span />
+    </div>
+    <div
+      className="sc-bdVaJa BQxiX"
+    >
+      <span />
+    </div>
+    <div
+      className="sc-bdVaJa dWNWPL"
+    >
+      <span />
+    </div>
+  </div>
+  <div />
+  <span>
+    <div
+      className="has-winner"
+    >
+      The winner
+       
+      <strong>
+        <span>
+           Jacob (X) 
+        </span>
+      </strong>
+    </div>
+  </span>
+  <span>
+    <button
+      className="play-again"
+      onClick={[Function]}
+      type="button"
+    >
+      Play again
+    </button>
+  </span>
+</div>
+`;
+
 exports[`Storyshots Game With initialized values 1`] = `
 <div>
   <h1>
@@ -272,81 +586,99 @@ exports[`Storyshots Game With initialized values 1`] = `
   <span>
      David (O) 
   </span>
-  <div>
-    <span>
+  <div
+    className="sc-htpNat euKIwJ"
+  >
+    <div
+      className="sc-bdVaJa cNKYHd"
+    >
       <button
-        className="square pending square-0"
+        className="square pending square-0 sc-bwzfXH bYFqfy"
         disabled={false}
         onClick={[Function]}
         type="button"
       />
-    </span>
-    <span>
+    </div>
+    <div
+      className="sc-bdVaJa gbAgJD"
+    >
       <button
-        className="square pending square-1"
+        className="square pending square-1 sc-bwzfXH bYFqfy"
         disabled={false}
         onClick={[Function]}
         type="button"
       />
-    </span>
-    <span>
+    </div>
+    <div
+      className="sc-bdVaJa cjRrrc"
+    >
       <button
-        className="square pending square-2"
+        className="square pending square-2 sc-bwzfXH bYFqfy"
         disabled={false}
         onClick={[Function]}
         type="button"
       />
-      <br />
-    </span>
-    <span>
+    </div>
+    <div
+      className="sc-bdVaJa iVAllT"
+    >
       <button
-        className="square pending square-3"
+        className="square pending square-3 sc-bwzfXH bYFqfy"
         disabled={false}
         onClick={[Function]}
         type="button"
       />
-    </span>
-    <span>
+    </div>
+    <div
+      className="sc-bdVaJa ggDFcv"
+    >
       <button
-        className="square pending square-4"
+        className="square pending square-4 sc-bwzfXH bYFqfy"
         disabled={false}
         onClick={[Function]}
         type="button"
       />
-    </span>
-    <span>
+    </div>
+    <div
+      className="sc-bdVaJa btJNLp"
+    >
       <button
-        className="square pending square-5"
+        className="square pending square-5 sc-bwzfXH bYFqfy"
         disabled={false}
         onClick={[Function]}
         type="button"
       />
-      <br />
-    </span>
-    <span>
+    </div>
+    <div
+      className="sc-bdVaJa fayFBb"
+    >
       <button
-        className="square pending square-6"
+        className="square pending square-6 sc-bwzfXH bYFqfy"
         disabled={false}
         onClick={[Function]}
         type="button"
       />
-    </span>
-    <span>
+    </div>
+    <div
+      className="sc-bdVaJa BQxiX"
+    >
       <button
-        className="square pending square-7"
+        className="square pending square-7 sc-bwzfXH bYFqfy"
         disabled={false}
         onClick={[Function]}
         type="button"
       />
-    </span>
-    <span>
+    </div>
+    <div
+      className="sc-bdVaJa dWNWPL"
+    >
       <button
-        className="square pending square-8"
+        className="square pending square-8 sc-bwzfXH bYFqfy"
         disabled={false}
         onClick={[Function]}
         type="button"
       />
-    </span>
+    </div>
   </div>
   <div>
     <span>
@@ -390,37 +722,87 @@ exports[`Storyshots PlayerInfo PlayerInfo of  val=PLAYER_2 label=O name=David 1`
 `;
 
 exports[`Storyshots Square Pending to use (displayed as a button) 1`] = `
-<button
-  className="square pending "
-  disabled={false}
-  onClick={[Function]}
-  type="button"
-/>
+<div
+  className="sc-bdVaJa krvsBL"
+>
+  <button
+    className="square pending  sc-bwzfXH bYFqfy"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  />
+</div>
 `;
 
 exports[`Storyshots Square Pending to use but game is over 1`] = `
-<button
-  className="square pending "
-  disabled={true}
-  onClick={[Function]}
-  type="button"
-/>
+<div
+  className="sc-bdVaJa krvsBL"
+>
+  <span />
+</div>
 `;
 
 exports[`Storyshots Square used by PLAYER_1  (X ) 1`] = `
-<span
-  className="square placed "
+<div
+  className="sc-bdVaJa krvsBL"
 >
-  X
-</span>
+  <svg
+    height="64"
+    width="64"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      id="svg_1"
+      transform="translate(-64,0)"
+    >
+      <path
+        d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
+        fill="#000000"
+        fillRule="nonzero"
+        id="path3676"
+        stroke="#000000"
+        strokeDashoffset="0"
+        strokeMiterlimit="4"
+        strokeWidth="2"
+      />
+      <path
+        d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
+        fill="#000000"
+        fillRule="nonzero"
+        id="path3678"
+        stroke="#000000"
+        strokeDashoffset="0"
+        strokeMiterlimit="4"
+        strokeWidth="2"
+      />
+    </g>
+  </svg>
+</div>
 `;
 
 exports[`Storyshots Square used by PLAYER_2  (O ) 1`] = `
-<span
-  className="square placed "
+<div
+  className="sc-bdVaJa krvsBL"
 >
-  O
-</span>
+  <svg
+    height="64"
+    width="64"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g>
+      <path
+        d="m35.104694,11.161316c-3.745693,-0.694368 -16.796932,3.032976 -14.63146,2.685302c3.489632,-2.757582 -8.717073,9.22066 -6.354376,14.71551c-1.657402,15.053522 14.30228,23.750284 27.104179,25.269571c3.250519,0.293041 12.036514,-3.859299 4.552967,-0.218243c8.041058,-10.160023 5.919575,-26.781155 -2.633755,-36.271605c-5.378586,-3.32588 -15.767635,-10.787502 -4.564316,-9.648385c12.621204,5.820886 19.66098,20.668349 16.303444,34.1296c-0.427242,14.974796 -21.150288,18.985233 -31.472523,10.861671c-13.402975,-4.417789 -18.267056,-21.579205 -10.777348,-33.029352c4.744314,-8.447283 21.285046,-12.820305 25.849361,-10.947108c-1.125397,0.817653 -2.250782,1.635401 -3.376175,2.453038z"
+        fill="#000000"
+        fillRule="nonzero"
+        id="path3666"
+        stroke="#000000"
+        strokeDashoffset="0"
+        strokeMiterlimit="4"
+        strokeWidth="2"
+      />
+    </g>
+  </svg>
+</div>
 `;
 
 exports[`Storyshots WhoIsNextInfo Game is not over and the next player is PLAYER_1  1`] = `

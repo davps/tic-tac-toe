@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { MOVE } from '../config';
+import { MOVE } from '../constants';
 
 /**
  * Component to display information about a player

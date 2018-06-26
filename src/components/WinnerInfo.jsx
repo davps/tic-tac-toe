@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import PlayerInfo from './PlayerInfo';
-import { MOVE } from '../config';
+import { MOVE } from '../constants';
 
 /* eslint-disable react/jsx-one-expression-per-line */
 const WinnerInfo = ({ hasWinner, isBoardFull, player }) => (

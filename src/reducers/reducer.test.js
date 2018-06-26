@@ -5,7 +5,7 @@ import {
   resetGame
 } from '../actions/actions';
 import reducer from './reducer';
-import { MOVE } from '../config';
+import { MOVE } from '../constants';
 
 describe(PLACE_MOVE, () => {
   let initialState;

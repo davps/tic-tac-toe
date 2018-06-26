@@ -1,4 +1,4 @@
-import { MOVE } from '../config';
+import { MOVE } from '../constants';
 /**
  * Initial state of the app, used to initialize and reset the game
  */

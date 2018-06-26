@@ -1,4 +1,4 @@
-import { MOVE } from '../config';
+import { MOVE } from '../constants';
 
 //
 const Logic = {

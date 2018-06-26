@@ -1,26 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import Square from './Square';
-import { MOVE } from '../config';
+import { MOVE, DIMENSIONS } from '../constants';
+
+const Container = styled.div`
+  background: black;
+  display: flex;
+  flex-wrap: wrap;
+  width: ${DIMENSIONS.board.width}px;
+  height: ${DIMENSIONS.board.heigth}px;
+  padding: 0px;
+  margin: 0px;
+`;
 
 const Board = ({ moves, onMove, isGameOver }) => {
-  const isLineBreak = index => index === 2 || index === 5;
-
   /* eslint-disable react/no-array-index-key */
   return (
-    <div>
+    <Container>
       {moves.map((square, index) => (
-        <span key={index}>
-          <Square
-            onMove={() => onMove(index)}
-            owner={square}
-            isGameOver={isGameOver}
-            className={`square-${index}`}
-          />
-          {isLineBreak(index) && <br />}
-        </span>
+        <Square
+          key={index}
+          onMove={() => onMove(index)}
+          owner={square}
+          isGameOver={isGameOver}
+          className={`square-${index}`}
+          style={DIMENSIONS.margins[index]}
+        />
       ))}
-    </div>
+    </Container>
   );
   /* eslint-enable */
 };
