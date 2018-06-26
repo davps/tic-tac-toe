@@ -2,21 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PlayerInfo from './PlayerInfo';
 import { MOVE } from '../constants';
+import { X, O } from './Icons';
+import { SpacedContainer as Container } from './Container';
 
 /* eslint-disable react/jsx-one-expression-per-line */
 const WinnerInfo = ({ hasWinner, isBoardFull, player }) => (
   <span>
     {hasWinner && (
-      <div className="has-winner">
-        The winner{' '}
+      <Container className="has-winner">
         <strong>
           <PlayerInfo player={player} />
         </strong>
-      </div>
+        wins!
+      </Container>
     )}
 
     {!hasWinner &&
-      isBoardFull && <div className="has-no-winner">Nobody wins!</div>}
+      isBoardFull && (
+        <Container className="has-no-winner">
+          Draw! <X size={25} /> <O size={25} />
+        </Container>
+      )}
   </span>
 );
 /* eslint-enable */

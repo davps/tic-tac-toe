@@ -1,16 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled, { keyframes } from 'styled-components';
 import PlayerInfo from './PlayerInfo';
+import { SpacedContainer } from './Container';
+
+const fadeInOut = keyframes`
+  0%,100% { opacity: 0.3 }
+  50% { opacity: 1 }
+`;
+
+const Container = SpacedContainer.extend`
+  animation: ${fadeInOut} 1s step-start infinite;
+`;
 
 const WhoIsNextInfo = ({ player, isGameOver }) => (
   <div>
     {!isGameOver && (
-      <span>
-        Now is the turn of
-        <strong>
-          <PlayerInfo player={player} />
-        </strong>
-      </span>
+      <Container>
+        <PlayerInfo player={player} />
+        <span> turn</span>
+      </Container>
     )}
   </div>
 );

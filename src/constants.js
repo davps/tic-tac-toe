@@ -4,11 +4,11 @@
  */
 export const MOVE = {
   PENDING: { val: 'PENDING', label: ' ' },
-  PLAYER_1: { val: 'PLAYER_1', label: 'X', name: 'Jacob' },
+  PLAYER_1: { val: 'PLAYER_1', label: 'X', name: 'Laura' },
   PLAYER_2: { val: 'PLAYER_2', label: 'O', name: 'David' }
 };
 
-const m = 7;
+const m = 3;
 const margins = [
   { top: 0, left: 0, right: m, bottom: m },
   { top: 0, left: m, right: m, bottom: m },
