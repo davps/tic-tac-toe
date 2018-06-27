@@ -6,8 +6,19 @@
 - Run this command on the video
 
 ```
- ffmpeg -i demo.mov -pix_fmt rgb24 demo.gif
+ffmpeg -y -ss 0 -t 30 -i demo.mov \
+-vf fps=10,scale=320:-1:flags=lanczos,palettegen palette.png
+
+ffmpeg -ss 0 -t 30 -i demo.mov -i palette.png -filter_complex \
+"fps=10,scale=320:-1:flags=lanczos[x];[x][1:v]paletteuse" output.gif
 ```
+
+Arguments:
+
+- `-ss 0`: Start at second 0
+- `-t 30`: Go until second 30
+
+Source: https://superuser.com/a/556031
 
 ## Deployment to Heroku
 
