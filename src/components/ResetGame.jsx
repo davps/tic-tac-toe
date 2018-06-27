@@ -22,13 +22,13 @@ const Button = styled.button`
 `;
 
 const ResetGame = ({ isGameOver, onReset }) => (
-  <span>
+  <div style={{ height: 57 }}>
     {isGameOver && (
       <Button className="play-again" onClick={onReset}>
         Play again
       </Button>
     )}
-  </span>
+  </div>
 );
 
 ResetGame.propTypes = {
