@@ -618,7 +618,7 @@ exports[`Storyshots Board Game over! and nobody wins 1`] = `
 
 exports[`Storyshots Full, live game Play it here 1`] = `
 <div
-  className="sc-htoDjs fMhxiM"
+  className="sc-htoDjs dGlSPh"
 >
   <h1>
     TIC TAC TOE!
@@ -869,13 +869,19 @@ exports[`Storyshots Full, live game Play it here 1`] = `
       />
     </div>
   </div>
-  <span />
+  <div
+    style={
+      Object {
+        "height": 57,
+      }
+    }
+  />
 </div>
 `;
 
 exports[`Storyshots Game With full board and no winner 1`] = `
 <div
-  className="sc-htoDjs fMhxiM"
+  className="sc-htoDjs dGlSPh"
 >
   <h1>
     TIC TAC TOE!
@@ -1396,20 +1402,26 @@ exports[`Storyshots Game With full board and no winner 1`] = `
       </span>
     </div>
   </div>
-  <span>
+  <div
+    style={
+      Object {
+        "height": 57,
+      }
+    }
+  >
     <button
       className="play-again sc-gzVnrw fBpHTn"
       onClick={[Function]}
     >
       Play again
     </button>
-  </span>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Game With full board and winner 1`] = `
 <div
-  className="sc-htoDjs fMhxiM"
+  className="sc-htoDjs dGlSPh"
 >
   <h1>
     TIC TAC TOE!
@@ -1789,20 +1801,26 @@ exports[`Storyshots Game With full board and winner 1`] = `
       <span />
     </div>
   </div>
-  <span>
+  <div
+    style={
+      Object {
+        "height": 57,
+      }
+    }
+  >
     <button
       className="play-again sc-gzVnrw fBpHTn"
       onClick={[Function]}
     >
       Play again
     </button>
-  </span>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Game With initialized values 1`] = `
 <div
-  className="sc-htoDjs fMhxiM"
+  className="sc-htoDjs dGlSPh"
 >
   <h1>
     TIC TAC TOE!
@@ -2053,7 +2071,13 @@ exports[`Storyshots Game With initialized values 1`] = `
       />
     </div>
   </div>
-  <span />
+  <div
+    style={
+      Object {
+        "height": 57,
+      }
+    }
+  />
 </div>
 `;
 
@@ -2208,17 +2232,31 @@ exports[`Storyshots PlayerName PlayerName of  val=PLAYER_2 label=O name=David 1`
 </span>
 `;
 
-exports[`Storyshots ResetGame Game is not over yet (so this component should be hidden)  1`] = `<span />`;
+exports[`Storyshots ResetGame Game is not over yet (so this component should be hidden)  1`] = `
+<div
+  style={
+    Object {
+      "height": 57,
+    }
+  }
+/>
+`;
 
 exports[`Storyshots ResetGame Game over! 1`] = `
-<span>
+<div
+  style={
+    Object {
+      "height": 57,
+    }
+  }
+>
   <button
     className="play-again sc-gzVnrw fBpHTn"
     onClick={[Function]}
   >
     Play again
   </button>
-</span>
+</div>
 `;
 
 exports[`Storyshots Square Game is not over, used by PLAYER_1  (X ) 1`] = `
