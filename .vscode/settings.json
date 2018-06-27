@@ -2,5 +2,6 @@
   "files.associations": {
     "*.js": "javascriptreact",
     "*.jsx": "javascriptreact"
-  }
+  },
+  "jest.pathToJest": "npm test --"
 }
