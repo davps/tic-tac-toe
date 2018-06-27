@@ -9,7 +9,7 @@ I am developing this Tic tac toe game to showcase my skillsets.
 
 ## Live demo
 
-[View the live demo](https://davps.github.io/tic-tac-toe) of tic-tac-toe and the individual components on my Storybook
+[View the live demo on Heroku](https://tic-tac-toe-david.herokuapp.com/) or the [individual UI components](https://davps.github.io/tic-tac-toe) of my Storybook on Github Pages.
 
 ![Demo Animation](./docs/demo.gif?raw=true)
 
@@ -19,7 +19,7 @@ I am developing this Tic tac toe game to showcase my skillsets.
 - Prettier Code Formatter + ESLint setup with Airbnb's style guide + VSCode integration
 - Jest + Enzyme for tests, including `@storybook/addon-storyshots` to snapshot test my Storybook and puppeteer for e2e tests.
 - Storybook of [my UI components](https://davps.github.io/tic-tac-toe)
-- Travis CI to build the production bundles, run the tests, creating and publishing [the test coverage report](https://coveralls.io/github/davps/tic-tac-toe) and the [UI documentation as a Storybook](https://davps.github.io/tic-tac-toe) on Github Pages.
+- Travis CI to build the production bundles and deploy it to Heroku, run the tests, creating and publishing [the test coverage report](https://coveralls.io/github/davps/tic-tac-toe) and the [UI documentation as a Storybook](https://davps.github.io/tic-tac-toe) on Github Pages.
 
 ## Best practices
 
