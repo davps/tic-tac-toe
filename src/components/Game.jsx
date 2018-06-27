@@ -25,7 +25,15 @@ const PlayersContainer = styled.div`
   margin-bottom: 10px;
 `;
 
-const Game = ({ xIsNext, winner, isFull, moves, placeMove, resetGame }) => {
+const Game = ({
+  xIsNext,
+  winner,
+  winnerMoves,
+  isFull,
+  moves,
+  placeMove,
+  resetGame
+}) => {
   const hasWinner = winner !== null;
   const isGameOver = hasWinner || isFull;
   const nextPlayer = Logic.getNextPlayer(xIsNext);
@@ -44,7 +52,12 @@ const Game = ({ xIsNext, winner, isFull, moves, placeMove, resetGame }) => {
       <WhoIsNextInfo player={nextPlayer} isGameOver={isGameOver} />
       <WinnerInfo player={winner} hasWinner={hasWinner} isBoardFull={isFull} />
 
-      <Board moves={moves} onMove={placeMove} isGameOver={isGameOver} />
+      <Board
+        moves={moves}
+        onMove={placeMove}
+        isGameOver={isGameOver}
+        winnerMoves={winnerMoves}
+      />
 
       <PlayAgainButton isGameOver={isGameOver} resetGame={resetGame} />
     </Container>
@@ -60,13 +73,15 @@ Game.propTypes = {
     PropTypes.oneOf([MOVE.PENDING.val, MOVE.PLAYER_1.val, MOVE.PLAYER_2.val])
   ).isRequired,
   placeMove: PropTypes.func.isRequired,
-  resetGame: PropTypes.func.isRequired
+  resetGame: PropTypes.func.isRequired,
+  winnerMoves: PropTypes.arrayOf(PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8]))
 };
 
 Game.defaultProps = {
   xIsNext: initialState.xIsNext,
   isFull: initialState.isFull,
-  winner: initialState.winner
+  winner: initialState.winner,
+  winnerMoves: null
 };
 
 export default Game;

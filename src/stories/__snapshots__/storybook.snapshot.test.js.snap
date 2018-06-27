@@ -2,7 +2,7 @@
 
 exports[`Storyshots Board Game is not over yet 1`] = `
 <div
-  className="sc-ifAKCX leUYFl"
+  className="sc-EHOje gZDqME"
 >
   <div
     className="sc-htpNat eFswRT"
@@ -97,12 +97,12 @@ exports[`Storyshots Board Game is not over yet 1`] = `
 </div>
 `;
 
-exports[`Storyshots Board Game over! 1`] = `
+exports[`Storyshots Board Game over! and has a winner 1`] = `
 <div
-  className="sc-ifAKCX leUYFl"
+  className="sc-EHOje gZDqME"
 >
   <div
-    className="sc-htpNat eFswRT"
+    className="sc-ifAKCX jGAHkG"
   >
     <span
       style={
@@ -147,7 +147,7 @@ exports[`Storyshots Board Game over! 1`] = `
     </span>
   </div>
   <div
-    className="sc-htpNat qihmN"
+    className="sc-ifAKCX llZypP"
   >
     <span
       style={
@@ -192,7 +192,7 @@ exports[`Storyshots Board Game over! 1`] = `
     </span>
   </div>
   <div
-    className="sc-htpNat eTshLM"
+    className="sc-ifAKCX eWMmJb"
   >
     <span
       style={
@@ -269,15 +269,362 @@ exports[`Storyshots Board Game over! 1`] = `
 </div>
 `;
 
+exports[`Storyshots Board Game over! and nobody wins 1`] = `
+<div
+  className="sc-EHOje gZDqME"
+>
+  <div
+    className="sc-htpNat eFswRT"
+  >
+    <span
+      style={
+        Object {
+          "height": "64px",
+          "width": "auto",
+        }
+      }
+    >
+      <svg
+        height="100%"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 64 64"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          id="svg_1"
+          transform="translate(-64,0)"
+        >
+          <path
+            d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
+            fill="#000000"
+            fillRule="nonzero"
+            id="path3676"
+            stroke="#000000"
+            strokeDashoffset="0"
+            strokeMiterlimit="4"
+            strokeWidth="2"
+          />
+          <path
+            d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
+            fill="#000000"
+            fillRule="nonzero"
+            id="path3678"
+            stroke="#000000"
+            strokeDashoffset="0"
+            strokeMiterlimit="4"
+            strokeWidth="2"
+          />
+        </g>
+      </svg>
+    </span>
+  </div>
+  <div
+    className="sc-htpNat qihmN"
+  >
+    <span
+      style={
+        Object {
+          "height": "64px",
+          "width": "auto",
+        }
+      }
+    >
+      <svg
+        height="100%"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 64 64"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g>
+          <path
+            d="m35.104694,11.161316c-3.745693,-0.694368 -16.796932,3.032976 -14.63146,2.685302c3.489632,-2.757582 -8.717073,9.22066 -6.354376,14.71551c-1.657402,15.053522 14.30228,23.750284 27.104179,25.269571c3.250519,0.293041 12.036514,-3.859299 4.552967,-0.218243c8.041058,-10.160023 5.919575,-26.781155 -2.633755,-36.271605c-5.378586,-3.32588 -15.767635,-10.787502 -4.564316,-9.648385c12.621204,5.820886 19.66098,20.668349 16.303444,34.1296c-0.427242,14.974796 -21.150288,18.985233 -31.472523,10.861671c-13.402975,-4.417789 -18.267056,-21.579205 -10.777348,-33.029352c4.744314,-8.447283 21.285046,-12.820305 25.849361,-10.947108c-1.125397,0.817653 -2.250782,1.635401 -3.376175,2.453038z"
+            fill="#000000"
+            fillRule="nonzero"
+            id="path3666"
+            stroke="#000000"
+            strokeDashoffset="0"
+            strokeMiterlimit="4"
+            strokeWidth="2"
+          />
+        </g>
+      </svg>
+    </span>
+  </div>
+  <div
+    className="sc-htpNat eTshLM"
+  >
+    <span
+      style={
+        Object {
+          "height": "64px",
+          "width": "auto",
+        }
+      }
+    >
+      <svg
+        height="100%"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 64 64"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          id="svg_1"
+          transform="translate(-64,0)"
+        >
+          <path
+            d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
+            fill="#000000"
+            fillRule="nonzero"
+            id="path3676"
+            stroke="#000000"
+            strokeDashoffset="0"
+            strokeMiterlimit="4"
+            strokeWidth="2"
+          />
+          <path
+            d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
+            fill="#000000"
+            fillRule="nonzero"
+            id="path3678"
+            stroke="#000000"
+            strokeDashoffset="0"
+            strokeMiterlimit="4"
+            strokeWidth="2"
+          />
+        </g>
+      </svg>
+    </span>
+  </div>
+  <div
+    className="sc-htpNat fgIPYy"
+  >
+    <span
+      style={
+        Object {
+          "height": "64px",
+          "width": "auto",
+        }
+      }
+    >
+      <svg
+        height="100%"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 64 64"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          id="svg_1"
+          transform="translate(-64,0)"
+        >
+          <path
+            d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
+            fill="#000000"
+            fillRule="nonzero"
+            id="path3676"
+            stroke="#000000"
+            strokeDashoffset="0"
+            strokeMiterlimit="4"
+            strokeWidth="2"
+          />
+          <path
+            d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
+            fill="#000000"
+            fillRule="nonzero"
+            id="path3678"
+            stroke="#000000"
+            strokeDashoffset="0"
+            strokeMiterlimit="4"
+            strokeWidth="2"
+          />
+        </g>
+      </svg>
+    </span>
+  </div>
+  <div
+    className="sc-htpNat chVWwc"
+  >
+    <span
+      style={
+        Object {
+          "height": "64px",
+          "width": "auto",
+        }
+      }
+    >
+      <svg
+        height="100%"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 64 64"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g>
+          <path
+            d="m35.104694,11.161316c-3.745693,-0.694368 -16.796932,3.032976 -14.63146,2.685302c3.489632,-2.757582 -8.717073,9.22066 -6.354376,14.71551c-1.657402,15.053522 14.30228,23.750284 27.104179,25.269571c3.250519,0.293041 12.036514,-3.859299 4.552967,-0.218243c8.041058,-10.160023 5.919575,-26.781155 -2.633755,-36.271605c-5.378586,-3.32588 -15.767635,-10.787502 -4.564316,-9.648385c12.621204,5.820886 19.66098,20.668349 16.303444,34.1296c-0.427242,14.974796 -21.150288,18.985233 -31.472523,10.861671c-13.402975,-4.417789 -18.267056,-21.579205 -10.777348,-33.029352c4.744314,-8.447283 21.285046,-12.820305 25.849361,-10.947108c-1.125397,0.817653 -2.250782,1.635401 -3.376175,2.453038z"
+            fill="#000000"
+            fillRule="nonzero"
+            id="path3666"
+            stroke="#000000"
+            strokeDashoffset="0"
+            strokeMiterlimit="4"
+            strokeWidth="2"
+          />
+        </g>
+      </svg>
+    </span>
+  </div>
+  <div
+    className="sc-htpNat eEPRbw"
+  >
+    <span
+      style={
+        Object {
+          "height": "64px",
+          "width": "auto",
+        }
+      }
+    >
+      <svg
+        height="100%"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 64 64"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g>
+          <path
+            d="m35.104694,11.161316c-3.745693,-0.694368 -16.796932,3.032976 -14.63146,2.685302c3.489632,-2.757582 -8.717073,9.22066 -6.354376,14.71551c-1.657402,15.053522 14.30228,23.750284 27.104179,25.269571c3.250519,0.293041 12.036514,-3.859299 4.552967,-0.218243c8.041058,-10.160023 5.919575,-26.781155 -2.633755,-36.271605c-5.378586,-3.32588 -15.767635,-10.787502 -4.564316,-9.648385c12.621204,5.820886 19.66098,20.668349 16.303444,34.1296c-0.427242,14.974796 -21.150288,18.985233 -31.472523,10.861671c-13.402975,-4.417789 -18.267056,-21.579205 -10.777348,-33.029352c4.744314,-8.447283 21.285046,-12.820305 25.849361,-10.947108c-1.125397,0.817653 -2.250782,1.635401 -3.376175,2.453038z"
+            fill="#000000"
+            fillRule="nonzero"
+            id="path3666"
+            stroke="#000000"
+            strokeDashoffset="0"
+            strokeMiterlimit="4"
+            strokeWidth="2"
+          />
+        </g>
+      </svg>
+    </span>
+  </div>
+  <div
+    className="sc-htpNat gxROEv"
+  >
+    <span
+      style={
+        Object {
+          "height": "64px",
+          "width": "auto",
+        }
+      }
+    >
+      <svg
+        height="100%"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 64 64"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g>
+          <path
+            d="m35.104694,11.161316c-3.745693,-0.694368 -16.796932,3.032976 -14.63146,2.685302c3.489632,-2.757582 -8.717073,9.22066 -6.354376,14.71551c-1.657402,15.053522 14.30228,23.750284 27.104179,25.269571c3.250519,0.293041 12.036514,-3.859299 4.552967,-0.218243c8.041058,-10.160023 5.919575,-26.781155 -2.633755,-36.271605c-5.378586,-3.32588 -15.767635,-10.787502 -4.564316,-9.648385c12.621204,5.820886 19.66098,20.668349 16.303444,34.1296c-0.427242,14.974796 -21.150288,18.985233 -31.472523,10.861671c-13.402975,-4.417789 -18.267056,-21.579205 -10.777348,-33.029352c4.744314,-8.447283 21.285046,-12.820305 25.849361,-10.947108c-1.125397,0.817653 -2.250782,1.635401 -3.376175,2.453038z"
+            fill="#000000"
+            fillRule="nonzero"
+            id="path3666"
+            stroke="#000000"
+            strokeDashoffset="0"
+            strokeMiterlimit="4"
+            strokeWidth="2"
+          />
+        </g>
+      </svg>
+    </span>
+  </div>
+  <div
+    className="sc-htpNat fLwvZg"
+  >
+    <span
+      style={
+        Object {
+          "height": "64px",
+          "width": "auto",
+        }
+      }
+    >
+      <svg
+        height="100%"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 64 64"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          id="svg_1"
+          transform="translate(-64,0)"
+        >
+          <path
+            d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
+            fill="#000000"
+            fillRule="nonzero"
+            id="path3676"
+            stroke="#000000"
+            strokeDashoffset="0"
+            strokeMiterlimit="4"
+            strokeWidth="2"
+          />
+          <path
+            d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
+            fill="#000000"
+            fillRule="nonzero"
+            id="path3678"
+            stroke="#000000"
+            strokeDashoffset="0"
+            strokeMiterlimit="4"
+            strokeWidth="2"
+          />
+        </g>
+      </svg>
+    </span>
+  </div>
+  <div
+    className="sc-htpNat eSBkMk"
+  >
+    <span
+      style={
+        Object {
+          "height": "64px",
+          "width": "auto",
+        }
+      }
+    >
+      <svg
+        height="100%"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 64 64"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g>
+          <path
+            d="m35.104694,11.161316c-3.745693,-0.694368 -16.796932,3.032976 -14.63146,2.685302c3.489632,-2.757582 -8.717073,9.22066 -6.354376,14.71551c-1.657402,15.053522 14.30228,23.750284 27.104179,25.269571c3.250519,0.293041 12.036514,-3.859299 4.552967,-0.218243c8.041058,-10.160023 5.919575,-26.781155 -2.633755,-36.271605c-5.378586,-3.32588 -15.767635,-10.787502 -4.564316,-9.648385c12.621204,5.820886 19.66098,20.668349 16.303444,34.1296c-0.427242,14.974796 -21.150288,18.985233 -31.472523,10.861671c-13.402975,-4.417789 -18.267056,-21.579205 -10.777348,-33.029352c4.744314,-8.447283 21.285046,-12.820305 25.849361,-10.947108c-1.125397,0.817653 -2.250782,1.635401 -3.376175,2.453038z"
+            fill="#000000"
+            fillRule="nonzero"
+            id="path3666"
+            stroke="#000000"
+            strokeDashoffset="0"
+            strokeMiterlimit="4"
+            strokeWidth="2"
+          />
+        </g>
+      </svg>
+    </span>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Full, live game Play it here 1`] = `
 <div
-  className="sc-gzVnrw jGncgf"
+  className="sc-htoDjs fMhxiM"
 >
   <h1>
     TIC TAC TOE!
   </h1>
   <div
-    className="sc-htoDjs kSEzul"
+    className="sc-dnqmqq ciasQq"
   >
     <span
       className="sc-bdVaJa eAhLIg"
@@ -372,7 +719,7 @@ exports[`Storyshots Full, live game Play it here 1`] = `
   </div>
   <div>
     <span
-      className="sc-EHOje dpncvS"
+      className="sc-bZQynM iNPAfB"
     >
       <span
         className="sc-bdVaJa eAhLIg"
@@ -429,7 +776,7 @@ exports[`Storyshots Full, live game Play it here 1`] = `
   </div>
   <span />
   <div
-    className="sc-ifAKCX leUYFl"
+    className="sc-EHOje gZDqME"
   >
     <div
       className="sc-htpNat eFswRT"
@@ -526,15 +873,549 @@ exports[`Storyshots Full, live game Play it here 1`] = `
 </div>
 `;
 
-exports[`Storyshots Game With full board and winner 1`] = `
+exports[`Storyshots Game With full board and no winner 1`] = `
 <div
-  className="sc-gzVnrw jGncgf"
+  className="sc-htoDjs fMhxiM"
 >
   <h1>
     TIC TAC TOE!
   </h1>
   <div
-    className="sc-htoDjs kSEzul"
+    className="sc-dnqmqq ciasQq"
+  >
+    <span
+      className="sc-bdVaJa eAhLIg"
+    >
+      <span>
+        Laura
+      </span>
+      <span
+        style={
+          Object {
+            "height": "25px",
+            "width": "auto",
+          }
+        }
+      >
+        <svg
+          height="100%"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 64 64"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            id="svg_1"
+            transform="translate(-64,0)"
+          >
+            <path
+              d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
+              fill="#000000"
+              fillRule="nonzero"
+              id="path3676"
+              stroke="#000000"
+              strokeDashoffset="0"
+              strokeMiterlimit="4"
+              strokeWidth="2"
+            />
+            <path
+              d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
+              fill="#000000"
+              fillRule="nonzero"
+              id="path3678"
+              stroke="#000000"
+              strokeDashoffset="0"
+              strokeMiterlimit="4"
+              strokeWidth="2"
+            />
+          </g>
+        </svg>
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "width": 20,
+        }
+      }
+    />
+    <span
+      className="sc-bdVaJa eAhLIg"
+    >
+      <span>
+        David
+      </span>
+      <span
+        style={
+          Object {
+            "height": "25px",
+            "width": "auto",
+          }
+        }
+      >
+        <svg
+          height="100%"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 64 64"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g>
+            <path
+              d="m35.104694,11.161316c-3.745693,-0.694368 -16.796932,3.032976 -14.63146,2.685302c3.489632,-2.757582 -8.717073,9.22066 -6.354376,14.71551c-1.657402,15.053522 14.30228,23.750284 27.104179,25.269571c3.250519,0.293041 12.036514,-3.859299 4.552967,-0.218243c8.041058,-10.160023 5.919575,-26.781155 -2.633755,-36.271605c-5.378586,-3.32588 -15.767635,-10.787502 -4.564316,-9.648385c12.621204,5.820886 19.66098,20.668349 16.303444,34.1296c-0.427242,14.974796 -21.150288,18.985233 -31.472523,10.861671c-13.402975,-4.417789 -18.267056,-21.579205 -10.777348,-33.029352c4.744314,-8.447283 21.285046,-12.820305 25.849361,-10.947108c-1.125397,0.817653 -2.250782,1.635401 -3.376175,2.453038z"
+              fill="#000000"
+              fillRule="nonzero"
+              id="path3666"
+              stroke="#000000"
+              strokeDashoffset="0"
+              strokeMiterlimit="4"
+              strokeWidth="2"
+            />
+          </g>
+        </svg>
+      </span>
+    </span>
+  </div>
+  <div />
+  <span>
+    <span
+      className="has-no-winner sc-bwzfXH dRTCAd"
+    >
+      Draw! 
+      <span
+        style={
+          Object {
+            "height": "25px",
+            "width": "auto",
+          }
+        }
+      >
+        <svg
+          height="100%"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 64 64"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            id="svg_1"
+            transform="translate(-64,0)"
+          >
+            <path
+              d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
+              fill="#000000"
+              fillRule="nonzero"
+              id="path3676"
+              stroke="#000000"
+              strokeDashoffset="0"
+              strokeMiterlimit="4"
+              strokeWidth="2"
+            />
+            <path
+              d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
+              fill="#000000"
+              fillRule="nonzero"
+              id="path3678"
+              stroke="#000000"
+              strokeDashoffset="0"
+              strokeMiterlimit="4"
+              strokeWidth="2"
+            />
+          </g>
+        </svg>
+      </span>
+       
+      <span
+        style={
+          Object {
+            "height": "25px",
+            "width": "auto",
+          }
+        }
+      >
+        <svg
+          height="100%"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 64 64"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g>
+            <path
+              d="m35.104694,11.161316c-3.745693,-0.694368 -16.796932,3.032976 -14.63146,2.685302c3.489632,-2.757582 -8.717073,9.22066 -6.354376,14.71551c-1.657402,15.053522 14.30228,23.750284 27.104179,25.269571c3.250519,0.293041 12.036514,-3.859299 4.552967,-0.218243c8.041058,-10.160023 5.919575,-26.781155 -2.633755,-36.271605c-5.378586,-3.32588 -15.767635,-10.787502 -4.564316,-9.648385c12.621204,5.820886 19.66098,20.668349 16.303444,34.1296c-0.427242,14.974796 -21.150288,18.985233 -31.472523,10.861671c-13.402975,-4.417789 -18.267056,-21.579205 -10.777348,-33.029352c4.744314,-8.447283 21.285046,-12.820305 25.849361,-10.947108c-1.125397,0.817653 -2.250782,1.635401 -3.376175,2.453038z"
+              fill="#000000"
+              fillRule="nonzero"
+              id="path3666"
+              stroke="#000000"
+              strokeDashoffset="0"
+              strokeMiterlimit="4"
+              strokeWidth="2"
+            />
+          </g>
+        </svg>
+      </span>
+    </span>
+  </span>
+  <div
+    className="sc-EHOje gZDqME"
+  >
+    <div
+      className="sc-htpNat eFswRT"
+    >
+      <span
+        style={
+          Object {
+            "height": "64px",
+            "width": "auto",
+          }
+        }
+      >
+        <svg
+          height="100%"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 64 64"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            id="svg_1"
+            transform="translate(-64,0)"
+          >
+            <path
+              d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
+              fill="#000000"
+              fillRule="nonzero"
+              id="path3676"
+              stroke="#000000"
+              strokeDashoffset="0"
+              strokeMiterlimit="4"
+              strokeWidth="2"
+            />
+            <path
+              d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
+              fill="#000000"
+              fillRule="nonzero"
+              id="path3678"
+              stroke="#000000"
+              strokeDashoffset="0"
+              strokeMiterlimit="4"
+              strokeWidth="2"
+            />
+          </g>
+        </svg>
+      </span>
+    </div>
+    <div
+      className="sc-htpNat qihmN"
+    >
+      <span
+        style={
+          Object {
+            "height": "64px",
+            "width": "auto",
+          }
+        }
+      >
+        <svg
+          height="100%"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 64 64"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g>
+            <path
+              d="m35.104694,11.161316c-3.745693,-0.694368 -16.796932,3.032976 -14.63146,2.685302c3.489632,-2.757582 -8.717073,9.22066 -6.354376,14.71551c-1.657402,15.053522 14.30228,23.750284 27.104179,25.269571c3.250519,0.293041 12.036514,-3.859299 4.552967,-0.218243c8.041058,-10.160023 5.919575,-26.781155 -2.633755,-36.271605c-5.378586,-3.32588 -15.767635,-10.787502 -4.564316,-9.648385c12.621204,5.820886 19.66098,20.668349 16.303444,34.1296c-0.427242,14.974796 -21.150288,18.985233 -31.472523,10.861671c-13.402975,-4.417789 -18.267056,-21.579205 -10.777348,-33.029352c4.744314,-8.447283 21.285046,-12.820305 25.849361,-10.947108c-1.125397,0.817653 -2.250782,1.635401 -3.376175,2.453038z"
+              fill="#000000"
+              fillRule="nonzero"
+              id="path3666"
+              stroke="#000000"
+              strokeDashoffset="0"
+              strokeMiterlimit="4"
+              strokeWidth="2"
+            />
+          </g>
+        </svg>
+      </span>
+    </div>
+    <div
+      className="sc-htpNat eTshLM"
+    >
+      <span
+        style={
+          Object {
+            "height": "64px",
+            "width": "auto",
+          }
+        }
+      >
+        <svg
+          height="100%"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 64 64"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            id="svg_1"
+            transform="translate(-64,0)"
+          >
+            <path
+              d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
+              fill="#000000"
+              fillRule="nonzero"
+              id="path3676"
+              stroke="#000000"
+              strokeDashoffset="0"
+              strokeMiterlimit="4"
+              strokeWidth="2"
+            />
+            <path
+              d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
+              fill="#000000"
+              fillRule="nonzero"
+              id="path3678"
+              stroke="#000000"
+              strokeDashoffset="0"
+              strokeMiterlimit="4"
+              strokeWidth="2"
+            />
+          </g>
+        </svg>
+      </span>
+    </div>
+    <div
+      className="sc-htpNat fgIPYy"
+    >
+      <span
+        style={
+          Object {
+            "height": "64px",
+            "width": "auto",
+          }
+        }
+      >
+        <svg
+          height="100%"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 64 64"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            id="svg_1"
+            transform="translate(-64,0)"
+          >
+            <path
+              d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
+              fill="#000000"
+              fillRule="nonzero"
+              id="path3676"
+              stroke="#000000"
+              strokeDashoffset="0"
+              strokeMiterlimit="4"
+              strokeWidth="2"
+            />
+            <path
+              d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
+              fill="#000000"
+              fillRule="nonzero"
+              id="path3678"
+              stroke="#000000"
+              strokeDashoffset="0"
+              strokeMiterlimit="4"
+              strokeWidth="2"
+            />
+          </g>
+        </svg>
+      </span>
+    </div>
+    <div
+      className="sc-htpNat chVWwc"
+    >
+      <span
+        style={
+          Object {
+            "height": "64px",
+            "width": "auto",
+          }
+        }
+      >
+        <svg
+          height="100%"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 64 64"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g>
+            <path
+              d="m35.104694,11.161316c-3.745693,-0.694368 -16.796932,3.032976 -14.63146,2.685302c3.489632,-2.757582 -8.717073,9.22066 -6.354376,14.71551c-1.657402,15.053522 14.30228,23.750284 27.104179,25.269571c3.250519,0.293041 12.036514,-3.859299 4.552967,-0.218243c8.041058,-10.160023 5.919575,-26.781155 -2.633755,-36.271605c-5.378586,-3.32588 -15.767635,-10.787502 -4.564316,-9.648385c12.621204,5.820886 19.66098,20.668349 16.303444,34.1296c-0.427242,14.974796 -21.150288,18.985233 -31.472523,10.861671c-13.402975,-4.417789 -18.267056,-21.579205 -10.777348,-33.029352c4.744314,-8.447283 21.285046,-12.820305 25.849361,-10.947108c-1.125397,0.817653 -2.250782,1.635401 -3.376175,2.453038z"
+              fill="#000000"
+              fillRule="nonzero"
+              id="path3666"
+              stroke="#000000"
+              strokeDashoffset="0"
+              strokeMiterlimit="4"
+              strokeWidth="2"
+            />
+          </g>
+        </svg>
+      </span>
+    </div>
+    <div
+      className="sc-htpNat eEPRbw"
+    >
+      <span
+        style={
+          Object {
+            "height": "64px",
+            "width": "auto",
+          }
+        }
+      >
+        <svg
+          height="100%"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 64 64"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g>
+            <path
+              d="m35.104694,11.161316c-3.745693,-0.694368 -16.796932,3.032976 -14.63146,2.685302c3.489632,-2.757582 -8.717073,9.22066 -6.354376,14.71551c-1.657402,15.053522 14.30228,23.750284 27.104179,25.269571c3.250519,0.293041 12.036514,-3.859299 4.552967,-0.218243c8.041058,-10.160023 5.919575,-26.781155 -2.633755,-36.271605c-5.378586,-3.32588 -15.767635,-10.787502 -4.564316,-9.648385c12.621204,5.820886 19.66098,20.668349 16.303444,34.1296c-0.427242,14.974796 -21.150288,18.985233 -31.472523,10.861671c-13.402975,-4.417789 -18.267056,-21.579205 -10.777348,-33.029352c4.744314,-8.447283 21.285046,-12.820305 25.849361,-10.947108c-1.125397,0.817653 -2.250782,1.635401 -3.376175,2.453038z"
+              fill="#000000"
+              fillRule="nonzero"
+              id="path3666"
+              stroke="#000000"
+              strokeDashoffset="0"
+              strokeMiterlimit="4"
+              strokeWidth="2"
+            />
+          </g>
+        </svg>
+      </span>
+    </div>
+    <div
+      className="sc-htpNat gxROEv"
+    >
+      <span
+        style={
+          Object {
+            "height": "64px",
+            "width": "auto",
+          }
+        }
+      >
+        <svg
+          height="100%"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 64 64"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g>
+            <path
+              d="m35.104694,11.161316c-3.745693,-0.694368 -16.796932,3.032976 -14.63146,2.685302c3.489632,-2.757582 -8.717073,9.22066 -6.354376,14.71551c-1.657402,15.053522 14.30228,23.750284 27.104179,25.269571c3.250519,0.293041 12.036514,-3.859299 4.552967,-0.218243c8.041058,-10.160023 5.919575,-26.781155 -2.633755,-36.271605c-5.378586,-3.32588 -15.767635,-10.787502 -4.564316,-9.648385c12.621204,5.820886 19.66098,20.668349 16.303444,34.1296c-0.427242,14.974796 -21.150288,18.985233 -31.472523,10.861671c-13.402975,-4.417789 -18.267056,-21.579205 -10.777348,-33.029352c4.744314,-8.447283 21.285046,-12.820305 25.849361,-10.947108c-1.125397,0.817653 -2.250782,1.635401 -3.376175,2.453038z"
+              fill="#000000"
+              fillRule="nonzero"
+              id="path3666"
+              stroke="#000000"
+              strokeDashoffset="0"
+              strokeMiterlimit="4"
+              strokeWidth="2"
+            />
+          </g>
+        </svg>
+      </span>
+    </div>
+    <div
+      className="sc-htpNat fLwvZg"
+    >
+      <span
+        style={
+          Object {
+            "height": "64px",
+            "width": "auto",
+          }
+        }
+      >
+        <svg
+          height="100%"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 64 64"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            id="svg_1"
+            transform="translate(-64,0)"
+          >
+            <path
+              d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
+              fill="#000000"
+              fillRule="nonzero"
+              id="path3676"
+              stroke="#000000"
+              strokeDashoffset="0"
+              strokeMiterlimit="4"
+              strokeWidth="2"
+            />
+            <path
+              d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
+              fill="#000000"
+              fillRule="nonzero"
+              id="path3678"
+              stroke="#000000"
+              strokeDashoffset="0"
+              strokeMiterlimit="4"
+              strokeWidth="2"
+            />
+          </g>
+        </svg>
+      </span>
+    </div>
+    <div
+      className="sc-htpNat eSBkMk"
+    >
+      <span
+        style={
+          Object {
+            "height": "64px",
+            "width": "auto",
+          }
+        }
+      >
+        <svg
+          height="100%"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 64 64"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g>
+            <path
+              d="m35.104694,11.161316c-3.745693,-0.694368 -16.796932,3.032976 -14.63146,2.685302c3.489632,-2.757582 -8.717073,9.22066 -6.354376,14.71551c-1.657402,15.053522 14.30228,23.750284 27.104179,25.269571c3.250519,0.293041 12.036514,-3.859299 4.552967,-0.218243c8.041058,-10.160023 5.919575,-26.781155 -2.633755,-36.271605c-5.378586,-3.32588 -15.767635,-10.787502 -4.564316,-9.648385c12.621204,5.820886 19.66098,20.668349 16.303444,34.1296c-0.427242,14.974796 -21.150288,18.985233 -31.472523,10.861671c-13.402975,-4.417789 -18.267056,-21.579205 -10.777348,-33.029352c4.744314,-8.447283 21.285046,-12.820305 25.849361,-10.947108c-1.125397,0.817653 -2.250782,1.635401 -3.376175,2.453038z"
+              fill="#000000"
+              fillRule="nonzero"
+              id="path3666"
+              stroke="#000000"
+              strokeDashoffset="0"
+              strokeMiterlimit="4"
+              strokeWidth="2"
+            />
+          </g>
+        </svg>
+      </span>
+    </div>
+  </div>
+  <span>
+    <button
+      className="play-again sc-gzVnrw fBpHTn"
+      onClick={[Function]}
+    >
+      Play again
+    </button>
+  </span>
+</div>
+`;
+
+exports[`Storyshots Game With full board and winner 1`] = `
+<div
+  className="sc-htoDjs fMhxiM"
+>
+  <h1>
+    TIC TAC TOE!
+  </h1>
+  <div
+    className="sc-dnqmqq ciasQq"
   >
     <span
       className="sc-bdVaJa eAhLIg"
@@ -686,10 +1567,10 @@ exports[`Storyshots Game With full board and winner 1`] = `
     </span>
   </span>
   <div
-    className="sc-ifAKCX leUYFl"
+    className="sc-EHOje gZDqME"
   >
     <div
-      className="sc-htpNat eFswRT"
+      className="sc-ifAKCX jGAHkG"
     >
       <span
         style={
@@ -734,7 +1615,7 @@ exports[`Storyshots Game With full board and winner 1`] = `
       </span>
     </div>
     <div
-      className="sc-htpNat qihmN"
+      className="sc-ifAKCX llZypP"
     >
       <span
         style={
@@ -779,7 +1660,7 @@ exports[`Storyshots Game With full board and winner 1`] = `
       </span>
     </div>
     <div
-      className="sc-htpNat eTshLM"
+      className="sc-ifAKCX eWMmJb"
     >
       <span
         style={
@@ -910,7 +1791,7 @@ exports[`Storyshots Game With full board and winner 1`] = `
   </div>
   <span>
     <button
-      className="play-again sc-bZQynM degBub"
+      className="play-again sc-gzVnrw fBpHTn"
       onClick={[Function]}
     >
       Play again
@@ -921,13 +1802,13 @@ exports[`Storyshots Game With full board and winner 1`] = `
 
 exports[`Storyshots Game With initialized values 1`] = `
 <div
-  className="sc-gzVnrw jGncgf"
+  className="sc-htoDjs fMhxiM"
 >
   <h1>
     TIC TAC TOE!
   </h1>
   <div
-    className="sc-htoDjs kSEzul"
+    className="sc-dnqmqq ciasQq"
   >
     <span
       className="sc-bdVaJa eAhLIg"
@@ -1022,7 +1903,7 @@ exports[`Storyshots Game With initialized values 1`] = `
   </div>
   <div>
     <span
-      className="sc-EHOje dpncvS"
+      className="sc-bZQynM iNPAfB"
     >
       <span
         className="sc-bdVaJa eAhLIg"
@@ -1079,7 +1960,7 @@ exports[`Storyshots Game With initialized values 1`] = `
   </div>
   <span />
   <div
-    className="sc-ifAKCX leUYFl"
+    className="sc-EHOje gZDqME"
   >
     <div
       className="sc-htpNat eFswRT"
@@ -1181,7 +2062,7 @@ exports[`Storyshots PlayAgainButton Game is not over yet (so this component shou
 exports[`Storyshots PlayAgainButton Game over! 1`] = `
 <span>
   <button
-    className="play-again sc-bZQynM degBub"
+    className="play-again sc-gzVnrw fBpHTn"
     onClick={[Function]}
   >
     Play again
@@ -1278,28 +2159,7 @@ exports[`Storyshots PlayerInfo PlayerInfo of  val=PLAYER_2 label=O name=David 1`
 </span>
 `;
 
-exports[`Storyshots Square Pending to use (displayed as a button) 1`] = `
-<div
-  className="sc-htpNat bsaxkK"
->
-  <button
-    className="square pending  sc-bxivhb JGWnr"
-    disabled={false}
-    onClick={[Function]}
-    type="button"
-  />
-</div>
-`;
-
-exports[`Storyshots Square Pending to use but game is over 1`] = `
-<div
-  className="sc-htpNat bsaxkK"
->
-  <span />
-</div>
-`;
-
-exports[`Storyshots Square used by PLAYER_1  (X ) 1`] = `
+exports[`Storyshots Square Game is not over, used by PLAYER_1  (X ) 1`] = `
 <div
   className="sc-htpNat bsaxkK"
 >
@@ -1347,7 +2207,7 @@ exports[`Storyshots Square used by PLAYER_1  (X ) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Square used by PLAYER_2  (O ) 1`] = `
+exports[`Storyshots Square Game is not over, used by PLAYER_2  (O ) 1`] = `
 <div
   className="sc-htpNat bsaxkK"
 >
@@ -1382,10 +2242,197 @@ exports[`Storyshots Square used by PLAYER_2  (O ) 1`] = `
 </div>
 `;
 
+exports[`Storyshots Square Game over, used by PLAYER_1  (X ), player is not the winner 1`] = `
+<div
+  className="sc-htpNat bsaxkK"
+>
+  <span
+    style={
+      Object {
+        "height": "64px",
+        "width": "auto",
+      }
+    }
+  >
+    <svg
+      height="100%"
+      preserveAspectRatio="xMidYMid meet"
+      viewBox="0 0 64 64"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        id="svg_1"
+        transform="translate(-64,0)"
+      >
+        <path
+          d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
+          fill="#000000"
+          fillRule="nonzero"
+          id="path3676"
+          stroke="#000000"
+          strokeDashoffset="0"
+          strokeMiterlimit="4"
+          strokeWidth="2"
+        />
+        <path
+          d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
+          fill="#000000"
+          fillRule="nonzero"
+          id="path3678"
+          stroke="#000000"
+          strokeDashoffset="0"
+          strokeMiterlimit="4"
+          strokeWidth="2"
+        />
+      </g>
+    </svg>
+  </span>
+</div>
+`;
+
+exports[`Storyshots Square Game over, used by PLAYER_1  (X ), player is the winner 1`] = `
+<div
+  className="sc-ifAKCX cgkBKv"
+>
+  <span
+    style={
+      Object {
+        "height": "64px",
+        "width": "auto",
+      }
+    }
+  >
+    <svg
+      height="100%"
+      preserveAspectRatio="xMidYMid meet"
+      viewBox="0 0 64 64"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        id="svg_1"
+        transform="translate(-64,0)"
+      >
+        <path
+          d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
+          fill="#000000"
+          fillRule="nonzero"
+          id="path3676"
+          stroke="#000000"
+          strokeDashoffset="0"
+          strokeMiterlimit="4"
+          strokeWidth="2"
+        />
+        <path
+          d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
+          fill="#000000"
+          fillRule="nonzero"
+          id="path3678"
+          stroke="#000000"
+          strokeDashoffset="0"
+          strokeMiterlimit="4"
+          strokeWidth="2"
+        />
+      </g>
+    </svg>
+  </span>
+</div>
+`;
+
+exports[`Storyshots Square Game over, used by PLAYER_2  (O ), player is not the winner 1`] = `
+<div
+  className="sc-htpNat bsaxkK"
+>
+  <span
+    style={
+      Object {
+        "height": "64px",
+        "width": "auto",
+      }
+    }
+  >
+    <svg
+      height="100%"
+      preserveAspectRatio="xMidYMid meet"
+      viewBox="0 0 64 64"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g>
+        <path
+          d="m35.104694,11.161316c-3.745693,-0.694368 -16.796932,3.032976 -14.63146,2.685302c3.489632,-2.757582 -8.717073,9.22066 -6.354376,14.71551c-1.657402,15.053522 14.30228,23.750284 27.104179,25.269571c3.250519,0.293041 12.036514,-3.859299 4.552967,-0.218243c8.041058,-10.160023 5.919575,-26.781155 -2.633755,-36.271605c-5.378586,-3.32588 -15.767635,-10.787502 -4.564316,-9.648385c12.621204,5.820886 19.66098,20.668349 16.303444,34.1296c-0.427242,14.974796 -21.150288,18.985233 -31.472523,10.861671c-13.402975,-4.417789 -18.267056,-21.579205 -10.777348,-33.029352c4.744314,-8.447283 21.285046,-12.820305 25.849361,-10.947108c-1.125397,0.817653 -2.250782,1.635401 -3.376175,2.453038z"
+          fill="#000000"
+          fillRule="nonzero"
+          id="path3666"
+          stroke="#000000"
+          strokeDashoffset="0"
+          strokeMiterlimit="4"
+          strokeWidth="2"
+        />
+      </g>
+    </svg>
+  </span>
+</div>
+`;
+
+exports[`Storyshots Square Game over, used by PLAYER_2  (O ), player is the winner 1`] = `
+<div
+  className="sc-ifAKCX cgkBKv"
+>
+  <span
+    style={
+      Object {
+        "height": "64px",
+        "width": "auto",
+      }
+    }
+  >
+    <svg
+      height="100%"
+      preserveAspectRatio="xMidYMid meet"
+      viewBox="0 0 64 64"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g>
+        <path
+          d="m35.104694,11.161316c-3.745693,-0.694368 -16.796932,3.032976 -14.63146,2.685302c3.489632,-2.757582 -8.717073,9.22066 -6.354376,14.71551c-1.657402,15.053522 14.30228,23.750284 27.104179,25.269571c3.250519,0.293041 12.036514,-3.859299 4.552967,-0.218243c8.041058,-10.160023 5.919575,-26.781155 -2.633755,-36.271605c-5.378586,-3.32588 -15.767635,-10.787502 -4.564316,-9.648385c12.621204,5.820886 19.66098,20.668349 16.303444,34.1296c-0.427242,14.974796 -21.150288,18.985233 -31.472523,10.861671c-13.402975,-4.417789 -18.267056,-21.579205 -10.777348,-33.029352c4.744314,-8.447283 21.285046,-12.820305 25.849361,-10.947108c-1.125397,0.817653 -2.250782,1.635401 -3.376175,2.453038z"
+          fill="#000000"
+          fillRule="nonzero"
+          id="path3666"
+          stroke="#000000"
+          strokeDashoffset="0"
+          strokeMiterlimit="4"
+          strokeWidth="2"
+        />
+      </g>
+    </svg>
+  </span>
+</div>
+`;
+
+exports[`Storyshots Square Pending to use (displayed as a button) 1`] = `
+<div
+  className="sc-htpNat bsaxkK"
+>
+  <button
+    className="square pending  sc-bxivhb JGWnr"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  />
+</div>
+`;
+
+exports[`Storyshots Square Pending to use but game is over 1`] = `
+<div
+  className="sc-htpNat bsaxkK"
+>
+  <span />
+</div>
+`;
+
 exports[`Storyshots WhoIsNextInfo Game is not over and the next player is PLAYER_1  1`] = `
 <div>
   <span
-    className="sc-EHOje dpncvS"
+    className="sc-bZQynM iNPAfB"
   >
     <span
       className="sc-bdVaJa eAhLIg"

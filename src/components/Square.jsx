@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { MOVE, DIMENSIONS } from '../constants';
 import { X, O } from './Icons';
+import { fadeInOut } from './Container';
 
 const Container = styled.div`
   width: ${DIMENSIONS.square.width}px;
@@ -39,13 +40,26 @@ const Button = styled.button`
   }
 `;
 
+const BlinkingContainer = Container.extend`
+  animation: ${fadeInOut} 1s step-start infinite;
+`;
+
 /**
  * A square of tic tac toe board
  * @param {string} owner The player (val) that owns the square
  */
-const Square = ({ owner, onMove, isGameOver, className, style }) => {
+const Square = ({
+  owner,
+  onMove,
+  isGameOver,
+  className,
+  isWinningMove,
+  style
+}) => {
+  const SelectedContainer = isWinningMove ? BlinkingContainer : Container;
+
   return (
-    <Container {...style}>
+    <SelectedContainer {...style}>
       {owner === MOVE.PLAYER_1.val && <X scale={0.8} />}
       {owner === MOVE.PLAYER_2.val && <O scale={0.8} />}
       {owner === MOVE.PENDING.val && isGameOver && <span />}
@@ -58,7 +72,7 @@ const Square = ({ owner, onMove, isGameOver, className, style }) => {
             onClick={onMove}
           />
         )}
-    </Container>
+    </SelectedContainer>
   );
 };
 
@@ -76,7 +90,8 @@ Square.propTypes = {
     bottom: PropTypes.number,
     left: PropTypes.number,
     right: PropTypes.number
-  })
+  }),
+  isWinningMove: PropTypes.bool
 };
 
 Square.defaultProps = {
@@ -86,7 +101,8 @@ Square.defaultProps = {
     bottom: 0,
     left: 0,
     right: 0
-  }
+  },
+  isWinningMove: false
 };
 
 export default Square;

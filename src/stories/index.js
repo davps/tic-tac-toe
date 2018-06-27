@@ -42,20 +42,78 @@ storiesOf('Square', module)
       isGameOver={boolean('Game over', true)}
     />
   ))
-  .add(`used by ${MOVE.PLAYER_1.val}  (${MOVE.PLAYER_1.label} )`, () => (
-    <Square
-      owner={owners()}
-      onMove={action('clicked')}
-      isGameOver={boolean('Game over', false)}
-    />
-  ))
-  .add(`used by ${MOVE.PLAYER_2.val}  (${MOVE.PLAYER_2.label} )`, () => (
-    <Square
-      owner={owners(MOVE.PLAYER_2.val)}
-      onMove={action('clicked')}
-      isGameOver={boolean('Game over', false)}
-    />
-  ));
+  .add(
+    `Game is not over, used by ${MOVE.PLAYER_1.val}  (${MOVE.PLAYER_1.label} )`,
+    () => (
+      <Square
+        owner={owners()}
+        onMove={action('clicked')}
+        isGameOver={boolean('Game over', false)}
+      />
+    )
+  )
+  .add(
+    `Game is not over, used by ${MOVE.PLAYER_2.val}  (${MOVE.PLAYER_2.label} )`,
+    () => (
+      <Square
+        owner={owners(MOVE.PLAYER_2.val)}
+        onMove={action('clicked')}
+        isGameOver={boolean('Game over', false)}
+      />
+    )
+  )
+  .add(
+    `Game over, used by ${MOVE.PLAYER_1.val}  (${
+      MOVE.PLAYER_1.label
+    } ), player is not the winner`,
+    () => (
+      <Square
+        owner={owners()}
+        onMove={action('clicked')}
+        isGameOver={boolean('Game over', false)}
+        isWinningMove={boolean('Is a winner', false)}
+      />
+    )
+  )
+  .add(
+    `Game over, used by ${MOVE.PLAYER_2.val}  (${
+      MOVE.PLAYER_2.label
+    } ), player is not the winner`,
+    () => (
+      <Square
+        owner={owners(MOVE.PLAYER_2.val)}
+        onMove={action('clicked')}
+        isGameOver={boolean('Game over', false)}
+        isWinningMove={boolean('Is a winner', false)}
+      />
+    )
+  )
+  .add(
+    `Game over, used by ${MOVE.PLAYER_1.val}  (${
+      MOVE.PLAYER_1.label
+    } ), player is the winner`,
+    () => (
+      <Square
+        owner={owners()}
+        onMove={action('clicked')}
+        isGameOver={boolean('Game over', false)}
+        isWinningMove={boolean('Is a winner', true)}
+      />
+    )
+  )
+  .add(
+    `Game over, used by ${MOVE.PLAYER_2.val}  (${
+      MOVE.PLAYER_2.label
+    } ), player is the winner`,
+    () => (
+      <Square
+        owner={owners(MOVE.PLAYER_2.val)}
+        onMove={action('clicked')}
+        isGameOver={boolean('Game over', false)}
+        isWinningMove={boolean('Is a winner', true)}
+      />
+    )
+  );
 
 const movesAllPending = [
   MOVE.PENDING.val,
@@ -81,6 +139,18 @@ const movesWithWinner = [
   MOVE.PENDING.val
 ];
 
+const movesWithDraw = [
+  MOVE.PLAYER_1.val,
+  MOVE.PLAYER_2.val,
+  MOVE.PLAYER_1.val,
+  MOVE.PLAYER_1.val,
+  MOVE.PLAYER_2.val,
+  MOVE.PLAYER_2.val,
+  MOVE.PLAYER_2.val,
+  MOVE.PLAYER_1.val,
+  MOVE.PLAYER_2.val
+];
+
 const movesWithWinner2 = [
   MOVE.PLAYER_1.val,
   MOVE.PLAYER_1.val,
@@ -102,11 +172,20 @@ storiesOf('Board', module)
       isGameOver={boolean('Game over', false)}
     />
   ))
-  .add('Game over!', () => (
+  .add('Game over! and has a winner', () => (
     <Board
       moves={movesWithWinner}
       onMove={action('clicked')}
       isGameOver={boolean('Game over', true)}
+      winnerMoves={[0, 1, 2]}
+    />
+  ))
+  .add('Game over! and nobody wins', () => (
+    <Board
+      moves={movesWithDraw}
+      onMove={action('clicked')}
+      isGameOver={boolean('Game over', true)}
+      winnerMoves={null}
     />
   ));
 
@@ -126,8 +205,19 @@ storiesOf('Game', module)
     <Game
       xIsNext={boolean(`${MOVE.PLAYER_1.val} is next`, false)}
       winner={MOVE.PLAYER_1.val}
+      winnerMoves={[0, 1, 2]}
       isFull={boolean('Is the board full', true)}
       moves={movesWithWinner2}
+      placeMove={action('clicked')}
+      resetGame={action('clicked')}
+    />
+  ))
+  .add('With full board and no winner', () => (
+    <Game
+      xIsNext={boolean(`${MOVE.PLAYER_1.val} is next`, false)}
+      winner={null}
+      isFull={boolean('Is the board full', true)}
+      moves={movesWithDraw}
       placeMove={action('clicked')}
       resetGame={action('clicked')}
     />

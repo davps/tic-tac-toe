@@ -8,7 +8,7 @@ const Logic = {
       const col2 = moves[i + 1];
       const col3 = moves[i + 2];
       if (col1 === col2 && col2 === col3 && col1 !== MOVE.PENDING.val) {
-        return col1;
+        return { winner: col1, winnerMoves: [i, i + 1, i + 2] };
       }
     }
     for (let i = 0; i < 3; i += 1) {
@@ -16,7 +16,7 @@ const Logic = {
       const row2 = moves[i + 3];
       const row3 = moves[i + 6];
       if (row1 === row2 && row2 === row3 && row1 !== MOVE.PENDING.val) {
-        return row1;
+        return { winner: row1, winnerMoves: [i, i + 3, i + 6] };
       }
     }
     const topLeft = moves[0];
@@ -29,16 +29,16 @@ const Logic = {
       center === bottomRight &&
       topLeft !== MOVE.PENDING.val
     ) {
-      return topLeft;
+      return { winner: topLeft, winnerMoves: [0, 4, 8] };
     }
     if (
       topRight === center &&
       center === bottomLeft &&
       topRight !== MOVE.PENDING.val
     ) {
-      return topRight;
+      return { winner: topRight, winnerMoves: [2, 4, 6] };
     }
-    return null;
+    return { winner: null, winnerMoves: null };
   },
 
   isFull: moves => {
@@ -65,13 +65,14 @@ const Logic = {
     const player = Logic.getNextPlayer(xIsNext);
     const updatedMoves = Logic.updateMoves(moves, moveIdx, player);
     const isFull = Logic.isFull(updatedMoves);
-    const winner = Logic.getWinner(updatedMoves);
+    const { winner, winnerMoves } = Logic.getWinner(updatedMoves);
 
     return {
       ...state,
       moves: updatedMoves,
       xIsNext: !xIsNext,
       winner,
+      winnerMoves,
       isFull
     };
   }

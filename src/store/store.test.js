@@ -1,5 +1,5 @@
 import store from './store';
-import initialState from '../store/initialState';
+import initialState from './initialState';
 import { placeMove } from '../actions/actions';
 
 it('verify if the store works', () => {
