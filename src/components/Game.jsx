@@ -15,6 +15,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 10px solid #444;
 `;
 
 const PlayersInfoContainer = styled.div`

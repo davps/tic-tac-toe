@@ -12,6 +12,7 @@ const Container = styled.div`
   height: ${DIMENSIONS.board.heigth}px;
   padding: 0px;
   margin: 0px;
+  margin-bottom: 20px;
 `;
 
 /* eslint-disable react/no-array-index-key */
