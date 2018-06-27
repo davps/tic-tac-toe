@@ -11,6 +11,8 @@ I am developing this Tic tac toe game to showcase my skillsets.
 
 [View the live demo](https://davps.github.io/tic-tac-toe) of tic-tac-toe and the individual components on my Storybook
 
+![Demo Animation](./docs/demo.gif?raw=true)
+
 ## Tech stack
 
 - Create-react-app, which includes: React, JSX, ES6, Webpack, Babel and other amazing projects.
