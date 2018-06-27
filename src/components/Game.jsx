@@ -18,7 +18,7 @@ const Container = styled.div`
   width: auto;
   padding-left: 20px;
   padding-right: 20px;
-  border: 1px #ccc solid;
+  border: 0;
 `;
 
 const PlayersInfoContainer = styled.div`
