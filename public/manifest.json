@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Tic tac toe",
+  "name": "Tic tac toe, by David Perez",
   "icons": [
     {
       "src": "favicon.ico",
