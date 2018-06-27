@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PlayerInfo from './PlayerInfo';
+import PlayerName from './PlayerName';
 import { SpacedContainer, fadeInOut } from './Container';
+import { customPropTypes } from '../constants';
 
 const Container = SpacedContainer.extend`
   animation: ${fadeInOut} 1s step-start infinite;
@@ -11,7 +12,7 @@ const WhoIsNextInfo = ({ player, isGameOver }) => (
   <div>
     {!isGameOver && (
       <Container>
-        <PlayerInfo player={player} />
+        <PlayerName player={player} />
         {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
         <span> turn</span>
       </Container>
@@ -20,8 +21,12 @@ const WhoIsNextInfo = ({ player, isGameOver }) => (
 );
 
 WhoIsNextInfo.propTypes = {
-  player: PlayerInfo.propTypes.player, // eslint-disable-line react/require-default-props
-  isGameOver: PropTypes.bool.isRequired
+  player: customPropTypes.winner.isRequired,
+  isGameOver: PropTypes.bool
+};
+
+WhoIsNextInfo.defaultProps = {
+  isGameOver: false
 };
 
 export default WhoIsNextInfo;

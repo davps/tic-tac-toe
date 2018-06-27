@@ -21,19 +21,23 @@ const Button = styled.button`
   }
 `;
 
-const PlayAgainButton = ({ isGameOver, resetGame }) => (
+const ResetGame = ({ isGameOver, onReset }) => (
   <span>
     {isGameOver && (
-      <Button className="play-again" onClick={resetGame}>
+      <Button className="play-again" onClick={onReset}>
         Play again
       </Button>
     )}
   </span>
 );
 
-PlayAgainButton.propTypes = {
-  isGameOver: PropTypes.bool.isRequired,
-  resetGame: PropTypes.func.isRequired
+ResetGame.propTypes = {
+  isGameOver: PropTypes.bool,
+  onReset: PropTypes.func.isRequired
 };
 
-export default PlayAgainButton;
+ResetGame.defaultProps = {
+  isGameOver: false
+};
+
+export default ResetGame;

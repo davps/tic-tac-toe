@@ -10,10 +10,10 @@ import App from '../App';
 import Game from '../components/Game';
 import Square from '../components/Square';
 import Board from '../components/Board';
-import PlayAgainButton from '../components/PlayAgainButton';
-import WhoIsNextInfo from '../components/WhoIsNextInfo';
-import WinnerInfo from '../components/WinnerInfo';
-import PlayerInfo from '../components/PlayerInfo';
+import ResetGame from '../components/ResetGame';
+import NextPlayerName from '../components/NextPlayerName';
+import WinnerName from '../components/WinnerName';
+import PlayerName from '../components/PlayerName';
 
 const owners = (defaultPlayer = MOVE.PLAYER_1.val) =>
   select(
@@ -197,8 +197,8 @@ storiesOf('Game', module)
       winner={null}
       isFull={boolean('Is the board full', false)}
       moves={movesAllPending}
-      placeMove={action('clicked')}
-      resetGame={action('clicked')}
+      onMove={action('clicked')}
+      onReset={action('clicked')}
     />
   ))
   .add('With full board and winner', () => (
@@ -208,8 +208,8 @@ storiesOf('Game', module)
       winnerMoves={[0, 1, 2]}
       isFull={boolean('Is the board full', true)}
       moves={movesWithWinner2}
-      placeMove={action('clicked')}
-      resetGame={action('clicked')}
+      onMove={action('clicked')}
+      onReset={action('clicked')}
     />
   ))
   .add('With full board and no winner', () => (
@@ -218,66 +218,62 @@ storiesOf('Game', module)
       winner={null}
       isFull={boolean('Is the board full', true)}
       moves={movesWithDraw}
-      placeMove={action('clicked')}
-      resetGame={action('clicked')}
+      onMove={action('clicked')}
+      onReset={action('clicked')}
     />
   ));
 
-storiesOf('PlayerInfo', module)
+storiesOf('PlayerName', module)
   .add(
-    `PlayerInfo of  val=${MOVE.PLAYER_1.val} label=${
+    `PlayerName of  val=${MOVE.PLAYER_1.val} label=${
       MOVE.PLAYER_1.label
     } name=${MOVE.PLAYER_1.name}`,
-    () => <PlayerInfo player={MOVE.PLAYER_1.val} />
+    () => <PlayerName player={MOVE.PLAYER_1.val} />
   )
   .add(
-    `PlayerInfo of  val=${MOVE.PLAYER_2.val} label=${
+    `PlayerName of  val=${MOVE.PLAYER_2.val} label=${
       MOVE.PLAYER_2.label
     } name=${MOVE.PLAYER_2.name}`,
-    () => <PlayerInfo player={MOVE.PLAYER_2.val} />
+    () => <PlayerName player={MOVE.PLAYER_2.val} />
   );
 
-storiesOf('PlayAgainButton', module)
+storiesOf('ResetGame', module)
   .addDecorator(withKnobs)
   .add('Game over!', () => (
-    <PlayAgainButton
+    <ResetGame
       isGameOver={boolean('Game over', true)}
-      resetGame={action('clicked')}
+      onReset={action('clicked')}
     />
   ))
   .add('Game is not over yet (so this component should be hidden) ', () => (
-    <PlayAgainButton
+    <ResetGame
       isGameOver={boolean('Game over', false)}
-      resetGame={action('clicked')}
+      onReset={action('clicked')}
     />
   ));
 
-storiesOf('WhoIsNextInfo', module)
+storiesOf('NextPlayerName', module)
   .addDecorator(withKnobs)
   .add(`Game is not over and the next player is ${MOVE.PLAYER_1.val} `, () => (
-    <WhoIsNextInfo
+    <NextPlayerName
       player={MOVE.PLAYER_1.val}
       isGameOver={boolean('Game over', false)}
     />
   ))
   .add('Game over! (so this component should be hidden)', () => (
-    <WhoIsNextInfo
+    <NextPlayerName
       player={MOVE.PLAYER_1.val}
       isGameOver={boolean('Game over', true)}
     />
   ));
 
-storiesOf('WinnerInfo', module)
+storiesOf('WinnerName', module)
   .add(`Game over! ${MOVE.PLAYER_1.val} wins. `, () => (
-    <WinnerInfo isBoardFull={false} player={MOVE.PLAYER_1.val} />
+    <WinnerName isBoardFull={false} winner={MOVE.PLAYER_1.val} />
   ))
   .add('Game is NOT over yet (so this component should be hidden)', () => (
-    <WinnerInfo
-      hasWinner={false}
-      isBoardFull={false}
-      player={MOVE.PLAYER_1.val}
-    />
+    <WinnerName />
   ))
-  .add('Game over! But without a winner, the board is full', () => (
-    <WinnerInfo hasWinner={false} player={MOVE.PLAYER_1.val} />
+  .add('Game over! The board is full but without a winner', () => (
+    <WinnerName isBoardFull />
   ));

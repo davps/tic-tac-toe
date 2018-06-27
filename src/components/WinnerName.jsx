@@ -1,23 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PlayerInfo from './PlayerInfo';
-import { MOVE } from '../constants';
+import PlayerName from './PlayerName';
+import { customPropTypes } from '../constants';
 import { X, O } from './Icons';
 import { SpacedContainer as Container } from './Container';
 
 /* eslint-disable react/jsx-one-expression-per-line */
-const WinnerInfo = ({ hasWinner, isBoardFull, player }) => (
+const WinnerName = ({ winner, isBoardFull }) => (
   <span>
-    {hasWinner && (
+    {winner && (
       <Container className="has-winner">
         <strong>
-          <PlayerInfo player={player} />
+          <PlayerName player={winner} />
         </strong>
         wins!
       </Container>
     )}
 
-    {!hasWinner &&
+    {!winner &&
       isBoardFull && (
         <Container className="has-no-winner">
           Draw! <X size={25} /> <O size={25} />
@@ -27,16 +27,14 @@ const WinnerInfo = ({ hasWinner, isBoardFull, player }) => (
 );
 /* eslint-enable */
 
-WinnerInfo.propTypes = {
-  hasWinner: PropTypes.bool,
-  player: PropTypes.oneOf([MOVE.PLAYER_1.val, MOVE.PLAYER_2.val]),
+WinnerName.propTypes = {
+  winner: customPropTypes.winner,
   isBoardFull: PropTypes.bool
 };
 
-WinnerInfo.defaultProps = {
-  hasWinner: true,
-  isBoardFull: true,
-  player: null
+WinnerName.defaultProps = {
+  isBoardFull: false,
+  winner: null
 };
 
-export default WinnerInfo;
+export default WinnerName;

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 /**
  * I used the key property on this data structure because it is
  * easiert to debug with it (instead of using null or empty)
@@ -50,5 +52,20 @@ export const DIMENSIONS = {
   margins,
   board
 };
+
+export const customPropTypes = {
+  moves: PropTypes.arrayOf(
+    PropTypes.oneOf([MOVE.PENDING.val, MOVE.PLAYER_1.val, MOVE.PLAYER_2.val])
+  ),
+  winner: PropTypes.oneOf([MOVE.PLAYER_1.val, MOVE.PLAYER_2.val]),
+  winnerMoves: PropTypes.arrayOf(PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8])),
+  moveVal: PropTypes.oneOf([
+    MOVE.PENDING.val,
+    MOVE.PLAYER_1.val,
+    MOVE.PLAYER_2.val
+  ])
+};
+
+export const customDefaultTypes = {};
 
 export default {};

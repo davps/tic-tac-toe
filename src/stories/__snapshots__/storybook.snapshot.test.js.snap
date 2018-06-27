@@ -2057,20 +2057,69 @@ exports[`Storyshots Game With initialized values 1`] = `
 </div>
 `;
 
-exports[`Storyshots PlayAgainButton Game is not over yet (so this component should be hidden)  1`] = `<span />`;
-
-exports[`Storyshots PlayAgainButton Game over! 1`] = `
-<span>
-  <button
-    className="play-again sc-gzVnrw fBpHTn"
-    onClick={[Function]}
+exports[`Storyshots NextPlayerName Game is not over and the next player is PLAYER_1  1`] = `
+<div>
+  <span
+    className="sc-bZQynM iNPAfB"
   >
-    Play again
-  </button>
-</span>
+    <span
+      className="sc-bdVaJa eAhLIg"
+    >
+      <span>
+        Laura
+      </span>
+      <span
+        style={
+          Object {
+            "height": "25px",
+            "width": "auto",
+          }
+        }
+      >
+        <svg
+          height="100%"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 64 64"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            id="svg_1"
+            transform="translate(-64,0)"
+          >
+            <path
+              d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
+              fill="#000000"
+              fillRule="nonzero"
+              id="path3676"
+              stroke="#000000"
+              strokeDashoffset="0"
+              strokeMiterlimit="4"
+              strokeWidth="2"
+            />
+            <path
+              d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
+              fill="#000000"
+              fillRule="nonzero"
+              id="path3678"
+              stroke="#000000"
+              strokeDashoffset="0"
+              strokeMiterlimit="4"
+              strokeWidth="2"
+            />
+          </g>
+        </svg>
+      </span>
+    </span>
+    <span>
+       turn
+    </span>
+  </span>
+</div>
 `;
 
-exports[`Storyshots PlayerInfo PlayerInfo of  val=PLAYER_1 label=X name=Laura 1`] = `
+exports[`Storyshots NextPlayerName Game over! (so this component should be hidden) 1`] = `<div />`;
+
+exports[`Storyshots PlayerName PlayerName of  val=PLAYER_1 label=X name=Laura 1`] = `
 <span
   className="sc-bdVaJa eAhLIg"
 >
@@ -2121,7 +2170,7 @@ exports[`Storyshots PlayerInfo PlayerInfo of  val=PLAYER_1 label=X name=Laura 1`
 </span>
 `;
 
-exports[`Storyshots PlayerInfo PlayerInfo of  val=PLAYER_2 label=O name=David 1`] = `
+exports[`Storyshots PlayerName PlayerName of  val=PLAYER_2 label=O name=David 1`] = `
 <span
   className="sc-bdVaJa eAhLIg"
 >
@@ -2156,6 +2205,19 @@ exports[`Storyshots PlayerInfo PlayerInfo of  val=PLAYER_2 label=O name=David 1`
       </g>
     </svg>
   </span>
+</span>
+`;
+
+exports[`Storyshots ResetGame Game is not over yet (so this component should be hidden)  1`] = `<span />`;
+
+exports[`Storyshots ResetGame Game over! 1`] = `
+<span>
+  <button
+    className="play-again sc-gzVnrw fBpHTn"
+    onClick={[Function]}
+  >
+    Play again
+  </button>
 </span>
 `;
 
@@ -2429,71 +2491,69 @@ exports[`Storyshots Square Pending to use but game is over 1`] = `
 </div>
 `;
 
-exports[`Storyshots WhoIsNextInfo Game is not over and the next player is PLAYER_1  1`] = `
-<div>
+exports[`Storyshots WinnerName Game is NOT over yet (so this component should be hidden) 1`] = `<span />`;
+
+exports[`Storyshots WinnerName Game over! PLAYER_1 wins.  1`] = `
+<span>
   <span
-    className="sc-bZQynM iNPAfB"
+    className="has-winner sc-bwzfXH dRTCAd"
   >
-    <span
-      className="sc-bdVaJa eAhLIg"
-    >
-      <span>
-        Laura
-      </span>
+    <strong>
       <span
-        style={
-          Object {
-            "height": "25px",
-            "width": "auto",
-          }
-        }
+        className="sc-bdVaJa eAhLIg"
       >
-        <svg
-          height="100%"
-          preserveAspectRatio="xMidYMid meet"
-          viewBox="0 0 64 64"
-          xmlns="http://www.w3.org/2000/svg"
+        <span>
+          Laura
+        </span>
+        <span
+          style={
+            Object {
+              "height": "25px",
+              "width": "auto",
+            }
+          }
         >
-          <g
-            id="svg_1"
-            transform="translate(-64,0)"
+          <svg
+            height="100%"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 64 64"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
-              fill="#000000"
-              fillRule="nonzero"
-              id="path3676"
-              stroke="#000000"
-              strokeDashoffset="0"
-              strokeMiterlimit="4"
-              strokeWidth="2"
-            />
-            <path
-              d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
-              fill="#000000"
-              fillRule="nonzero"
-              id="path3678"
-              stroke="#000000"
-              strokeDashoffset="0"
-              strokeMiterlimit="4"
-              strokeWidth="2"
-            />
-          </g>
-        </svg>
+            <g
+              id="svg_1"
+              transform="translate(-64,0)"
+            >
+              <path
+                d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
+                fill="#000000"
+                fillRule="nonzero"
+                id="path3676"
+                stroke="#000000"
+                strokeDashoffset="0"
+                strokeMiterlimit="4"
+                strokeWidth="2"
+              />
+              <path
+                d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
+                fill="#000000"
+                fillRule="nonzero"
+                id="path3678"
+                stroke="#000000"
+                strokeDashoffset="0"
+                strokeMiterlimit="4"
+                strokeWidth="2"
+              />
+            </g>
+          </svg>
+        </span>
       </span>
-    </span>
-    <span>
-       turn
-    </span>
+    </strong>
+    wins!
   </span>
-</div>
+</span>
 `;
 
-exports[`Storyshots WhoIsNextInfo Game over! (so this component should be hidden) 1`] = `<div />`;
-
-exports[`Storyshots WinnerInfo Game is NOT over yet (so this component should be hidden) 1`] = `<span />`;
-
-exports[`Storyshots WinnerInfo Game over! But without a winner, the board is full 1`] = `
+exports[`Storyshots WinnerName Game over! The board is full but without a winner 1`] = `
 <span>
   <span
     className="has-no-winner sc-bwzfXH dRTCAd"
@@ -2569,66 +2629,6 @@ exports[`Storyshots WinnerInfo Game over! But without a winner, the board is ful
         </g>
       </svg>
     </span>
-  </span>
-</span>
-`;
-
-exports[`Storyshots WinnerInfo Game over! PLAYER_1 wins.  1`] = `
-<span>
-  <span
-    className="has-winner sc-bwzfXH dRTCAd"
-  >
-    <strong>
-      <span
-        className="sc-bdVaJa eAhLIg"
-      >
-        <span>
-          Laura
-        </span>
-        <span
-          style={
-            Object {
-              "height": "25px",
-              "width": "auto",
-            }
-          }
-        >
-          <svg
-            height="100%"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 64 64"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              id="svg_1"
-              transform="translate(-64,0)"
-            >
-              <path
-                d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
-                fill="#000000"
-                fillRule="nonzero"
-                id="path3676"
-                stroke="#000000"
-                strokeDashoffset="0"
-                strokeMiterlimit="4"
-                strokeWidth="2"
-              />
-              <path
-                d="m120.117722,8.394409c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713c-1.795517,4.951488 -18.3871,16.510624 -8.64241,6.133335c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398c1.308609,-2.23285 4.248138,-2.444931 6.351563,-3.63265z"
-                fill="#000000"
-                fillRule="nonzero"
-                id="path3678"
-                stroke="#000000"
-                strokeDashoffset="0"
-                strokeMiterlimit="4"
-                strokeWidth="2"
-              />
-            </g>
-          </svg>
-        </span>
-      </span>
-    </strong>
-    wins!
   </span>
 </span>
 `;

@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import App from './App';
 import Square from './components/Square';
-import PlayAgainButton from './components/PlayAgainButton';
+import ResetGame from './components/ResetGame';
 
 /**
  * Smoke test
@@ -28,7 +28,7 @@ it('Smoke test', () => {
   placeMove(2);
 
   game
-    .find(PlayAgainButton)
+    .find(ResetGame)
     .at(0)
     .find('button')
     .simulate('click');

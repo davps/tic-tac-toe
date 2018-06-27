@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Square from './Square';
-import { MOVE, DIMENSIONS } from '../constants';
+import { DIMENSIONS, customPropTypes } from '../constants';
 
 const Container = styled.div`
   background: black;
@@ -33,16 +33,15 @@ const Board = ({ moves, onMove, isGameOver, winnerMoves }) => (
 /* eslint-enable */
 
 Board.propTypes = {
-  moves: PropTypes.arrayOf(
-    PropTypes.oneOf([MOVE.PENDING.val, MOVE.PLAYER_1.val, MOVE.PLAYER_2.val])
-  ).isRequired,
+  moves: customPropTypes.moves.isRequired,
   onMove: PropTypes.func.isRequired,
-  isGameOver: PropTypes.bool.isRequired,
-  winnerMoves: PropTypes.arrayOf(PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8]))
+  isGameOver: PropTypes.bool,
+  winnerMoves: customPropTypes.winnerMoves
 };
 
 Board.defaultProps = {
-  winnerMoves: null
+  winnerMoves: null,
+  isGameOver: false
 };
 
 export default Board;

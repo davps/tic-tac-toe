@@ -6,6 +6,7 @@ const initialState = {
   xIsNext: false,
   winner: null,
   isFull: false,
+  winnerMoves: null,
   moves: [
     MOVE.PENDING.val,
     MOVE.PENDING.val,

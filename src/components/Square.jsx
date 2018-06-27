@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { MOVE, DIMENSIONS } from '../constants';
+import { MOVE, DIMENSIONS, customPropTypes } from '../constants';
 import { X, O } from './Icons';
 import { fadeInOut } from './Container';
 
@@ -77,13 +77,9 @@ const Square = ({
 };
 
 Square.propTypes = {
-  owner: PropTypes.oneOf([
-    MOVE.PENDING.val,
-    MOVE.PLAYER_1.val,
-    MOVE.PLAYER_2.val
-  ]).isRequired,
+  owner: customPropTypes.moveVal.isRequired,
   onMove: PropTypes.func.isRequired,
-  isGameOver: PropTypes.bool.isRequired,
+  isGameOver: PropTypes.bool,
   className: PropTypes.string,
   style: PropTypes.shape({
     top: PropTypes.number,
@@ -95,6 +91,7 @@ Square.propTypes = {
 };
 
 Square.defaultProps = {
+  isGameOver: false,
   className: '',
   style: {
     top: 0,

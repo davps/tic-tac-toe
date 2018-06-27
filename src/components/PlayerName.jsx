@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { MOVE } from '../constants';
+import { MOVE, customPropTypes } from '../constants';
 import { X, O } from './Icons';
 import { Container } from './Container';
 
@@ -13,7 +12,7 @@ icon[MOVE.PLAYER_2.val] = <O size={25} />;
  * @param {string} player The player value
  */
 /* eslint-disable react/jsx-one-expression-per-line */
-const PlayerInfo = ({ player }) => (
+const PlayerName = ({ player }) => (
   <Container>
     <span>{MOVE[player].name}</span>
     {icon[player]}
@@ -21,8 +20,8 @@ const PlayerInfo = ({ player }) => (
 );
 /* eslint-enable */
 
-PlayerInfo.propTypes = {
-  player: PropTypes.oneOf([MOVE.PLAYER_1.val, MOVE.PLAYER_2.val]).isRequired
+PlayerName.propTypes = {
+  player: customPropTypes.winner.isRequired
 };
 
-export default PlayerInfo;
+export default PlayerName;

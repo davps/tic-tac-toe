@@ -6,8 +6,8 @@ const mapStateToProps = state => state;
 
 const mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    placeMove: position => dispatch(placeMove(position)),
-    resetGame: () => dispatch(resetGame())
+    onMove: position => dispatch(placeMove(position)),
+    onReset: () => dispatch(resetGame())
   };
 };
 

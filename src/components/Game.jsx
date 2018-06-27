@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { MOVE } from '../constants';
-import WinnerInfo from './WinnerInfo';
+import { MOVE, customPropTypes } from '../constants';
+import WinnerName from './WinnerName';
 import Board from './Board';
 import Logic from '../reducers/Logic';
-import WhoIsNextInfo from './WhoIsNextInfo';
-import PlayAgainButton from './PlayAgainButton';
-import PlayerInfo from './PlayerInfo';
+import NextPlayerName from './NextPlayerName';
+import ResetGame from './ResetGame';
+import PlayerName from './PlayerName';
 import initialState from '../store/initialState';
 
 const Container = styled.div`
@@ -17,7 +17,7 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const PlayersContainer = styled.div`
+const PlayersInfoContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -31,8 +31,8 @@ const Game = ({
   winnerMoves,
   isFull,
   moves,
-  placeMove,
-  resetGame
+  onMove,
+  onReset
 }) => {
   const hasWinner = winner !== null;
   const isGameOver = hasWinner || isFull;
@@ -43,23 +43,23 @@ const Game = ({
     <Container>
       <h1>TIC TAC TOE!</h1>
 
-      <PlayersContainer>
-        <PlayerInfo player={MOVE.PLAYER_1.val} />
+      <PlayersInfoContainer>
+        <PlayerName player={MOVE.PLAYER_1.val} />
         <span style={{ width: 20 }} />
-        <PlayerInfo player={MOVE.PLAYER_2.val} />
-      </PlayersContainer>
+        <PlayerName player={MOVE.PLAYER_2.val} />
+      </PlayersInfoContainer>
 
-      <WhoIsNextInfo player={nextPlayer} isGameOver={isGameOver} />
-      <WinnerInfo player={winner} hasWinner={hasWinner} isBoardFull={isFull} />
+      <NextPlayerName player={nextPlayer} isGameOver={isGameOver} />
+      <WinnerName winner={winner} isBoardFull={isFull} />
 
       <Board
         moves={moves}
-        onMove={placeMove}
+        onMove={onMove}
         isGameOver={isGameOver}
         winnerMoves={winnerMoves}
       />
 
-      <PlayAgainButton isGameOver={isGameOver} resetGame={resetGame} />
+      <ResetGame isGameOver={isGameOver} onReset={onReset} />
     </Container>
   );
   /* eslint-enable */
@@ -67,21 +67,19 @@ const Game = ({
 
 Game.propTypes = {
   xIsNext: PropTypes.bool,
-  winner: PropTypes.string,
+  winner: customPropTypes.winner,
   isFull: PropTypes.bool,
-  moves: PropTypes.arrayOf(
-    PropTypes.oneOf([MOVE.PENDING.val, MOVE.PLAYER_1.val, MOVE.PLAYER_2.val])
-  ).isRequired,
-  placeMove: PropTypes.func.isRequired,
-  resetGame: PropTypes.func.isRequired,
-  winnerMoves: PropTypes.arrayOf(PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8]))
+  moves: customPropTypes.moves.isRequired,
+  onMove: PropTypes.func.isRequired,
+  onReset: PropTypes.func.isRequired,
+  winnerMoves: customPropTypes.winnerMoves
 };
 
 Game.defaultProps = {
   xIsNext: initialState.xIsNext,
   isFull: initialState.isFull,
   winner: initialState.winner,
-  winnerMoves: null
+  winnerMoves: initialState.winnerMoves
 };
 
 export default Game;
