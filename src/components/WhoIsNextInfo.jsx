@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { keyframes } from 'styled-components';
+import { keyframes } from 'styled-components';
 import PlayerInfo from './PlayerInfo';
 import { SpacedContainer } from './Container';
 
