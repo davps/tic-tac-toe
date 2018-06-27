@@ -1,10 +1,15 @@
 language: node_js
 node_js:
-  - 8
+- 8
 cache:
   directories:
-    - node_modules
+  - node_modules
 script:
-  - npm run build
-  - npm test -- --coverage --coverageReporters=text-lcov | ./node_modules/coveralls/bin/coveralls.js
-  - npm run deploy-storybook -- --ci
+- npm run build
+- npm test -- --coverage --coverageReporters=text-lcov | ./node_modules/coveralls/bin/coveralls.js
+- npm run deploy-storybook -- --ci
+deploy:
+  provider: heroku
+  app: tic-tac-toe-david
+  api_key:
+    secure: HTZfcFeNFNNhHYEQSIXT3lyE13hG++Q9vu9tSh2Y2hjE0EWR79uD/1QKwM8hUccAY25Ju843BkpOx9QK+xndqaG1rhedOTRGa/ssmLYeAxkYTDJ4kQ3XJ+edoVKS8AGD1fnvRJ6GC3tGbNx7M3cZBaxHJw6FHsGsa0rnm8aic7hHbF+F3u1S+jGdmWicY4z+FCeZK97sQ4wCjFn66T/9OZAqJzgnNLOOoxOZM9qWOD2gI3J722J/f4P93QmoaZg29kxg7rIBJqyN+MFuOKpt80l4eCQ6aeRiUgqvZ2GyjQTbdULw01KFV9nJx3HDs7404x0uLvYo/JCQtCY1vH72GVUyfGBL5v9VM74/ExnMXQVR1y+e1fx0luFVtmo6ksrhQRx3cXnwhWMPB3yv73WawBs9AeYkB1EfoSO2NWxFfgj+FPJmE1Q7RK+6aa32C0Wt/MhYE6H6Vdc3NvagvTCzbGe2CPLpqZ/a/au/1xg4ZnDYcJ64H2JFAkv0vSP5CqaPJqW0W9H9gCIcVOALkeZ80erp+O3k4HXDpsgk6Vjy5HHOuWH03omhVplFzlzGENOZzeTpognhgyjW3ID3RqaWqE5FBQ5JPbIQRjeRUinTvxNJCji3MEaX3YnpWi2rTDh4sU8H02o57m8RyvffDGgM2FZPyJpsxEM4sQLHbljUQ50=
