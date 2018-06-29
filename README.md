@@ -30,3 +30,26 @@ Since all my relevant development work is focused on private, commercial codebas
 - Test Driven Development for the business logic.
 - Good separation of concerns between the views (React components) and their state management (Redux).
 - Pixel-perfect CSS on the react components (see how I use styled components on `Board.jsx` and `Square.jsx`.
+
+# Install and run locally
+
+First, clone the repo via git:
+
+```bash
+git clone https://github.com/davps/tic-tac-toe.git
+```
+
+And then install dependencies.
+
+```bash
+cd tic-tac-toe && npm install
+```
+
+Run these two commands **simultaneously** in different console tabs.
+
+```bash
+npm start
+npm run storybook
+```
+
+And open http://localhost:3000/ to run the web app, http://localhost:9009/ to open the storybook and `Menu > Debug > Start Debugging` on VSCode to run the test on each file change.
