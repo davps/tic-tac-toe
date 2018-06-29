@@ -33,7 +33,9 @@ Since all my relevant development work is focused on private, commercial codebas
 
 # Install and run locally
 
-First, clone the repo via git:
+Install [redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension#installation) in your browser (optional, use this browser extension during development).
+
+then clone the repo via git:
 
 ```bash
 git clone https://github.com/davps/tic-tac-toe.git
