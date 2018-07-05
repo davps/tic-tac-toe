@@ -11,7 +11,7 @@ const Container = SpacedContainer.extend`
 const WhoIsNextInfo = ({ player, isGameOver }) => (
   <div>
     {!isGameOver && (
-      <Container>
+      <Container className="game-is-not-over">
         <PlayerName player={player} />
         {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
         <span> turn</span>

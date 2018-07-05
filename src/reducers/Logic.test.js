@@ -1,5 +1,15 @@
 import Logic from './Logic';
-import { MOVE } from '../constants';
+import { MOVE, POSITION } from '../constants';
+
+const {
+  TOP_LEFT,
+  TOP_CENTER,
+  TOP_RIGHT,
+  MIDDLE_LEFT,
+  CENTER,
+  BOTTOM_LEFT,
+  BOTTOM_RIGHT
+} = POSITION;
 
 it('the board is full', () => {
   const moves = [
@@ -46,7 +56,7 @@ it('the game has a winner', () => {
 
   expect(Logic.getWinner(moves1)).toEqual({
     winner: MOVE.PLAYER_1.val,
-    winnerMoves: [0, 1, 2]
+    winnerMoves: [TOP_LEFT, TOP_CENTER, TOP_RIGHT]
   });
 
   const moves2 = [
@@ -60,9 +70,10 @@ it('the game has a winner', () => {
     MOVE.PENDING.val,
     MOVE.PENDING.val
   ];
+
   expect(Logic.getWinner(moves2)).toEqual({
     winner: MOVE.PLAYER_1.val,
-    winnerMoves: [0, 3, 6]
+    winnerMoves: [TOP_LEFT, MIDDLE_LEFT, BOTTOM_LEFT]
   });
 
   const moves3 = [
@@ -79,7 +90,7 @@ it('the game has a winner', () => {
 
   expect(Logic.getWinner(moves3)).toEqual({
     winner: MOVE.PLAYER_2.val,
-    winnerMoves: [2, 4, 6]
+    winnerMoves: [TOP_RIGHT, CENTER, BOTTOM_LEFT]
   });
 
   const moves4 = [
@@ -96,7 +107,7 @@ it('the game has a winner', () => {
 
   expect(Logic.getWinner(moves4)).toEqual({
     winner: MOVE.PLAYER_1.val,
-    winnerMoves: [0, 4, 8]
+    winnerMoves: [TOP_LEFT, CENTER, BOTTOM_RIGHT]
   });
 });
 

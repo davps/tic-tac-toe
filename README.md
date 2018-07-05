@@ -25,6 +25,19 @@ Since all my relevant development work is focused on private, commercial codebas
 
 - Super-high test coverage, including unit tests, integration tests and end to end tests.
 - Application of the DRY principle.
+- A Domain Specific Language (DSL), extremely easy to learn, suitable to play the game programmatically and evaluate results (used for testing). Useful to make it easy to write tests (for the QA team, for example) or to run the game programmatically in headless mode (in the real world this could be useful for manteinance tasks, for example). TODO: Use babel to simplyfy the DSL even more (a la JSX). Example:
+
+```javascript
+Scenario('Game over! X wins');
+I.placeMove(TOP_LEFT);
+I.placeMove(BOTTOM_RIGHT);
+I.placeMove(TOP_CENTER);
+I.placeMove(BOTTOM_CENTER);
+I.placeMove(TOP_RIGHT);
+I.expect().gameOver();
+I.expect(X).toBeWinner();
+```
+
 - Usage of a linter and code formatting.
 - Atomic design and Component Driven Development for the UI. Each UI component does only one thing and one thing well and are tested in isolation then later in conjunction and build their documentations as I write the code using Storybook.
 - Test Driven Development for the business logic.

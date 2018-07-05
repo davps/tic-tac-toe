@@ -627,7 +627,7 @@ exports[`Storyshots Full, live game Play it here 1`] = `
     className="sc-dnqmqq ciasQq"
   >
     <span
-      className="sc-bdVaJa eAhLIg"
+      className="PLAYER_1 sc-bdVaJa eAhLIg"
     >
       <span>
         Laura
@@ -682,7 +682,7 @@ exports[`Storyshots Full, live game Play it here 1`] = `
       }
     />
     <span
-      className="sc-bdVaJa eAhLIg"
+      className="PLAYER_2 sc-bdVaJa eAhLIg"
     >
       <span>
         David
@@ -719,10 +719,10 @@ exports[`Storyshots Full, live game Play it here 1`] = `
   </div>
   <div>
     <span
-      className="sc-bZQynM iNPAfB"
+      className="game-is-not-over sc-bZQynM iNPAfB"
     >
       <span
-        className="sc-bdVaJa eAhLIg"
+        className="PLAYER_1 sc-bdVaJa eAhLIg"
       >
         <span>
           Laura
@@ -890,7 +890,7 @@ exports[`Storyshots Game With full board and no winner 1`] = `
     className="sc-dnqmqq ciasQq"
   >
     <span
-      className="sc-bdVaJa eAhLIg"
+      className="PLAYER_1 sc-bdVaJa eAhLIg"
     >
       <span>
         Laura
@@ -945,7 +945,7 @@ exports[`Storyshots Game With full board and no winner 1`] = `
       }
     />
     <span
-      className="sc-bdVaJa eAhLIg"
+      className="PLAYER_2 sc-bdVaJa eAhLIg"
     >
       <span>
         David
@@ -983,7 +983,7 @@ exports[`Storyshots Game With full board and no winner 1`] = `
   <div />
   <span>
     <span
-      className="has-no-winner sc-bwzfXH dRTCAd"
+      className="has-no-winner game-over sc-bwzfXH dRTCAd"
     >
       Draw! 
       <span
@@ -1430,7 +1430,7 @@ exports[`Storyshots Game With full board and winner 1`] = `
     className="sc-dnqmqq ciasQq"
   >
     <span
-      className="sc-bdVaJa eAhLIg"
+      className="PLAYER_1 sc-bdVaJa eAhLIg"
     >
       <span>
         Laura
@@ -1485,7 +1485,7 @@ exports[`Storyshots Game With full board and winner 1`] = `
       }
     />
     <span
-      className="sc-bdVaJa eAhLIg"
+      className="PLAYER_2 sc-bdVaJa eAhLIg"
     >
       <span>
         David
@@ -1523,11 +1523,11 @@ exports[`Storyshots Game With full board and winner 1`] = `
   <div />
   <span>
     <span
-      className="has-winner sc-bwzfXH dRTCAd"
+      className="has-winner game-over sc-bwzfXH dRTCAd"
     >
       <strong>
         <span
-          className="sc-bdVaJa eAhLIg"
+          className="PLAYER_1 sc-bdVaJa eAhLIg"
         >
           <span>
             Laura
@@ -1829,7 +1829,7 @@ exports[`Storyshots Game With initialized values 1`] = `
     className="sc-dnqmqq ciasQq"
   >
     <span
-      className="sc-bdVaJa eAhLIg"
+      className="PLAYER_1 sc-bdVaJa eAhLIg"
     >
       <span>
         Laura
@@ -1884,7 +1884,7 @@ exports[`Storyshots Game With initialized values 1`] = `
       }
     />
     <span
-      className="sc-bdVaJa eAhLIg"
+      className="PLAYER_2 sc-bdVaJa eAhLIg"
     >
       <span>
         David
@@ -1921,10 +1921,10 @@ exports[`Storyshots Game With initialized values 1`] = `
   </div>
   <div>
     <span
-      className="sc-bZQynM iNPAfB"
+      className="game-is-not-over sc-bZQynM iNPAfB"
     >
       <span
-        className="sc-bdVaJa eAhLIg"
+        className="PLAYER_1 sc-bdVaJa eAhLIg"
       >
         <span>
           Laura
@@ -2084,10 +2084,10 @@ exports[`Storyshots Game With initialized values 1`] = `
 exports[`Storyshots NextPlayerName Game is not over and the next player is PLAYER_1  1`] = `
 <div>
   <span
-    className="sc-bZQynM iNPAfB"
+    className="game-is-not-over sc-bZQynM iNPAfB"
   >
     <span
-      className="sc-bdVaJa eAhLIg"
+      className="PLAYER_1 sc-bdVaJa eAhLIg"
     >
       <span>
         Laura
@@ -2145,7 +2145,7 @@ exports[`Storyshots NextPlayerName Game over! (so this component should be hidde
 
 exports[`Storyshots PlayerName PlayerName of  val=PLAYER_1 label=X name=Laura 1`] = `
 <span
-  className="sc-bdVaJa eAhLIg"
+  className="PLAYER_1 sc-bdVaJa eAhLIg"
 >
   <span>
     Laura
@@ -2196,7 +2196,7 @@ exports[`Storyshots PlayerName PlayerName of  val=PLAYER_1 label=X name=Laura 1`
 
 exports[`Storyshots PlayerName PlayerName of  val=PLAYER_2 label=O name=David 1`] = `
 <span
-  className="sc-bdVaJa eAhLIg"
+  className="PLAYER_2 sc-bdVaJa eAhLIg"
 >
   <span>
     David
@@ -2534,11 +2534,11 @@ exports[`Storyshots WinnerName Game is NOT over yet (so this component should be
 exports[`Storyshots WinnerName Game over! PLAYER_1 wins.  1`] = `
 <span>
   <span
-    className="has-winner sc-bwzfXH dRTCAd"
+    className="has-winner game-over sc-bwzfXH dRTCAd"
   >
     <strong>
       <span
-        className="sc-bdVaJa eAhLIg"
+        className="PLAYER_1 sc-bdVaJa eAhLIg"
       >
         <span>
           Laura
@@ -2594,7 +2594,7 @@ exports[`Storyshots WinnerName Game over! PLAYER_1 wins.  1`] = `
 exports[`Storyshots WinnerName Game over! The board is full but without a winner 1`] = `
 <span>
   <span
-    className="has-no-winner sc-bwzfXH dRTCAd"
+    className="has-no-winner game-over sc-bwzfXH dRTCAd"
   >
     Draw! 
     <span

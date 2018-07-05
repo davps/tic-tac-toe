@@ -5,7 +5,9 @@ import {
   resetGame
 } from '../actions/actions';
 import reducer from './reducer';
-import { MOVE } from '../constants';
+import { MOVE, POSITION } from '../constants';
+
+const { TOP_LEFT, TOP_CENTER, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT } = POSITION;
 
 describe(PLACE_MOVE, () => {
   let initialState;
@@ -14,22 +16,13 @@ describe(PLACE_MOVE, () => {
   let stateC;
   let stateD;
   let stateE;
-  const topLeft = 0;
-  const topMid = 1;
-  const topRight = 2;
-  //   const midLeft = 3;
-  //   const mid = 4;
-  //   const midRight = 5;
-  const bottomLeft = 6;
-  //   const bottomMid = 7;
-  const bottomRight = 8;
   beforeEach(() => {
     initialState = reducer(undefined, {});
-    stateA = reducer(initialState, placeMove(topLeft));
-    stateB = reducer(stateA, placeMove(bottomLeft));
-    stateC = reducer(stateB, placeMove(topMid));
-    stateD = reducer(stateC, placeMove(bottomRight));
-    stateE = reducer(stateD, placeMove(topRight));
+    stateA = reducer(initialState, placeMove(TOP_LEFT));
+    stateB = reducer(stateA, placeMove(BOTTOM_LEFT));
+    stateC = reducer(stateB, placeMove(TOP_CENTER));
+    stateD = reducer(stateC, placeMove(BOTTOM_RIGHT));
+    stateE = reducer(stateD, placeMove(TOP_RIGHT));
   });
   it('initial state', () => {
     expect(initialState).not.toBeNull();

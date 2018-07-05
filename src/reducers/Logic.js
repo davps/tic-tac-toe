@@ -1,4 +1,6 @@
-import { MOVE } from '../constants';
+import { MOVE, POSITION } from '../constants';
+
+const { TOP_LEFT, TOP_RIGHT, CENTER, BOTTOM_LEFT, BOTTOM_RIGHT } = POSITION;
 
 //
 const Logic = {
@@ -19,24 +21,28 @@ const Logic = {
         return { winner: row1, winnerMoves: [i, i + 3, i + 6] };
       }
     }
-    const topLeft = moves[0];
-    const topRight = moves[2];
-    const center = moves[4];
-    const bottomLeft = moves[6];
-    const bottomRight = moves[8];
+
+    const topLeft = moves[TOP_LEFT];
+    const topRight = moves[TOP_RIGHT];
+    const center = moves[CENTER];
+    const bottomLeft = moves[BOTTOM_LEFT];
+    const bottomRight = moves[BOTTOM_RIGHT];
     if (
       topLeft === center &&
       center === bottomRight &&
       topLeft !== MOVE.PENDING.val
     ) {
-      return { winner: topLeft, winnerMoves: [0, 4, 8] };
+      return { winner: topLeft, winnerMoves: [TOP_LEFT, CENTER, BOTTOM_RIGHT] };
     }
     if (
       topRight === center &&
       center === bottomLeft &&
       topRight !== MOVE.PENDING.val
     ) {
-      return { winner: topRight, winnerMoves: [2, 4, 6] };
+      return {
+        winner: topRight,
+        winnerMoves: [TOP_RIGHT, CENTER, BOTTOM_LEFT]
+      };
     }
     return { winner: null, winnerMoves: null };
   },

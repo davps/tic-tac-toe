@@ -13,7 +13,7 @@ icon[MOVE.PLAYER_2.val] = <O size={25} />;
  */
 /* eslint-disable react/jsx-one-expression-per-line */
 const PlayerName = ({ player }) => (
-  <Container>
+  <Container className={MOVE[player].val}>
     <span>{MOVE[player].name}</span>
     {icon[player]}
   </Container>
