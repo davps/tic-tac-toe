@@ -45,6 +45,19 @@ I.placeMove(BOTTOM_CENTER);
 I.placeMove(BOTTOM_LEFT);
 I.placeMove(MIDDLE_RIGHT);
 I.expect().draw();
+I.resetGame();
+
+Scenario('Draw (no winners and board is full)');
+I.placeMove(TOP_LEFT);
+I.placeMove(BOTTOM_RIGHT);
+I.placeMove(TOP_RIGHT);
+I.placeMove(TOP_CENTER);
+I.placeMove(MIDDLE_LEFT);
+I.placeMove(CENTER);
+I.placeMove(BOTTOM_CENTER);
+I.placeMove(BOTTOM_LEFT);
+I.placeMove(MIDDLE_RIGHT);
+I.expect().draw();
 
 // winner positions
 const x = [
