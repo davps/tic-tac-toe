@@ -85,4 +85,4 @@ for (let i = 0; i < x.length; i += 1) {
   I.expect(X).toBeWinner();
 }
 
-export default I.getMyTestDescription();
+export default I.getTestsAsJSON();

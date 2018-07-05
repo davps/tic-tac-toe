@@ -111,7 +111,7 @@ export const createTestDescription = () => {
       toBeWinner: () => dispatch(expect.toBeWinner(player)),
       notToBeWinner: () => dispatch(expect.notToBeWinner(player))
     }),
-    getMyTestDescription: () => [...actionsByScenario]
+    getTestsAsJSON: () => [...actionsByScenario]
   };
 
   return descriptors;
