@@ -23,7 +23,7 @@ Since all my relevant development work is focused on private, commercial codebas
 
 ## Best practices
 
-- Super-high test coverage, including unit tests, integration tests and end to end tests.
+- Super-high test coverage (see the [reports](https://coveralls.io/github/davps/tic-tac-toe) for [more details](https://coveralls.io/builds/17849470/source?filename=src/reducers/Logic.js)), including unit tests, integration tests and end to end tests.
 - Application of the DRY principle.
 - A Domain Specific Language (DSL), extremely easy to learn, suitable to play the game programmatically and evaluate results (used for testing). Useful to make it easy to write tests (for the QA team, for example) or to run the game programmatically in headless mode (in the real world this could be useful for maintenance tasks, for example). TODO: Use babel to simplify the DSL even more (a la JSX). Example:
 
