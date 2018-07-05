@@ -2,7 +2,7 @@
  * My Domain Specific Language (DSLs) for Tic Tac Toe.
  *
  * Used to describe the tests. An usage example could be found
- * on the Tests.DSL.js file.
+ * on the App.testsWithDSL.js file.
  *
  * How to use it: Use this DSL to describe the behaviour
  * of the app, which could be useful for integration or for

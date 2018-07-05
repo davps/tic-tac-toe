@@ -85,10 +85,4 @@ for (let i = 0; i < x.length; i += 1) {
   I.expect(X).toBeWinner();
 }
 
-// winnerPositions.forEach(positions => {
-//   const xPositions = positions;
-//   const oPositions = noWinnerRandomPositions(positions);
-// });
-
-const tests = I.getMyTestDescription();
-export default tests;
+export default I.getMyTestDescription();
