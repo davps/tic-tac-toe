@@ -48,7 +48,26 @@ describe('e2e tests', () => {
       });
     }
 
-    /* args are supplied to avoid issues in Travis CI to launch chromium:
+    /**
+     * TODO: Instal Redux DevTool chrome extension for the headless chrome with these steps:
+     * 1- Add more arguments to puppeteer.lauch (below):
+        '--disable-extensions-except=/path/to/extension/',
+        '--load-extension=/path/to/extension/'
+     * https://github.com/GoogleChrome/puppeteer/blob/master/examples/README.md#load-a-chrome-extension
+     * 
+     * 2- Programmatically, before launching chrome, check if the crx extension 
+     * file exist on the disk and if it did not, then downlaod it from the store 
+     * with the instructions provided here:
+     * https://stackoverflow.com/a/14099762
+     * (probably I will need to retrive my chrome version programmatically too)
+     * 
+     * Why?: I need to to resemble my original dev environment and to 
+     * have full tests coverage (100%) 
+     * (see store.js, line 8 https://coveralls.io/builds/17849136/source?filename=src/store/store.js#L8).
+     */
+
+    /* args --no-sandbox and --disable-setuid-sandbox are supplied 
+         to avoid issues in Travis CI to launch chromium:
          https://github.com/GoogleChrome/puppeteer/issues/807 */
     browser = await puppeteer.launch({
       headless: true, // sometimes I manually toggle this value on my dev environment

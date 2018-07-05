@@ -93,9 +93,11 @@ export const createTestDescription = () => {
       );
     }
     const scenario = findScenario(currentScenario);
-    if (!scenario) {
-      throw new Error('It is always expected to get an object here');
-    }
+    // commented this block of code because (in theory)
+    // my code will never pass this condition (unreachable code)
+    // if (!scenario) {
+    //   throw new Error('It is always expected to get an object here');
+    // }
     scenario.actions.push(action);
     currentScenario = scenario.name;
   };
