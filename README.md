@@ -72,4 +72,14 @@ npm start
 npm run storybook
 ```
 
-And open http://localhost:3000/ to run the web app, http://localhost:9009/ to open the storybook and `Menu > Debug > Start Debugging` on VSCode to run the test on each file change.
+And open http://localhost:3000/ to run the web app, http://localhost:9009/ to open the storybook and `Menu > Debug > Start Debugging` on VSCode to run the test on each file change. If that didn't work for you, you can try `Menu > Debug > Start without debugging` or you can use this command on your terminal:
+```
+npm test
+```
+
+You can generate a report of the test coverage with this command
+```
+npm test -- --coverage
+```
+and then open the  `./coverage/Icov-report/index.html` file to explore the coverage details.
+
