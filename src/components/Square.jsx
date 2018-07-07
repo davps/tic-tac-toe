@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { MOVE, DIMENSIONS, customPropTypes } from '../constants';
 import { X, O } from './Icons';
-import { fadeInOut } from './Container';
+import { animation } from './Container';
 
 const Container = styled.div`
   width: ${DIMENSIONS.square.width}px;
@@ -41,7 +41,7 @@ const Button = styled.button`
 `;
 
 const BlinkingContainer = Container.extend`
-  animation: ${fadeInOut} 1s step-start infinite;
+  ${animation};
 `;
 
 /**

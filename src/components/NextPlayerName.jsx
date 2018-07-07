@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import PlayerName from './PlayerName';
-import { SpacedContainer, fadeInOut } from './Container';
+import { SpacedContainer, animation } from './Container';
 import { customPropTypes } from '../constants';
 
 const Container = SpacedContainer.extend`
-  animation: ${fadeInOut} 1s step-start infinite;
+  ${animation};
 `;
 
 const WhoIsNextInfo = ({ player, isGameOver }) => (
