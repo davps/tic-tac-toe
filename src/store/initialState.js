@@ -1,4 +1,7 @@
-import { MOVE } from '../constants';
+import ACTOR from '../reducers/ACTOR';
+
+const { PENDING } = ACTOR;
+
 /**
  * Initial state of the app, used to initialize and reset the game
  */
@@ -8,15 +11,15 @@ const initialState = {
   isFull: false,
   winnerMoves: null,
   moves: [
-    MOVE.PENDING.val,
-    MOVE.PENDING.val,
-    MOVE.PENDING.val,
-    MOVE.PENDING.val,
-    MOVE.PENDING.val,
-    MOVE.PENDING.val,
-    MOVE.PENDING.val,
-    MOVE.PENDING.val,
-    MOVE.PENDING.val
+    PENDING,
+    PENDING,
+    PENDING,
+    PENDING,
+    PENDING,
+    PENDING,
+    PENDING,
+    PENDING,
+    PENDING
   ]
 };
 

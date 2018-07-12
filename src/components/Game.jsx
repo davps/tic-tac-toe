@@ -2,14 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { MOVE, customPropTypes } from '../constants';
+import { customPropTypes } from '../constants';
 import WinnerName from './WinnerName';
 import Board from './Board';
-import Logic from '../reducers/Logic';
+import Script from '../reducers/Script';
 import NextPlayerName from './NextPlayerName';
 import ResetGame from './ResetGame';
 import PlayerName from './PlayerName';
 import initialState from '../store/initialState';
+import ACTOR from '../reducers/ACTOR';
+
+const { PLAYER_1, PLAYER_2 } = ACTOR;
 
 const Container = styled.div`
   display: flex;
@@ -40,7 +43,7 @@ const Game = ({
 }) => {
   const hasWinner = winner !== null;
   const isGameOver = hasWinner || isFull;
-  const nextPlayer = Logic.getNextPlayer(xIsNext);
+  const nextPlayer = Script.getNextPlayer(xIsNext);
 
   /* eslint-disable react/jsx-one-expression-per-line */
   return (
@@ -48,9 +51,9 @@ const Game = ({
       <h1>TIC TAC TOE!</h1>
 
       <PlayersInfoContainer>
-        <PlayerName player={MOVE.PLAYER_1.val} />
+        <PlayerName player={PLAYER_1} />
         <span style={{ width: 20 }} />
-        <PlayerName player={MOVE.PLAYER_2.val} />
+        <PlayerName player={PLAYER_2} />
       </PlayersInfoContainer>
 
       <NextPlayerName player={nextPlayer} isGameOver={isGameOver} />

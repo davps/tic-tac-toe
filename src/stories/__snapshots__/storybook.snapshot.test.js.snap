@@ -102,7 +102,7 @@ exports[`Storyshots Board Game over! and has a winner 1`] = `
   className="sc-EHOje gZDqME"
 >
   <div
-    className="sc-ifAKCX jGAHkG"
+    className="sc-ifAKCX bqIdvC"
   >
     <span
       style={
@@ -147,7 +147,7 @@ exports[`Storyshots Board Game over! and has a winner 1`] = `
     </span>
   </div>
   <div
-    className="sc-ifAKCX llZypP"
+    className="sc-ifAKCX foEHRE"
   >
     <span
       style={
@@ -192,7 +192,7 @@ exports[`Storyshots Board Game over! and has a winner 1`] = `
     </span>
   </div>
   <div
-    className="sc-ifAKCX eWMmJb"
+    className="sc-ifAKCX dNazhw"
   >
     <span
       style={
@@ -719,7 +719,7 @@ exports[`Storyshots Full, live game Play it here 1`] = `
   </div>
   <div>
     <span
-      className="game-is-not-over sc-bZQynM iNPAfB"
+      className="game-is-not-over sc-bZQynM IuXpY"
     >
       <span
         className="PLAYER_1 sc-bdVaJa eAhLIg"
@@ -1582,7 +1582,7 @@ exports[`Storyshots Game With full board and winner 1`] = `
     className="sc-EHOje gZDqME"
   >
     <div
-      className="sc-ifAKCX jGAHkG"
+      className="sc-ifAKCX bqIdvC"
     >
       <span
         style={
@@ -1627,7 +1627,7 @@ exports[`Storyshots Game With full board and winner 1`] = `
       </span>
     </div>
     <div
-      className="sc-ifAKCX llZypP"
+      className="sc-ifAKCX foEHRE"
     >
       <span
         style={
@@ -1672,7 +1672,7 @@ exports[`Storyshots Game With full board and winner 1`] = `
       </span>
     </div>
     <div
-      className="sc-ifAKCX eWMmJb"
+      className="sc-ifAKCX dNazhw"
     >
       <span
         style={
@@ -1921,7 +1921,7 @@ exports[`Storyshots Game With initialized values 1`] = `
   </div>
   <div>
     <span
-      className="game-is-not-over sc-bZQynM iNPAfB"
+      className="game-is-not-over sc-bZQynM IuXpY"
     >
       <span
         className="PLAYER_1 sc-bdVaJa eAhLIg"
@@ -2084,7 +2084,7 @@ exports[`Storyshots Game With initialized values 1`] = `
 exports[`Storyshots NextPlayerName Game is not over and the next player is PLAYER_1  1`] = `
 <div>
   <span
-    className="game-is-not-over sc-bZQynM iNPAfB"
+    className="game-is-not-over sc-bZQynM IuXpY"
   >
     <span
       className="PLAYER_1 sc-bdVaJa eAhLIg"
@@ -2392,7 +2392,7 @@ exports[`Storyshots Square Game over, used by PLAYER_1  (X ), player is not the 
 
 exports[`Storyshots Square Game over, used by PLAYER_1  (X ), player is the winner 1`] = `
 <div
-  className="sc-ifAKCX cgkBKv"
+  className="sc-ifAKCX gcdHHp"
 >
   <span
     style={
@@ -2475,7 +2475,7 @@ exports[`Storyshots Square Game over, used by PLAYER_2  (O ), player is not the 
 
 exports[`Storyshots Square Game over, used by PLAYER_2  (O ), player is the winner 1`] = `
 <div
-  className="sc-ifAKCX cgkBKv"
+  className="sc-ifAKCX gcdHHp"
 >
   <span
     style={

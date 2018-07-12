@@ -1,11 +1,12 @@
 import React from 'react';
-import { MOVE, customPropTypes } from '../constants';
+import { customPropTypes } from '../constants';
 import { X, O } from './Icons';
 import { Container } from './Container';
+import ACTOR from '../reducers/ACTOR';
 
 const icon = {};
-icon[MOVE.PLAYER_1.val] = <X size={25} />;
-icon[MOVE.PLAYER_2.val] = <O size={25} />;
+icon[ACTOR.PLAYER_1] = <X size={25} />;
+icon[ACTOR.PLAYER_2] = <O size={25} />;
 
 /**
  * Component to display information about a player
@@ -13,8 +14,8 @@ icon[MOVE.PLAYER_2.val] = <O size={25} />;
  */
 /* eslint-disable react/jsx-one-expression-per-line */
 const PlayerName = ({ player }) => (
-  <Container className={MOVE[player].val}>
-    <span>{MOVE[player].name}</span>
+  <Container className={ACTOR[player]}>
+    <span>{ACTOR.name[player]}</span>
     {icon[player]}
   </Container>
 );

@@ -83,3 +83,4 @@ npm test -- --coverage
 ```
 and then open the  `./coverage/Icov-report/index.html` file to explore the coverage details.
 
+In your local environment, the puppeteer tests will pass only if your server is up and running (you need to do that manually) Why? Because reinitializing the server to run the test is too slow. In the CI server, the test suite will automatically start the server and tear down when it is done.

@@ -1,14 +1,8 @@
 import PropTypes from 'prop-types';
 
-/**
- * I used the key property on this data structure because it is
- * easiert to debug with it (instead of using null or empty)
- */
-export const MOVE = {
-  PENDING: { val: 'PENDING', label: ' ' },
-  PLAYER_1: { val: 'PLAYER_1', label: 'X', name: 'Laura' },
-  PLAYER_2: { val: 'PLAYER_2', label: 'O', name: 'David' }
-};
+import ACTOR from './reducers/ACTOR';
+
+const { PLAYER_1, PLAYER_2, PENDING } = ACTOR;
 
 const m = 3;
 const margins = [
@@ -54,16 +48,10 @@ export const DIMENSIONS = {
 };
 
 export const customPropTypes = {
-  moves: PropTypes.arrayOf(
-    PropTypes.oneOf([MOVE.PENDING.val, MOVE.PLAYER_1.val, MOVE.PLAYER_2.val])
-  ),
-  winner: PropTypes.oneOf([MOVE.PLAYER_1.val, MOVE.PLAYER_2.val]),
+  moves: PropTypes.arrayOf(PropTypes.oneOf([PENDING, PLAYER_1, PLAYER_2])),
+  winner: PropTypes.oneOf([PLAYER_1, PLAYER_2]),
   winnerMoves: PropTypes.arrayOf(PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8])),
-  moveVal: PropTypes.oneOf([
-    MOVE.PENDING.val,
-    MOVE.PLAYER_1.val,
-    MOVE.PLAYER_2.val
-  ])
+  moveVal: PropTypes.oneOf([PENDING, PLAYER_1, PLAYER_2])
 };
 
 export const customDefaultTypes = {};

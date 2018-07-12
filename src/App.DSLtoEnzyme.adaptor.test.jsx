@@ -11,11 +11,13 @@ import {
   EXPECT_TO_BE_WINNER,
   EXPECT_NOT_TO_BE_WINNER
 } from './DSL';
-import { MOVE } from './constants';
 import { PLACE_MOVE, RESET_GAME } from './actions/actions';
 import WinnerName from './components/WinnerName';
 import NextPlayerName from './components/NextPlayerName';
 import tests from './App.testsWithDSL';
+import ACTOR from './reducers/ACTOR';
+
+const { PLAYER_1, PLAYER_2 } = ACTOR;
 
 /**
  * Smoke test
@@ -102,10 +104,7 @@ tests.forEach(scenario => {
         }
 
         case EXPECT_NOT_TO_BE_WINNER: {
-          const otherPlayer =
-            action.player === MOVE.PLAYER_1.val
-              ? MOVE.PLAYER_2.val
-              : MOVE.PLAYER_1.val;
+          const otherPlayer = action.player === PLAYER_1 ? PLAYER_2 : PLAYER_1;
 
           expect(
             game

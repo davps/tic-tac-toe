@@ -5,8 +5,10 @@ import {
   resetGame
 } from '../actions/actions';
 import reducer from './reducer';
-import { MOVE, POSITION } from '../constants';
+import { POSITION } from '../constants';
+import ACTOR from './ACTOR';
 
+const { PLAYER_1, PLAYER_2 } = ACTOR;
 const { TOP_LEFT, TOP_CENTER, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT } = POSITION;
 
 describe(PLACE_MOVE, () => {
@@ -27,11 +29,11 @@ describe(PLACE_MOVE, () => {
   it('initial state', () => {
     expect(initialState).not.toBeNull();
     expect(initialState).toBeDefined();
-    expect(initialState.moves.includes(MOVE.PLAYER_1.val)).toBe(false);
-    expect(initialState.moves.includes(MOVE.PLAYER_2.val)).toBe(false);
+    expect(initialState.moves.includes(PLAYER_1)).toBe(false);
+    expect(initialState.moves.includes(PLAYER_2)).toBe(false);
   });
   it('game over', () => {
-    expect(stateE.winner).toBe(MOVE.PLAYER_1.val);
+    expect(stateE.winner).toBe(PLAYER_1);
     expect(stateE.isFull).toBe(false);
   });
 

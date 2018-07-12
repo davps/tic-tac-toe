@@ -12,9 +12,11 @@ import {
   EXPECT_TO_BE_WINNER,
   EXPECT_NOT_TO_BE_WINNER
 } from './DSL';
-import { MOVE } from './constants';
 import { PLACE_MOVE, RESET_GAME } from './actions/actions';
 import tests from './App.testsWithDSL';
+import ACTOR from './reducers/ACTOR';
+
+const { PLAYER_1, PLAYER_2 } = ACTOR;
 
 const timeout = 60000;
 const port = 3000;
@@ -24,6 +26,17 @@ const url = `http://localhost:${port}/`;
 // my local dev environment. Instead, I just have
 // the server running manually on the terminal
 const startServer = process.env.CI;
+
+if (!startServer) {
+  console.log(
+    `The tests are not running on a CI server. 
+    Make sure to have the game running on ${url}
+    to pass the puppeteer tests
+    (on the CI server it will automatically start the server
+    but not on your dev environment)
+    `
+  );
+}
 
 describe('e2e tests', () => {
   let page;
@@ -129,9 +142,7 @@ describe('e2e tests', () => {
 
           case EXPECT_NOT_TO_BE_WINNER: {
             const otherPlayer =
-              action.player === MOVE.PLAYER_1.val
-                ? MOVE.PLAYER_2.val
-                : MOVE.PLAYER_1.val;
+              action.player === PLAYER_1 ? PLAYER_2 : PLAYER_1;
             await page.waitForSelector(`.has-winner .${otherPlayer}`);
             break;
           }

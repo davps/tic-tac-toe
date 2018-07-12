@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { MOVE, DIMENSIONS, customPropTypes } from '../constants';
+import { DIMENSIONS, customPropTypes } from '../constants';
 import { X, O } from './Icons';
 import { animation } from './Container';
+import ACTOR from '../reducers/ACTOR';
+
+const { PLAYER_1, PLAYER_2, PENDING } = ACTOR;
 
 const Container = styled.div`
   width: ${DIMENSIONS.square.width}px;
@@ -60,10 +63,10 @@ const Square = ({
 
   return (
     <SelectedContainer {...style}>
-      {owner === MOVE.PLAYER_1.val && <X scale={0.8} />}
-      {owner === MOVE.PLAYER_2.val && <O scale={0.8} />}
-      {owner === MOVE.PENDING.val && isGameOver && <span />}
-      {owner === MOVE.PENDING.val &&
+      {owner === PLAYER_1 && <X scale={0.8} />}
+      {owner === PLAYER_2 && <O scale={0.8} />}
+      {owner === PENDING && isGameOver && <span />}
+      {owner === PENDING &&
         !isGameOver && (
           <Button
             type="button"

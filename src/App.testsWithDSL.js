@@ -1,5 +1,6 @@
-import { POSITION, MOVE } from './constants';
+import { POSITION } from './constants';
 import { I, Scenario } from './DSL';
+import ACTOR from './reducers/ACTOR';
 
 const {
   TOP_LEFT,
@@ -13,8 +14,8 @@ const {
   BOTTOM_RIGHT
 } = POSITION;
 
-const X = MOVE.PLAYER_1.val;
-const O = MOVE.PLAYER_2.val;
+const X = ACTOR.PLAYER_1;
+const O = ACTOR.PLAYER_2;
 
 Scenario('Game is not over yet');
 I.placeMove(TOP_LEFT);
