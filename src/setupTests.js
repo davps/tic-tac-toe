@@ -71,9 +71,10 @@ const assertMandatory = action => {
   }
 };
 
-const printExpectedAction = action =>
-  `\non expected type ${printExpected(action.type)}:` +
-  `\n${JSON.stringify(action, null, 2)}`;
+const printExpectedAction = action => `
+    on expected type ${printExpected(action.type)}:
+    ${JSON.stringify(action, null, 2)}
+`;
 
 expect.extend({
   toFailBecause: (received, action) => {
@@ -82,15 +83,12 @@ expect.extend({
     const pass = false;
 
     /* eslint-disable prefer-template */
-    const message = pass
-      ? () =>
-          matcherHint('.not.toBeNull') +
-          `\n\nFailed expectation\n` +
-          ` on expected type ${printExpected(action)}`
-      : () =>
-          matcherHint('.toBeNull') +
-          `\n\nFailed expectation\n` +
-          printExpectedAction(action);
+    const message = () => `
+      ${matcherHint('.toFailBecause')}
+
+      Failed expectation.
+      ${printExpectedAction(action)}
+    `;
     // eslint-enable */
 
     return { message, pass };
@@ -103,18 +101,21 @@ expect.extend({
 
     /* eslint-disable prefer-template */
     const message = pass
-      ? () =>
-          matcherHint('.not.toBeNullBecause') +
-          `\n\nExpected value not to be null.\n` +
-          `\nReceived:\n` +
-          `  ${printReceived(received)}` +
-          printExpectedAction(action)
-      : () =>
-          matcherHint('.toBeNullBecause') +
-          `\n\nExpected value to be null.\n` +
-          `\nReceived:\n` +
-          `  ${printReceived(received)}` +
-          printExpectedAction(action);
+      ? () => `
+        ${matcherHint('.not.toBeNullBecause')}
+
+        Expected value not to be null.   
+        Received:
+          ${printReceived(received)}
+          ${printExpectedAction(action)}
+      `
+      : () => `
+        ${matcherHint('.toBeNullBecause')}
+
+        Expected value to be null.   
+        ${printReceived(received)}  
+        ${printExpectedAction(action)}   
+      `;
     /* eslint-enable */
 
     return { message, pass };
@@ -127,18 +128,22 @@ expect.extend({
 
     /* eslint-disable prefer-template */
     const message = pass
-      ? () =>
-          matcherHint('.not.toBeDefinedBecause') +
-          `\n\nExpected value not to be defined.\n` +
-          `\nReceived:\n` +
-          `  ${printReceived(received)}` +
-          printExpectedAction(action)
-      : () =>
-          matcherHint('.toBeDefinedBecause') +
-          `\n\nExpected value to be defined.\n` +
-          `\nReceived:\n` +
-          `  ${printReceived(received)}` +
-          printExpectedAction(action);
+      ? () => `
+        ${matcherHint('.not.toBeDefinedBecause')}
+
+        Expected value not to be defined.
+        Received:
+          ${printReceived(received)}
+          ${printExpectedAction(action)}
+      `
+      : () => `
+        ${matcherHint('.toBeDefinedBecause')}
+
+        Expected value to be defined.
+        Received:
+        ${printReceived(received)}
+        ${printExpectedAction(action)}
+      `;
     /* eslint-enable */
 
     return { message, pass };
@@ -151,20 +156,24 @@ expect.extend({
 
     /* eslint-disable prefer-template */
     const message = pass
-      ? () =>
-          matcherHint('.not.equalBecause') +
-          `\n\nExpected value not to match:\n` +
-          `  ${printExpected(expected)}` +
-          `\nReceived:\n` +
-          `  ${printReceived(received)}` +
-          printExpectedAction(action)
-      : () =>
-          matcherHint('.equalBecause') +
-          `\n\nExpected value to match:\n` +
-          `  ${printExpected(expected)}` +
-          `\nReceived:\n` +
-          `  ${printReceived(received)}` +
-          printExpectedAction(action);
+      ? () => `
+          ${matcherHint('.not.equalBecause')}
+
+          Expected value not to match:
+            ${printExpected(expected)}
+          Received:
+            ${printReceived(received)}
+            ${printExpectedAction(action)}
+        `
+      : () => `
+          ${matcherHint('.equalBecause')}
+          
+          Expected value to match:
+            ${printExpected(expected)}
+          Received:
+            ${printReceived(received)}
+            ${printExpectedAction(action)}
+      `;
     /* eslint-enable */
 
     return { message, pass };

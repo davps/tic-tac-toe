@@ -43,14 +43,6 @@ it('run without crashing', () => {
   const state = store.getState();
   expect(state).toBeDefined();
   expect(state).toEqual(initialState);
-
-  expect(true).toEqualBecause(true, {
-    type: 'Custom toEqualBecause matcher test'
-  });
-  expect(true).toBeDefinedBecause({
-    type: 'Custom toBeDefinedBecause matcher test'
-  });
-  expect().not.toFailBecause({ type: 'Testing toFailBecause not failure' });
 });
 
 /**
