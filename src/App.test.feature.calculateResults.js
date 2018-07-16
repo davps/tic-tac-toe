@@ -35,7 +35,7 @@ I.placeMove(TOP_CENTER);
 I.expect().gameNotOver();
 
 Scenario(
-  'Place more moves for a Game over and X wins to verify that the winner and game over was detected'
+  'Place more moves for a Game over and X wins to verify it was detected by the game'
 );
 I.placeMove(BOTTOM_CENTER);
 I.placeMove(TOP_RIGHT);
@@ -45,7 +45,7 @@ I.expect(O).notToBeWinner();
 I.expect().gameOver();
 
 Scenario(
-  'Start a new game and fill all squares but with no winners to verify if we are in Draw state'
+  'Start a new game and fill all squares but with no winners to verify if the game detected the Draw'
 );
 I.startNewGame();
 I.placeMove(TOP_LEFT);
