@@ -88,16 +88,25 @@ const nonReduxActionCreators = {
   })
 };
 
+/**
+ * Use symbols to create (sort of) private methods
+ * because I want to expose only some methods which helps to
+ * easily change the internals in the future
+ */
+const createDescriptor = Symbol('createDescriptor');
+const findScenario = Symbol('findScenario');
+
 class DSL {
   constructor() {
     this.actionsByScenario = [];
     this.currentScenario = null;
+
     this.Scenario = name => {
       if (!name) {
         throw new Error('The scenario must have a name');
       }
 
-      if (this.findScenario(name)) {
+      if (this[findScenario](name)) {
         throw new Error('Cannot repeat the same scenario twice.');
       }
 
@@ -109,27 +118,29 @@ class DSL {
       this.currentScenario = name;
     };
 
-    this.findScenario = this.findScenario.bind(this);
-    this.createDescriptor = this.createDescriptor.bind(this);
-    this.toJSON = this.toJSON.bind(this);
-  }
+    this.I = this[createDescriptor]();
 
-  findScenario(scenarioName) {
-    return this.actionsByScenario.find(item => item.name === scenarioName);
+    this[findScenario] = this[findScenario].bind(this);
+    this[createDescriptor] = this[createDescriptor].bind(this);
+    this.toJSON = this.toJSON.bind(this);
   }
 
   toJSON() {
     return JSON.parse(JSON.stringify(this.actionsByScenario));
   }
 
-  createDescriptor() {
+  [findScenario](scenarioName) {
+    return this.actionsByScenario.find(item => item.name === scenarioName);
+  }
+
+  [createDescriptor]() {
     const dispatch = action => {
       if (this.currentScenario === null) {
         throw new Error(
           'You must define a scenario before taking an action ( before using I.method() )'
         );
       }
-      const scenario = this.findScenario(this.currentScenario);
+      const scenario = this[findScenario](this.currentScenario);
       // commented this block of code because (in theory)
       // my code will never pass this condition (unreachable code)
       // if (!scenario) {

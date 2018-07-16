@@ -1,8 +1,7 @@
 import DSL from './DSL';
 
 const testDSL = new DSL();
-const { Scenario } = testDSL;
-const I = testDSL.createDescriptor();
+const { Scenario, I } = testDSL;
 
 it('Unit testing boundary conditions of the DSL processor', () => {
   expect(() => {

@@ -6,8 +6,7 @@ import { POSITION } from './constants';
 import DSL from './DSL';
 
 const testDSL = new DSL();
-const { Scenario } = testDSL;
-const I = testDSL.createDescriptor();
+const { Scenario, I } = testDSL;
 
 const {
   TOP_LEFT,
