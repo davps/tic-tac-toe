@@ -21,7 +21,7 @@ const {
   BOTTOM_RIGHT
 } = POSITION;
 
-Scenario('Place some moves but game is not over yet');
+Scenario('Reset when game is over');
 I.startNewGame();
 
 I.expect(TOP_LEFT).isAvailable();

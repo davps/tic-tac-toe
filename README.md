@@ -89,7 +89,13 @@ In your local environment, the puppeteer tests will pass only if your server is 
 
 ## How to extend the DSL
 
-I'll explain it with an example: We want to add the new method `isAvailable()` to use it as `I.expect(TOP_LEFT).isAvailable()`. Below are the steps:
+We will always want to extend the actual syntax of our DSL to cover new cases of the business domain. This section document the steps you can follow to extend the DSL.
+
+I'll explain it with an example: We want to add the new method `isAvailable()` to use it as 
+```javascript
+I.expect(TOP_LEFT).isAvailable()
+```
+Below are the steps:
 
 1- Add isAvailable to DSL.js, as a `descriptor` on the `createTestDescription` method, in this case, as part of the expectation object. Note that we pass the `arg` value here:
 ```javascript
@@ -133,3 +139,4 @@ and then put all the test scenarios on a single array with:
 const tests = [].concat(testsWithDSL, testFeaturePlaceMove);
 ```
 and start running the tests from there
+

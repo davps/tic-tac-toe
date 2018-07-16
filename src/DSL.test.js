@@ -12,4 +12,9 @@ it('Unit testing boundary conditions of the DSL processor', () => {
   expect(() => {
     Scenario();
   }).toThrow();
+
+  expect(() => {
+    Scenario('A');
+    Scenario('A'); // repeat the scenario
+  }).toThrow();
 });

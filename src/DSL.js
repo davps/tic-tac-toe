@@ -88,7 +88,7 @@ const nonReduxActionCreators = {
   })
 };
 
-export default class DSL {
+class DSL {
   constructor() {
     this.actionsByScenario = [];
     this.currentScenario = null;
@@ -97,23 +97,20 @@ export default class DSL {
         throw new Error('The scenario must have a name');
       }
 
-      if (!this.findScenario(name)) {
-        this.actionsByScenario.push({
-          name,
-          actions: []
-        });
+      if (this.findScenario(name)) {
+        throw new Error('Cannot repeat the same scenario twice.');
       }
+
+      this.actionsByScenario.push({
+        name,
+        actions: []
+      });
 
       this.currentScenario = name;
     };
 
     this.findScenario = this.findScenario.bind(this);
     this.createTestDescription = this.createTestDescription.bind(this);
-    // this.printName = this.printName.bind(this);
-    // this.printName = this.printName.bind(this);
-    // this.printName = this.printName.bind(this);
-    // this.printName = this.printName.bind(this);
-    // this.printName = this.printName.bind(this);
   }
 
   findScenario(scenarioName) {
@@ -159,4 +156,4 @@ export default class DSL {
   }
 }
 
-// export const I = createTestDescription();
+export default DSL;
