@@ -74,8 +74,8 @@ tests.forEach(scenario => {
             game
               .find(WinnerName)
               .at(0)
-              .find('.has-winner').length
-          ).toBeGreaterThan(0);
+              .find('.has-winner').length > 0
+          ).toEqualBecause(true, action);
           break;
         }
 
@@ -84,8 +84,8 @@ tests.forEach(scenario => {
             game
               .find(WinnerName)
               .at(0)
-              .find('.has-no-winner').length
-          ).toBeGreaterThan(0);
+              .find('.has-no-winner').length > 0
+          ).toEqualBecause(true, action);
           break;
         }
 
@@ -94,8 +94,8 @@ tests.forEach(scenario => {
             game
               .find(WinnerName)
               .at(0)
-              .find('.game-over').length
-          ).toBeGreaterThan(0);
+              .find('.game-over').length > 0
+          ).toEqualBecause(true, action);
           break;
         }
 
@@ -104,8 +104,8 @@ tests.forEach(scenario => {
             game
               .find(NextPlayerName)
               .at(0)
-              .find('.game-is-not-over').length
-          ).toBeGreaterThan(0);
+              .find('.game-is-not-over').length > 0
+          ).toEqualBecause(true, action);
           break;
         }
 
@@ -114,8 +114,8 @@ tests.forEach(scenario => {
             game
               .find(WinnerName)
               .at(0)
-              .find(`.has-winner .${action.player}`).length
-          ).toBeGreaterThan(0);
+              .find(`.has-winner .${action.player}`).length > 0
+          ).toEqualBecause(true, action);
           break;
         }
 
@@ -126,8 +126,8 @@ tests.forEach(scenario => {
             game
               .find(WinnerName)
               .at(0)
-              .find(`.has-winner .${otherPlayer}`).length
-          ).toBeGreaterThan(0);
+              .find(`.has-winner .${otherPlayer}`).length > 0
+          ).toEqualBecause(true, action);
           break;
         }
 
@@ -137,15 +137,14 @@ tests.forEach(scenario => {
               .find(Board)
               .find(`Square.square-${action.position}`)
               .prop('owner')
-            // [PLAYER_1, PLAYER_2].includes(square.prop('owner')
-          ).toBe(PENDING);
+          ).toEqualBecause(PENDING, action);
           break;
         }
 
         case EXPECT_IS_NOT_AVAILABLE: {
           expect(
             game.find(Board).find(`button.square-${action.position}`).length
-          ).toBe(0);
+          ).toEqualBecause(0, action);
           break;
         }
 
@@ -159,7 +158,7 @@ tests.forEach(scenario => {
           const square = game
             .find(Board)
             .find(`svg.square-${action.position}.${action.player}`);
-          expect(square.length).toBeGreaterThan(0);
+          expect(square.length > 0).toEqualBecause(true, action);
           break;
         }
 

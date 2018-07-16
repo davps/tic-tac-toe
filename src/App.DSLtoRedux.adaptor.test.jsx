@@ -43,6 +43,14 @@ it('run without crashing', () => {
   const state = store.getState();
   expect(state).toBeDefined();
   expect(state).toEqual(initialState);
+
+  expect(true).toEqualBecause(true, {
+    type: 'Custom toEqualBecause matcher test'
+  });
+  expect(true).toBeDefinedBecause({
+    type: 'Custom toBeDefinedBecause matcher test'
+  });
+  expect().not.toFailBecause({ type: 'Testing toFailBecause not failure' });
 });
 
 /**
@@ -70,45 +78,57 @@ tests.forEach(scenario => {
         }
 
         case EXPECT_A_WINNER: {
-          expect(store.getState().winner).toBeDefined();
+          expect(store.getState().winner).toBeDefinedBecause(action);
           break;
         }
 
         case EXPECT_DRAW: {
-          expect(store.getState().winner).toBeNull();
-          expect(store.getState().isFull).toBe(true);
+          expect(store.getState().winner).toBeNullBecause(action);
+          expect(store.getState().isFull).toEqualBecause(true, action);
           break;
         }
 
         case EXPECT_GAME_OVER: {
           const state = store.getState();
-          expect(state.winner !== null || state.isFull).toBe(true);
+          expect(state.winner !== null || state.isFull).toEqualBecause(
+            true,
+            action
+          );
           break;
         }
 
         case EXPECT_GAME_NOT_OVER: {
-          expect(store.getState().winner).toBeNull();
-          expect(store.getState().isFull).toBe(false);
+          expect(store.getState().winner).toBeNullBecause(action);
+          expect(store.getState().isFull).toEqualBecause(false, action);
           break;
         }
 
         case EXPECT_TO_BE_WINNER: {
-          expect(store.getState().winner).toEqual(action.player);
+          expect(store.getState().winner).toEqualBecause(action.player, action);
           break;
         }
 
         case EXPECT_NOT_TO_BE_WINNER: {
-          expect(store.getState().winner).not.toEqual(action.player);
+          expect(store.getState().winner).not.toEqualBecause(
+            action.player,
+            action
+          );
           break;
         }
 
         case EXPECT_IS_AVAILABLE: {
-          expect(store.getState().moves[action.position]).toBe(PENDING);
+          expect(store.getState().moves[action.position]).toEqualBecause(
+            PENDING,
+            action
+          );
           break;
         }
 
         case EXPECT_IS_NOT_AVAILABLE: {
-          expect(store.getState().moves[action.position]).not.toBe(PENDING);
+          expect(store.getState().moves[action.position]).not.toEqualBecause(
+            PENDING,
+            action
+          );
           break;
         }
 
@@ -118,7 +138,10 @@ tests.forEach(scenario => {
         }
 
         case EXPECT_HAS_MOVE: {
-          expect(store.getState().moves[action.position]).toBe(action.player);
+          expect(store.getState().moves[action.position]).toEqualBecause(
+            action.player,
+            action
+          );
           break;
         }
 

@@ -108,6 +108,10 @@ describe('e2e tests', () => {
     testCalculateResults
   );
 
+  const options = {
+    timeout: 3000
+  };
+
   tests.forEach(scenario => {
     it(scenario.name, async () => {
       // disabled the linter below because I really need to await
@@ -128,44 +132,73 @@ describe('e2e tests', () => {
           }
 
           case EXPECT_A_WINNER: {
-            await page.waitForSelector('.has-winner');
+            await page.waitForSelector('.has-winner', options).catch(() => {
+              expect().toFailBecause(action);
+            });
+
             break;
           }
 
           case EXPECT_DRAW: {
-            await page.waitForSelector('.has-no-winner');
+            await page.waitForSelector('.has-no-winner', options).catch(() => {
+              expect().toFailBecause(action);
+            });
             break;
           }
 
           case EXPECT_GAME_OVER: {
-            await page.waitForSelector('.game-over');
+            await page.waitForSelector('.game-over', options).catch(() => {
+              expect().toFailBecause(action);
+            });
             break;
           }
 
           case EXPECT_GAME_NOT_OVER: {
-            await page.waitForSelector('.game-is-not-over');
+            await page
+              .waitForSelector('.game-is-not-over', options)
+              .catch(() => {
+                expect().toFailBecause(action);
+              });
             break;
           }
 
           case EXPECT_TO_BE_WINNER: {
-            await page.waitForSelector(`.has-winner .${action.player}`);
+            await page
+              .waitForSelector(`.has-winner .${action.player}`, options)
+              .catch(() => {
+                expect().toFailBecause(action);
+              });
             break;
           }
 
           case EXPECT_NOT_TO_BE_WINNER: {
             const otherPlayer =
               action.player === PLAYER_1 ? PLAYER_2 : PLAYER_1;
-            await page.waitForSelector(`.has-winner .${otherPlayer}`);
+
+            await page
+              .waitForSelector(`.has-winner .${otherPlayer}`, options)
+              .catch(() => {
+                expect().toFailBecause(action);
+              });
+
             break;
           }
 
           case EXPECT_IS_AVAILABLE: {
-            await page.waitForSelector(`button.square-${action.position}`);
+            await page
+              .waitForSelector(`button.square-${action.position}`, options)
+              .catch(() => {
+                expect().toFailBecause(action);
+              });
             break;
           }
 
           case EXPECT_IS_NOT_AVAILABLE: {
-            await page.waitForSelector(`svg.square-${action.position}`);
+            await page
+              .waitForSelector(`svg.square-${action.position}`, options)
+              .catch(() => {
+                expect().toFailBecause(action);
+              });
             break;
           }
 
@@ -175,9 +208,14 @@ describe('e2e tests', () => {
           }
 
           case EXPECT_HAS_MOVE: {
-            await page.waitForSelector(
-              `svg.square-${action.position}.${action.player}`
-            );
+            await page
+              .waitForSelector(
+                `svg.square-${action.position}.${action.player}`,
+                options
+              )
+              .catch(() => {
+                expect().toFailBecause(action);
+              });
             break;
           }
 
