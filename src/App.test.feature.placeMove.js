@@ -8,7 +8,7 @@ import DSL from './DSL';
 
 const testDSL = new DSL();
 const { Scenario } = testDSL;
-const I = testDSL.createTestDescription();
+const I = testDSL.createDescriptor();
 
 const {
   TOP_LEFT,
@@ -69,4 +69,4 @@ I.expect(BOTTOM_CENTER).isAvailable();
 I.expect(BOTTOM_RIGHT).hasMove(O);
 I.expect(BOTTOM_RIGHT).isNotAvailable();
 
-export default I.getTestsAsJSON();
+export default testDSL.toJSON();

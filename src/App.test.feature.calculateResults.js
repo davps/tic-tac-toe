@@ -8,7 +8,7 @@ import DSL from './DSL';
 
 const testDSL = new DSL();
 const { Scenario } = testDSL;
-const I = testDSL.createTestDescription();
+const I = testDSL.createDescriptor();
 
 const {
   TOP_LEFT,
@@ -98,4 +98,4 @@ for (let i = 0; i < x.length; i += 1) {
   I.expect(X).toBeWinner();
 }
 
-export default I.getTestsAsJSON();
+export default testDSL.toJSON();

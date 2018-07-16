@@ -110,14 +110,19 @@ class DSL {
     };
 
     this.findScenario = this.findScenario.bind(this);
-    this.createTestDescription = this.createTestDescription.bind(this);
+    this.createDescriptor = this.createDescriptor.bind(this);
+    this.toJSON = this.toJSON.bind(this);
   }
 
   findScenario(scenarioName) {
     return this.actionsByScenario.find(item => item.name === scenarioName);
   }
 
-  createTestDescription() {
+  toJSON() {
+    return JSON.parse(JSON.stringify(this.actionsByScenario));
+  }
+
+  createDescriptor() {
     const dispatch = action => {
       if (this.currentScenario === null) {
         throw new Error(
@@ -148,8 +153,7 @@ class DSL {
         isAvailable: () => dispatch(expect.isAvailable(arg)),
         isNotAvailable: () => dispatch(expect.isNotAvailable(arg)),
         hasMove: player => dispatch(expect.hasMove(arg, player))
-      }),
-      getTestsAsJSON: () => [...this.actionsByScenario]
+      })
     };
 
     return descriptors;

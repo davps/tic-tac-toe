@@ -97,7 +97,7 @@ I.expect(TOP_LEFT).isAvailable()
 ```
 Below are the steps:
 
-1- Add isAvailable to DSL.js, as a `descriptor` on the `createTestDescription` method, in this case, as part of the expectation object. Note that we pass the `arg` value here:
+1- Add isAvailable to DSL.js, as a `descriptor` on the `createDescriptor` method, in this case, as part of the expectation object. Note that we pass the `arg` value here:
 ```javascript
       isAvailable: () => dispatch(expect.isAvailable(arg))
 ```
