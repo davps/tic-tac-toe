@@ -49,7 +49,9 @@ This is how I develop an app to make it easy to test.
 - Travis CI to build the production bundles and deploy it to Heroku, run the tests, creating and publishing [the test coverage report](https://coveralls.io/github/davps/tic-tac-toe) and the [UI documentation as a Storybook](https://davps.github.io/tic-tac-toe) on Github Pages.
 
 
-# Install and run locally
+# Instructions
+
+## Install and run locally
 
 Install [redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension#installation) in your browser (optional, use this browser extension during development).
 
@@ -84,3 +86,50 @@ npm test -- --coverage
 and then open the  `./coverage/Icov-report/index.html` file to explore the coverage details.
 
 In your local environment, the puppeteer tests will pass only if your server is up and running (you need to do that manually) Why? Because reinitializing the server to run the test is too slow. In the CI server, the test suite will automatically start the server and tear down when it is done.
+
+## How to extend the DSL
+
+I'll explain it with an example: We want to add the new method `isAvailable()` to use it as `I.expect(TOP_LEFT).isAvailable()`. Below are the steps:
+
+1- Add isAvailable to DSL.js, as a `descriptor` on the `createTestDescription` method, in this case, as part of the expectation object. Note that we pass the `arg` value here:
+```javascript
+      isAvailable: () => dispatch(expect.isAvailable(arg))
+```
+
+2- Add an expectation creator for `isAvailable`. It will look like this (from the architectural point of view, this is equivalent to the **action creator** of redux):
+```javascript
+  isAvailable: position => ({
+    type: EXPECT_IS_AVAILABLE,
+    position
+  })
+```
+
+3- Add an expectation type (also, equivalent to action types of Redux):
+```javascript
+export const EXPECT_IS_AVAILABLE = 'EXPECT_IS_AVAILABLE';
+```
+
+4- Now we need to modify the `App.DSLto****.adaptor.test.jsx` files, to implement this new
+expectation type for each file. The implementation is optional for expectations but mandatory
+when the new interface is not an expectation.
+So, for `App.DSLtoRedux.adaptor.test.jsx`, for example, we add:
+```javascript
+case EXPECT_IS_AVAILABLE: {
+    expect(store.getState().moves[action.position]).toBe(ACTOR.PENDING);
+    break;
+}
+```
+
+5- In case you are writing the new tests on a new file, make sure to concat all the tests
+on the `tests` array of your adaptor that run implement file. 
+At the time of writing this tutorial, we used these tests on the redux adaptor (retrieved the JSON description of the tests with `import`:
+```javascript
+import testsWithDSL from './App.testsWithDSL';
+import testFeaturePlaceMove from './App.test.feature.placeMove';
+```
+
+and then put all the test scenarios on a single array with:
+```javascript
+const tests = [].concat(testsWithDSL, testFeaturePlaceMove);
+```
+and start running the tests from there

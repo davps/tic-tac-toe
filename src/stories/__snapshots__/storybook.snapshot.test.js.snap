@@ -113,6 +113,7 @@ exports[`Storyshots Board Game over! and has a winner 1`] = `
       }
     >
       <svg
+        className="PLAYER_1 square-0"
         height="100%"
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 64 64"
@@ -158,6 +159,7 @@ exports[`Storyshots Board Game over! and has a winner 1`] = `
       }
     >
       <svg
+        className="PLAYER_1 square-1"
         height="100%"
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 64 64"
@@ -203,6 +205,7 @@ exports[`Storyshots Board Game over! and has a winner 1`] = `
       }
     >
       <svg
+        className="PLAYER_1 square-2"
         height="100%"
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 64 64"
@@ -285,6 +288,7 @@ exports[`Storyshots Board Game over! and nobody wins 1`] = `
       }
     >
       <svg
+        className="PLAYER_1 square-0"
         height="100%"
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 64 64"
@@ -330,6 +334,7 @@ exports[`Storyshots Board Game over! and nobody wins 1`] = `
       }
     >
       <svg
+        className="PLAYER_2 square-1"
         height="100%"
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 64 64"
@@ -362,6 +367,7 @@ exports[`Storyshots Board Game over! and nobody wins 1`] = `
       }
     >
       <svg
+        className="PLAYER_1 square-2"
         height="100%"
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 64 64"
@@ -407,6 +413,7 @@ exports[`Storyshots Board Game over! and nobody wins 1`] = `
       }
     >
       <svg
+        className="PLAYER_1 square-3"
         height="100%"
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 64 64"
@@ -452,6 +459,7 @@ exports[`Storyshots Board Game over! and nobody wins 1`] = `
       }
     >
       <svg
+        className="PLAYER_2 square-4"
         height="100%"
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 64 64"
@@ -484,6 +492,7 @@ exports[`Storyshots Board Game over! and nobody wins 1`] = `
       }
     >
       <svg
+        className="PLAYER_2 square-5"
         height="100%"
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 64 64"
@@ -516,6 +525,7 @@ exports[`Storyshots Board Game over! and nobody wins 1`] = `
       }
     >
       <svg
+        className="PLAYER_2 square-6"
         height="100%"
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 64 64"
@@ -548,6 +558,7 @@ exports[`Storyshots Board Game over! and nobody wins 1`] = `
       }
     >
       <svg
+        className="PLAYER_1 square-7"
         height="100%"
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 64 64"
@@ -593,6 +604,7 @@ exports[`Storyshots Board Game over! and nobody wins 1`] = `
       }
     >
       <svg
+        className="PLAYER_2 square-8"
         height="100%"
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 64 64"
@@ -641,6 +653,7 @@ exports[`Storyshots Full, live game Play it here 1`] = `
         }
       >
         <svg
+          className="PLAYER_1 "
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -696,6 +709,7 @@ exports[`Storyshots Full, live game Play it here 1`] = `
         }
       >
         <svg
+          className="PLAYER_2 "
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -736,6 +750,7 @@ exports[`Storyshots Full, live game Play it here 1`] = `
           }
         >
           <svg
+            className="PLAYER_1 "
             height="100%"
             preserveAspectRatio="xMidYMid meet"
             viewBox="0 0 64 64"
@@ -904,6 +919,7 @@ exports[`Storyshots Game With full board and no winner 1`] = `
         }
       >
         <svg
+          className="PLAYER_1 "
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -959,6 +975,7 @@ exports[`Storyshots Game With full board and no winner 1`] = `
         }
       >
         <svg
+          className="PLAYER_2 "
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -995,6 +1012,7 @@ exports[`Storyshots Game With full board and no winner 1`] = `
         }
       >
         <svg
+          className="PLAYER_1 "
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -1037,6 +1055,7 @@ exports[`Storyshots Game With full board and no winner 1`] = `
         }
       >
         <svg
+          className="PLAYER_2 "
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -1073,6 +1092,7 @@ exports[`Storyshots Game With full board and no winner 1`] = `
         }
       >
         <svg
+          className="PLAYER_1 square-0"
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -1118,6 +1138,7 @@ exports[`Storyshots Game With full board and no winner 1`] = `
         }
       >
         <svg
+          className="PLAYER_2 square-1"
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -1150,6 +1171,7 @@ exports[`Storyshots Game With full board and no winner 1`] = `
         }
       >
         <svg
+          className="PLAYER_1 square-2"
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -1195,6 +1217,7 @@ exports[`Storyshots Game With full board and no winner 1`] = `
         }
       >
         <svg
+          className="PLAYER_1 square-3"
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -1240,6 +1263,7 @@ exports[`Storyshots Game With full board and no winner 1`] = `
         }
       >
         <svg
+          className="PLAYER_2 square-4"
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -1272,6 +1296,7 @@ exports[`Storyshots Game With full board and no winner 1`] = `
         }
       >
         <svg
+          className="PLAYER_2 square-5"
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -1304,6 +1329,7 @@ exports[`Storyshots Game With full board and no winner 1`] = `
         }
       >
         <svg
+          className="PLAYER_2 square-6"
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -1336,6 +1362,7 @@ exports[`Storyshots Game With full board and no winner 1`] = `
         }
       >
         <svg
+          className="PLAYER_1 square-7"
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -1381,6 +1408,7 @@ exports[`Storyshots Game With full board and no winner 1`] = `
         }
       >
         <svg
+          className="PLAYER_2 square-8"
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -1444,6 +1472,7 @@ exports[`Storyshots Game With full board and winner 1`] = `
         }
       >
         <svg
+          className="PLAYER_1 "
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -1499,6 +1528,7 @@ exports[`Storyshots Game With full board and winner 1`] = `
         }
       >
         <svg
+          className="PLAYER_2 "
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -1541,6 +1571,7 @@ exports[`Storyshots Game With full board and winner 1`] = `
             }
           >
             <svg
+              className="PLAYER_1 "
               height="100%"
               preserveAspectRatio="xMidYMid meet"
               viewBox="0 0 64 64"
@@ -1593,6 +1624,7 @@ exports[`Storyshots Game With full board and winner 1`] = `
         }
       >
         <svg
+          className="PLAYER_1 square-0"
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -1638,6 +1670,7 @@ exports[`Storyshots Game With full board and winner 1`] = `
         }
       >
         <svg
+          className="PLAYER_1 square-1"
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -1683,6 +1716,7 @@ exports[`Storyshots Game With full board and winner 1`] = `
         }
       >
         <svg
+          className="PLAYER_1 square-2"
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -1728,6 +1762,7 @@ exports[`Storyshots Game With full board and winner 1`] = `
         }
       >
         <svg
+          className="PLAYER_2 square-3"
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -1760,6 +1795,7 @@ exports[`Storyshots Game With full board and winner 1`] = `
         }
       >
         <svg
+          className="PLAYER_2 square-4"
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -1843,6 +1879,7 @@ exports[`Storyshots Game With initialized values 1`] = `
         }
       >
         <svg
+          className="PLAYER_1 "
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -1898,6 +1935,7 @@ exports[`Storyshots Game With initialized values 1`] = `
         }
       >
         <svg
+          className="PLAYER_2 "
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -1938,6 +1976,7 @@ exports[`Storyshots Game With initialized values 1`] = `
           }
         >
           <svg
+            className="PLAYER_1 "
             height="100%"
             preserveAspectRatio="xMidYMid meet"
             viewBox="0 0 64 64"
@@ -2101,6 +2140,7 @@ exports[`Storyshots NextPlayerName Game is not over and the next player is PLAYE
         }
       >
         <svg
+          className="PLAYER_1 "
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 64 64"
@@ -2159,6 +2199,7 @@ exports[`Storyshots PlayerName PlayerName of  val=PLAYER_1 label=X name=Laura 1`
     }
   >
     <svg
+      className="PLAYER_1 "
       height="100%"
       preserveAspectRatio="xMidYMid meet"
       viewBox="0 0 64 64"
@@ -2210,6 +2251,7 @@ exports[`Storyshots PlayerName PlayerName of  val=PLAYER_2 label=O name=David 1`
     }
   >
     <svg
+      className="PLAYER_2 "
       height="100%"
       preserveAspectRatio="xMidYMid meet"
       viewBox="0 0 64 64"
@@ -2272,6 +2314,7 @@ exports[`Storyshots Square Game is not over, used by PLAYER_1  (X ) 1`] = `
     }
   >
     <svg
+      className="PLAYER_1 "
       height="100%"
       preserveAspectRatio="xMidYMid meet"
       viewBox="0 0 64 64"
@@ -2320,6 +2363,7 @@ exports[`Storyshots Square Game is not over, used by PLAYER_2  (O ) 1`] = `
     }
   >
     <svg
+      className="PLAYER_2 "
       height="100%"
       preserveAspectRatio="xMidYMid meet"
       viewBox="0 0 64 64"
@@ -2355,6 +2399,7 @@ exports[`Storyshots Square Game over, used by PLAYER_1  (X ), player is not the 
     }
   >
     <svg
+      className="PLAYER_1 "
       height="100%"
       preserveAspectRatio="xMidYMid meet"
       viewBox="0 0 64 64"
@@ -2403,6 +2448,7 @@ exports[`Storyshots Square Game over, used by PLAYER_1  (X ), player is the winn
     }
   >
     <svg
+      className="PLAYER_1 "
       height="100%"
       preserveAspectRatio="xMidYMid meet"
       viewBox="0 0 64 64"
@@ -2451,6 +2497,7 @@ exports[`Storyshots Square Game over, used by PLAYER_2  (O ), player is not the 
     }
   >
     <svg
+      className="PLAYER_2 "
       height="100%"
       preserveAspectRatio="xMidYMid meet"
       viewBox="0 0 64 64"
@@ -2486,6 +2533,7 @@ exports[`Storyshots Square Game over, used by PLAYER_2  (O ), player is the winn
     }
   >
     <svg
+      className="PLAYER_2 "
       height="100%"
       preserveAspectRatio="xMidYMid meet"
       viewBox="0 0 64 64"
@@ -2552,6 +2600,7 @@ exports[`Storyshots WinnerName Game over! PLAYER_1 wins.  1`] = `
           }
         >
           <svg
+            className="PLAYER_1 "
             height="100%"
             preserveAspectRatio="xMidYMid meet"
             viewBox="0 0 64 64"
@@ -2606,6 +2655,7 @@ exports[`Storyshots WinnerName Game over! The board is full but without a winner
       }
     >
       <svg
+        className="PLAYER_1 "
         height="100%"
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 64 64"
@@ -2648,6 +2698,7 @@ exports[`Storyshots WinnerName Game over! The board is full but without a winner
       }
     >
       <svg
+        className="PLAYER_2 "
         height="100%"
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 64 64"

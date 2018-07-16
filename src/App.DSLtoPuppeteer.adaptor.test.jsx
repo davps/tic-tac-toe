@@ -10,11 +10,17 @@ import {
   EXPECT_GAME_OVER,
   EXPECT_GAME_NOT_OVER,
   EXPECT_TO_BE_WINNER,
-  EXPECT_NOT_TO_BE_WINNER
+  EXPECT_NOT_TO_BE_WINNER,
+  EXPECT_IS_AVAILABLE,
+  EXPECT_IS_NOT_AVAILABLE,
+  START_NEW_GAME,
+  EXPECT_HAS_MOVE
 } from './DSL';
 import { PLACE_MOVE, RESET_GAME } from './actions/actions';
-import tests from './App.testsWithDSL';
 import ACTOR from './reducers/ACTOR';
+import testFeaturePlaceMove from './App.test.feature.placeMove';
+import testResetGame from './App.test.feature.resetGame';
+import testCalculateResults from './App.test.feature.calculateResults';
 
 const { PLAYER_1, PLAYER_2 } = ACTOR;
 
@@ -96,6 +102,12 @@ describe('e2e tests', () => {
     await page.waitForSelector('.square');
   });
 
+  const tests = [].concat(
+    testFeaturePlaceMove,
+    testResetGame,
+    testCalculateResults
+  );
+
   tests.forEach(scenario => {
     it(scenario.name, async () => {
       // disabled the linter below because I really need to await
@@ -144,6 +156,28 @@ describe('e2e tests', () => {
             const otherPlayer =
               action.player === PLAYER_1 ? PLAYER_2 : PLAYER_1;
             await page.waitForSelector(`.has-winner .${otherPlayer}`);
+            break;
+          }
+
+          case EXPECT_IS_AVAILABLE: {
+            await page.waitForSelector(`button.square-${action.position}`);
+            break;
+          }
+
+          case EXPECT_IS_NOT_AVAILABLE: {
+            await page.waitForSelector(`svg.square-${action.position}`);
+            break;
+          }
+
+          case START_NEW_GAME: {
+            await page.reload();
+            break;
+          }
+
+          case EXPECT_HAS_MOVE: {
+            await page.waitForSelector(
+              `svg.square-${action.position}.${action.player}`
+            );
             break;
           }
 

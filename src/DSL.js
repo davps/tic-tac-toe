@@ -33,6 +33,10 @@ export const EXPECT_GAME_OVER = 'EXPECT_GAME_OVER';
 export const EXPECT_GAME_NOT_OVER = 'EXPECT_GAME_NOT_OVER';
 export const EXPECT_TO_BE_WINNER = 'EXPECT_TO_BE_WINNER';
 export const EXPECT_NOT_TO_BE_WINNER = 'EXPECT_NOT_TO_BE_WINNER';
+export const EXPECT_IS_AVAILABLE = 'EXPECT_IS_AVAILABLE';
+export const EXPECT_IS_NOT_AVAILABLE = 'EXPECT_IS_NOT_AVAILABLE';
+export const START_NEW_GAME = 'START_NEW_GAME';
+export const EXPECT_HAS_MOVE = 'EXPECT_HAS_MOVE';
 
 /*
  * Expectation creators
@@ -62,61 +66,97 @@ const expect = {
   toBeWinner: player => ({
     type: EXPECT_TO_BE_WINNER,
     player
+  }),
+  isAvailable: position => ({
+    type: EXPECT_IS_AVAILABLE,
+    position
+  }),
+  isNotAvailable: position => ({
+    type: EXPECT_IS_NOT_AVAILABLE,
+    position
+  }),
+  hasMove: (position, player) => ({
+    type: EXPECT_HAS_MOVE,
+    position,
+    player
   })
 };
 
-const actionsByScenario = [];
-let currentScenario = null;
-const findScenario = scenarioName =>
-  actionsByScenario.find(item => item.name === scenarioName);
-
-export const Scenario = name => {
-  if (!name) {
-    throw new Error('The scenario must have a name');
-  }
-
-  if (!findScenario(name)) {
-    actionsByScenario.push({
-      name,
-      actions: []
-    });
-  }
-
-  currentScenario = name;
+const nonReduxActionCreators = {
+  startNewGame: () => ({
+    type: START_NEW_GAME
+  })
 };
 
-export const createTestDescription = () => {
-  const dispatch = action => {
-    if (currentScenario === null) {
-      throw new Error(
-        'You must define a scenario before taking an action ( before using I.method() )'
-      );
-    }
-    const scenario = findScenario(currentScenario);
-    // commented this block of code because (in theory)
-    // my code will never pass this condition (unreachable code)
-    // if (!scenario) {
-    //   throw new Error('It is always expected to get an object here');
-    // }
-    scenario.actions.push(action);
-    currentScenario = scenario.name;
-  };
+export default class DSL {
+  constructor() {
+    this.actionsByScenario = [];
+    this.currentScenario = null;
+    this.Scenario = name => {
+      if (!name) {
+        throw new Error('The scenario must have a name');
+      }
 
-  const descriptors = {
-    placeMove: position => dispatch(placeMove(position)),
-    resetGame: () => dispatch(resetGame()),
-    expect: player => ({
-      aWinner: () => dispatch(expect.aWinner()),
-      draw: () => dispatch(expect.draw()),
-      gameOver: () => dispatch(expect.gameOver()),
-      gameNotOver: () => dispatch(expect.gameNotOver()),
-      toBeWinner: () => dispatch(expect.toBeWinner(player)),
-      notToBeWinner: () => dispatch(expect.notToBeWinner(player))
-    }),
-    getTestsAsJSON: () => [...actionsByScenario]
-  };
+      if (!this.findScenario(name)) {
+        this.actionsByScenario.push({
+          name,
+          actions: []
+        });
+      }
 
-  return descriptors;
-};
+      this.currentScenario = name;
+    };
 
-export const I = createTestDescription();
+    this.findScenario = this.findScenario.bind(this);
+    this.createTestDescription = this.createTestDescription.bind(this);
+    // this.printName = this.printName.bind(this);
+    // this.printName = this.printName.bind(this);
+    // this.printName = this.printName.bind(this);
+    // this.printName = this.printName.bind(this);
+    // this.printName = this.printName.bind(this);
+  }
+
+  findScenario(scenarioName) {
+    return this.actionsByScenario.find(item => item.name === scenarioName);
+  }
+
+  createTestDescription() {
+    const dispatch = action => {
+      if (this.currentScenario === null) {
+        throw new Error(
+          'You must define a scenario before taking an action ( before using I.method() )'
+        );
+      }
+      const scenario = this.findScenario(this.currentScenario);
+      // commented this block of code because (in theory)
+      // my code will never pass this condition (unreachable code)
+      // if (!scenario) {
+      //   throw new Error('It is always expected to get an object here');
+      // }
+      scenario.actions.push(action);
+      this.currentScenario = scenario.name;
+    };
+
+    const descriptors = {
+      placeMove: position => dispatch(placeMove(position)),
+      resetGame: () => dispatch(resetGame()),
+      startNewGame: () => dispatch(nonReduxActionCreators.startNewGame()),
+      expect: arg => ({
+        aWinner: () => dispatch(expect.aWinner()),
+        draw: () => dispatch(expect.draw()),
+        gameOver: () => dispatch(expect.gameOver()),
+        gameNotOver: () => dispatch(expect.gameNotOver()),
+        toBeWinner: () => dispatch(expect.toBeWinner(arg)),
+        notToBeWinner: () => dispatch(expect.notToBeWinner(arg)),
+        isAvailable: () => dispatch(expect.isAvailable(arg)),
+        isNotAvailable: () => dispatch(expect.isNotAvailable(arg)),
+        hasMove: player => dispatch(expect.hasMove(arg, player))
+      }),
+      getTestsAsJSON: () => [...this.actionsByScenario]
+    };
+
+    return descriptors;
+  }
+}
+
+// export const I = createTestDescription();

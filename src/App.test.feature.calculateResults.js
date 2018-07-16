@@ -1,6 +1,14 @@
+/**
+ * Aceptance tests for the feature "Detect game over and calculate results"
+ */
+
 import { POSITION } from './constants';
-import { I, Scenario } from './DSL';
 import ACTOR from './reducers/ACTOR';
+import DSL from './DSL';
+
+const testDSL = new DSL();
+const { Scenario } = testDSL;
+const I = testDSL.createTestDescription();
 
 const {
   TOP_LEFT,
@@ -17,7 +25,8 @@ const {
 const X = ACTOR.PLAYER_1;
 const O = ACTOR.PLAYER_2;
 
-Scenario('Game is not over yet');
+Scenario('Place some moves but game is not over yet');
+I.startNewGame();
 I.placeMove(TOP_LEFT);
 I.placeMove(BOTTOM_RIGHT);
 I.placeMove(TOP_CENTER);
@@ -31,24 +40,8 @@ I.expect(X).toBeWinner();
 I.expect(O).notToBeWinner();
 I.expect().gameOver();
 
-Scenario('Reset game');
-I.resetGame();
-I.expect().gameNotOver();
-
 Scenario('Draw (no winners and board is full)');
-I.placeMove(TOP_LEFT);
-I.placeMove(BOTTOM_RIGHT);
-I.placeMove(TOP_RIGHT);
-I.placeMove(TOP_CENTER);
-I.placeMove(MIDDLE_LEFT);
-I.placeMove(CENTER);
-I.placeMove(BOTTOM_CENTER);
-I.placeMove(BOTTOM_LEFT);
-I.placeMove(MIDDLE_RIGHT);
-I.expect().draw();
-I.resetGame();
-
-Scenario('Draw (no winners and board is full)');
+I.startNewGame();
 I.placeMove(TOP_LEFT);
 I.placeMove(BOTTOM_RIGHT);
 I.placeMove(TOP_RIGHT);
@@ -89,7 +82,7 @@ for (let i = 0; i < x.length; i += 1) {
   const oPositions = o[i];
 
   Scenario(`Winning in other positions (${i})`);
-  I.resetGame();
+  I.startNewGame();
   I.placeMove(xPositions[0]);
   I.placeMove(oPositions[0]);
   I.placeMove(xPositions[1]);

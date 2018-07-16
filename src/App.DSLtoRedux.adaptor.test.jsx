@@ -14,10 +14,16 @@ import {
   EXPECT_GAME_OVER,
   EXPECT_GAME_NOT_OVER,
   EXPECT_TO_BE_WINNER,
-  EXPECT_NOT_TO_BE_WINNER
+  EXPECT_NOT_TO_BE_WINNER,
+  EXPECT_IS_AVAILABLE,
+  START_NEW_GAME,
+  EXPECT_IS_NOT_AVAILABLE,
+  EXPECT_HAS_MOVE
 } from './DSL';
-import tests from './App.testsWithDSL';
 import store from './store/store';
+import testFeaturePlaceMove from './App.test.feature.placeMove';
+import testResetGame from './App.test.feature.resetGame';
+import testCalculateResults from './App.test.feature.calculateResults';
 
 import {
   PLACE_MOVE,
@@ -26,6 +32,9 @@ import {
   resetGame
 } from './actions/actions';
 import initialState from './store/initialState';
+import ACTOR from './reducers/ACTOR';
+
+const { PENDING } = ACTOR;
 
 /**
  * Smoke test
@@ -39,6 +48,13 @@ it('run without crashing', () => {
 /**
  * Tests from DSL
  */
+
+const tests = [].concat(
+  testFeaturePlaceMove,
+  testResetGame,
+  testCalculateResults
+);
+
 tests.forEach(scenario => {
   it(scenario.name, () => {
     scenario.actions.forEach(action => {
@@ -83,6 +99,26 @@ tests.forEach(scenario => {
 
         case EXPECT_NOT_TO_BE_WINNER: {
           expect(store.getState().winner).not.toEqual(action.player);
+          break;
+        }
+
+        case EXPECT_IS_AVAILABLE: {
+          expect(store.getState().moves[action.position]).toBe(PENDING);
+          break;
+        }
+
+        case EXPECT_IS_NOT_AVAILABLE: {
+          expect(store.getState().moves[action.position]).not.toBe(PENDING);
+          break;
+        }
+
+        case START_NEW_GAME: {
+          store.dispatch(resetGame());
+          break;
+        }
+
+        case EXPECT_HAS_MOVE: {
+          expect(store.getState().moves[action.position]).toBe(action.player);
           break;
         }
 

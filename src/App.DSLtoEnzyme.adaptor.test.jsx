@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
+import { mountWithState } from 'enzyme-redux';
 import App from './App';
 import Square from './components/Square';
 import ResetGame from './components/ResetGame';
@@ -9,15 +10,24 @@ import {
   EXPECT_GAME_OVER,
   EXPECT_GAME_NOT_OVER,
   EXPECT_TO_BE_WINNER,
-  EXPECT_NOT_TO_BE_WINNER
+  EXPECT_NOT_TO_BE_WINNER,
+  EXPECT_IS_AVAILABLE,
+  EXPECT_IS_NOT_AVAILABLE,
+  START_NEW_GAME,
+  EXPECT_HAS_MOVE
 } from './DSL';
-import { PLACE_MOVE, RESET_GAME } from './actions/actions';
+import { PLACE_MOVE, RESET_GAME, resetGame } from './actions/actions';
+import store from './store/store';
+import initialState from './store/initialState';
 import WinnerName from './components/WinnerName';
 import NextPlayerName from './components/NextPlayerName';
-import tests from './App.testsWithDSL';
 import ACTOR from './reducers/ACTOR';
+import Board from './components/Board';
+import testFeaturePlaceMove from './App.test.feature.placeMove';
+import testResetGame from './App.test.feature.resetGame';
+import testCalculateResults from './App.test.feature.calculateResults';
 
-const { PLAYER_1, PLAYER_2 } = ACTOR;
+const { PLAYER_1, PLAYER_2, PENDING } = ACTOR;
 
 /**
  * Smoke test
@@ -29,7 +39,13 @@ it('renders without crashing', () => {
 /**
  * Tests from DSL
  */
-const game = mount(<App />);
+const tests = [].concat(
+  testFeaturePlaceMove,
+  testResetGame,
+  testCalculateResults
+);
+
+let game = mount(<App />);
 
 tests.forEach(scenario => {
   it(scenario.name, () => {
@@ -112,6 +128,38 @@ tests.forEach(scenario => {
               .at(0)
               .find(`.has-winner .${otherPlayer}`).length
           ).toBeGreaterThan(0);
+          break;
+        }
+
+        case EXPECT_IS_AVAILABLE: {
+          expect(
+            game
+              .find(Board)
+              .find(`Square.square-${action.position}`)
+              .prop('owner')
+            // [PLAYER_1, PLAYER_2].includes(square.prop('owner')
+          ).toBe(PENDING);
+          break;
+        }
+
+        case EXPECT_IS_NOT_AVAILABLE: {
+          expect(
+            game.find(Board).find(`button.square-${action.position}`).length
+          ).toBe(0);
+          break;
+        }
+
+        case START_NEW_GAME: {
+          store.dispatch(resetGame());
+          game = mountWithState(<App />, initialState);
+          break;
+        }
+
+        case EXPECT_HAS_MOVE: {
+          const square = game
+            .find(Board)
+            .find(`svg.square-${action.position}.${action.player}`);
+          expect(square.length).toBeGreaterThan(0);
           break;
         }
 

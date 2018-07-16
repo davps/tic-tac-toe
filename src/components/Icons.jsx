@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ACTOR from '../reducers/ACTOR';
+
+const { PLAYER_1, PLAYER_2 } = ACTOR;
+
 /**
  * The svg transformation to the origin is tricky
  * Source: https://stackoverflow.com/a/49563224
  */
 
-export const X = ({ size }) => (
+export const X = ({ size, className }) => (
   <span
     style={{
       width: 'auto',
@@ -17,6 +21,7 @@ export const X = ({ size }) => (
       height="100%"
       viewBox="0 0 64 64"
       preserveAspectRatio="xMidYMid meet"
+      className={`${PLAYER_1} ${className}`}
     >
       <g id="svg_1" transform="translate(-64,0)">
         <path
@@ -45,14 +50,16 @@ export const X = ({ size }) => (
 );
 
 X.propTypes = {
-  size: PropTypes.number
+  size: PropTypes.number,
+  className: PropTypes.string
 };
 
 X.defaultProps = {
-  size: 64
+  size: 64,
+  className: ''
 };
 
-export const O = ({ size }) => (
+export const O = ({ size, className }) => (
   <span
     style={{
       width: 'auto',
@@ -64,6 +71,7 @@ export const O = ({ size }) => (
       height="100%"
       viewBox="0 0 64 64"
       preserveAspectRatio="xMidYMid meet"
+      className={`${PLAYER_2} ${className}`}
     >
       <g>
         <path
@@ -82,9 +90,11 @@ export const O = ({ size }) => (
 );
 
 O.propTypes = {
-  size: PropTypes.number
+  size: PropTypes.number,
+  className: PropTypes.string
 };
 
 O.defaultProps = {
-  size: 64
+  size: 64,
+  className: ''
 };

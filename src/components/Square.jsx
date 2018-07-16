@@ -63,8 +63,8 @@ const Square = ({
 
   return (
     <SelectedContainer {...style}>
-      {owner === PLAYER_1 && <X scale={0.8} />}
-      {owner === PLAYER_2 && <O scale={0.8} />}
+      {owner === PLAYER_1 && <X className={className} scale={0.8} />}
+      {owner === PLAYER_2 && <O className={className} scale={0.8} />}
       {owner === PENDING && isGameOver && <span />}
       {owner === PENDING &&
         !isGameOver && (
