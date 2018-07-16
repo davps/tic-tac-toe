@@ -33,17 +33,6 @@ const url = `http://localhost:${port}/`;
 // the server running manually on the terminal
 const startServer = process.env.CI;
 
-if (!startServer) {
-  console.log(
-    `The tests are not running on a CI server. 
-    Make sure to have the game running on ${url}
-    to pass the puppeteer tests
-    (on the CI server it will automatically start the server
-    but not on your dev environment)
-    `
-  );
-}
-
 describe('e2e tests', () => {
   let page;
   let browser;
@@ -95,7 +84,23 @@ describe('e2e tests', () => {
     });
 
     page = await browser.newPage();
-    await page.goto(url);
+    try {
+      await page.goto(url);
+    } catch (e) {
+      if (!startServer) {
+        console.error(
+          `The tests are not running on a CI server and the localhost connection was refused. 
+          Make sure to have the game running on ${url}
+          to pass the puppeteer tests
+          (on the CI server it will automatically start the server
+          but that will not happen on your dev environment because you need to start
+          the server manually with npm start command)
+          `
+        );
+      }
+
+      throw e;
+    }
   }, timeout);
 
   it('smoke tests', async () => {
