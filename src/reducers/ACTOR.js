@@ -10,7 +10,9 @@ const ACTOR = {
   PLAYER_1: 'PLAYER_1',
   PLAYER_2: 'PLAYER_2',
 
-  // these enumerations are used only on a few places, so it's not too expresive (that's the trade-off)
+  // the usage syntax for label and name are not too expresive
+  // but that's ok because these enumerations are used only
+  // on a few places
   label: {},
   name: {}
 };

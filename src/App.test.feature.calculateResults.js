@@ -25,14 +25,18 @@ const {
 const X = ACTOR.PLAYER_1;
 const O = ACTOR.PLAYER_2;
 
-Scenario('Place some moves but game is not over yet');
+Scenario(
+  'Place 3 moves to verify its non game over state. The game over actions cannot be performed in this case.'
+);
 I.startNewGame();
 I.placeMove(TOP_LEFT);
 I.placeMove(BOTTOM_RIGHT);
 I.placeMove(TOP_CENTER);
 I.expect().gameNotOver();
 
-Scenario('Game over, X wins');
+Scenario(
+  'Place more moves for a Game over and X wins to verify that the winner and game over was detected'
+);
 I.placeMove(BOTTOM_CENTER);
 I.placeMove(TOP_RIGHT);
 I.expect().aWinner();
@@ -40,7 +44,9 @@ I.expect(X).toBeWinner();
 I.expect(O).notToBeWinner();
 I.expect().gameOver();
 
-Scenario('Draw (no winners and board is full)');
+Scenario(
+  'Start a new game and fill all squares but with no winners to verify if we are in Draw state'
+);
 I.startNewGame();
 I.placeMove(TOP_LEFT);
 I.placeMove(BOTTOM_RIGHT);
@@ -81,7 +87,7 @@ for (let i = 0; i < x.length; i += 1) {
   const xPositions = x[i];
   const oPositions = o[i];
 
-  Scenario(`Winning in other positions (${i})`);
+  Scenario(`Winning in all positions (${i}) to cover all winning use cases`);
   I.startNewGame();
   I.placeMove(xPositions[0]);
   I.placeMove(oPositions[0]);

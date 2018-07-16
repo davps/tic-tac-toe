@@ -25,7 +25,9 @@ const {
 const X = ACTOR.PLAYER_1;
 const O = ACTOR.PLAYER_2;
 
-Scenario('Place a move');
+Scenario(
+  'The top left square is not available anymore when placing a move there because we can have only one move per square'
+);
 I.startNewGame();
 
 I.expect(TOP_LEFT).isAvailable();
@@ -51,7 +53,7 @@ I.expect(BOTTOM_LEFT).isAvailable();
 I.expect(BOTTOM_CENTER).isAvailable();
 I.expect(BOTTOM_RIGHT).isAvailable();
 
-Scenario('Place more moves');
+Scenario('And the same happens to other squares when we place more moves');
 I.placeMove(BOTTOM_RIGHT);
 I.placeMove(TOP_CENTER);
 I.expect(TOP_LEFT).hasMove(X);

@@ -21,7 +21,9 @@ const {
   BOTTOM_RIGHT
 } = POSITION;
 
-Scenario('Reset when game is over');
+Scenario(
+  'Place moves for a game over because that will enable the Reset controls, which we trigger and verify it outcome'
+);
 I.startNewGame();
 
 I.expect(TOP_LEFT).isAvailable();
