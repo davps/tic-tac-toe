@@ -14,7 +14,7 @@ icon[ACTOR.PLAYER_2] = <O size={25} />;
  */
 /* eslint-disable react/jsx-one-expression-per-line */
 const PlayerName = ({ player }) => (
-  <Container className={ACTOR[player]}>
+  <Container className={ACTOR[player]} player={player}>
     <span>{ACTOR.name[player]}</span>
     {icon[player]}
   </Container>

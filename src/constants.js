@@ -4,7 +4,7 @@ import ACTOR from './reducers/ACTOR';
 
 const { PLAYER_1, PLAYER_2, PENDING } = ACTOR;
 
-const m = 3;
+const m = 1;
 const margins = [
   { top: 0, left: 0, right: m, bottom: m },
   { top: 0, left: m, right: m, bottom: m },

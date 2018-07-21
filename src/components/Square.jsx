@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { DIMENSIONS, customPropTypes } from '../constants';
 import { X, O } from './Icons';
-import { animation } from './Container';
 import ACTOR from '../reducers/ACTOR';
 
 const { PLAYER_1, PLAYER_2, PENDING } = ACTOR;
@@ -43,8 +42,23 @@ const Button = styled.button`
   }
 `;
 
+const fadeInOut = keyframes`
+  0%,100% { opacity: 0.8 }
+  50% { opacity: 1 }
+`;
+
 const BlinkingContainer = Container.extend`
-  ${animation};
+  animation: ${fadeInOut} 1s step-start infinite;
+`;
+
+const fadeIn = keyframes`
+  100% { transform: scale(1,1); }
+`;
+
+const Animation = styled.div`
+  animation: ${fadeIn} 0.1s ease-out
+  transform: scale(0,0);
+  animation-fill-mode: forwards; /* Add this so that your div doesn't close after the animation completes */
 `;
 
 /**
@@ -60,11 +74,18 @@ const Square = ({
   style
 }) => {
   const SelectedContainer = isWinningMove ? BlinkingContainer : Container;
-
   return (
     <SelectedContainer {...style}>
-      {owner === PLAYER_1 && <X className={className} scale={0.8} />}
-      {owner === PLAYER_2 && <O className={className} scale={0.8} />}
+      {owner === PLAYER_1 && (
+        <Animation>
+          <X className={className} />
+        </Animation>
+      )}
+      {owner === PLAYER_2 && (
+        <Animation>
+          <O className={className} />
+        </Animation>
+      )}
       {owner === PENDING && isGameOver && <span />}
       {owner === PENDING &&
         !isGameOver && (

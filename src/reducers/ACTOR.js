@@ -14,7 +14,8 @@ const ACTOR = {
   // but that's ok because these enumerations are used only
   // on a few places
   label: {},
-  name: {}
+  name: {},
+  color: {}
 };
 
 ACTOR.label[ACTOR.PENDING] = ' ';
@@ -23,5 +24,7 @@ ACTOR.label[ACTOR.PLAYER_2] = 'O';
 ACTOR.name[ACTOR.PENDING] = ' ';
 ACTOR.name[ACTOR.PLAYER_1] = 'Laura';
 ACTOR.name[ACTOR.PLAYER_2] = 'David';
+ACTOR.color[ACTOR.PLAYER_1] = '#333';
+ACTOR.color[ACTOR.PLAYER_2] = '#333';
 
 export default ACTOR;

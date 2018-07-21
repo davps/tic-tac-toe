@@ -5,7 +5,7 @@ import Square from './Square';
 import { DIMENSIONS, customPropTypes } from '../constants';
 
 const Container = styled.div`
-  background: black;
+  background: #a9a9a9;
   display: flex;
   flex-wrap: wrap;
   width: ${DIMENSIONS.board.width}px;

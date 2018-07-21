@@ -25,9 +25,9 @@ export const X = ({ size, className }) => (
     >
       <g id="svg_1" transform="translate(-64,0)">
         <path
-          fill="#000000"
+          fill={ACTOR.color[PLAYER_1]}
           fillRule="nonzero"
-          stroke="#000000"
+          stroke={ACTOR.color[PLAYER_1]}
           strokeWidth="2"
           strokeMiterlimit="4"
           strokeDashoffset="0"
@@ -35,9 +35,9 @@ export const X = ({ size, className }) => (
           d="m74.703056,8.841259c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498z"
         />
         <path
-          fill="#000000"
+          fill={ACTOR.color[PLAYER_1]}
           fillRule="nonzero"
-          stroke="#000000"
+          stroke={ACTOR.color[PLAYER_1]}
           strokeWidth="2"
           strokeMiterlimit="4"
           strokeDashoffset="0"
@@ -75,9 +75,9 @@ export const O = ({ size, className }) => (
     >
       <g>
         <path
-          fill="#000000"
+          fill={ACTOR.color[PLAYER_2]}
           fillRule="nonzero"
-          stroke="#000000"
+          stroke={ACTOR.color[PLAYER_2]}
           strokeWidth="2"
           strokeMiterlimit="4"
           strokeDashoffset="0"

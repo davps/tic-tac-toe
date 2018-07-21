@@ -21,7 +21,7 @@ const Container = styled.div`
   width: auto;
   padding-left: 20px;
   padding-right: 20px;
-  border: 0;
+  padding-top: 25px;
 `;
 
 const PlayersInfoContainer = styled.div`
@@ -48,8 +48,6 @@ const Game = ({
   /* eslint-disable react/jsx-one-expression-per-line */
   return (
     <Container>
-      <h1>TIC TAC TOE!</h1>
-
       <PlayersInfoContainer>
         <PlayerName player={PLAYER_1} />
         <span style={{ width: 20 }} />

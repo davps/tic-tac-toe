@@ -9,7 +9,7 @@ import { SpacedContainer as Container } from './Container';
 const WinnerName = ({ winner, isBoardFull }) => (
   <span>
     {winner && (
-      <Container className="has-winner game-over">
+      <Container className="has-winner game-over" player={winner}>
         <strong>
           <PlayerName player={winner} />
         </strong>
