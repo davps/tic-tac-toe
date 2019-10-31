@@ -1,7 +1,5 @@
 # Showcase of my development workflow
 
-**Currently I am available for new opportunities**
-
 Since all my relevant development work is focused on private, commercial codebases, I am writing this small tic tac toe game to showcase my skillsets to the world. Hello, world!
 
 This is how I develop an app to make it easy to test.
